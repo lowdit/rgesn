@@ -272,33 +272,33 @@
       "critere": "Le service numérique est-il utilisable via une connexion bas débit ?",
       "thematique": "UX/UI",
       "objectif": "Si le service numérique s'adresse à un large public, vous ne maitrisez donc pas le niveau de connectivité. Il est nécessaire de veiller à ne pas exclure certains publics qui n'ont pas accès à de hauts débits.\nTout en permettant de réduire la fracture numérique, il s'agit aussi d'une bonne pratique pour l'environnement. En effet, les utilisateurs n'ont pas toujours conscience de ce qui ralentit un service numérique : la connexion réseau, le service numérique ou le terminal utilisé ?\nUn service numérique plus léger a, par conséquent, beaucoup moins besoin de ressources réseaux pour fonctionner.",
-      "miseEnOeuvre": "Tester l'utilisabilité du service avec des connexions bas débit, mesurer et améliorer le temps de réponse. Les contenus peuvent être servis en qualité dégradées lorsque cela s'avère nécessaire.",
-      "controle": "Tester l'utilisabilité du service avec des connexions bas débit (3G en mobilité et 512 Kbs en fixe).",
+      "miseEnOeuvre": "Tester l’utilisabilité du service avec des connexions bas débit, mesurer et améliorer le temps de réponse. Les contenus peuvent être servis en qualité dégradée lorsque cela s’avère nécessaire.\nIl est recommandé aux applications natives de prévoir un mode hors-ligne sur les fonctionnalités qu'il est techniquement possible de fournir hors ligne.",
+      "controle": "Tester l’utilisabilité du service avec des connexions bas débit (3G en mobilité et 512 Kbit/s en fixe). Le critère est validé si le service numérique est utilisable sans connexion au réseau ou avec une connexion bas débit.",
       "difficulte": "Faible",
       "priorite": "Recommandé"
     },{
       "id": "4.2",
       "critere": "Le service numérique comporte-t-il uniquement des éléments animations, vidéos et sons dont la lecture automatique est désactivée ?",
       "thematique": "UX/UI",
-      "objectif": "Éviter de précharger des contenus et de les lancer sans consentement de l'utilisateur.",
-      "miseEnOeuvre": "Par exemple, éviter de précharger et de lire automatiquement vidéos, sons, animations, carrousel, etc.",
-      "controle": "Contrôler la mise en œuvre",
+      "objectif": "Plus un utilisateur passe de temps sur un site ou une application, plus l’empreinte environnementale associée à cet usage sera élevée, les ressources réseaux et systèmes sur le terminal étant mobilisées plus longtemps. S’il appartient bien entendu à l’utilisateur de décider quel temps il souhaite consacrer à tel ou tel usage, les pratiques de développement du site ou de l’application concernée peuvent avoir un impact direct sur cette durée d’utilisation, en particulier les pratiques de captation.\nLe lancement automatique de contenus en particulier de vidéos fait partie des mécanismes mis en place pour garder l'utilisateur en état d'attention. Le déclenchement de contenu et leur pré- chargement sans consentement de l’utilisateur doit être évité dans une perspective de sobriété des usages.",
+      "miseEnOeuvre": "Désactiver par défaut le chargement automatique de contenus vidéos et/ou sonores dans les paramètres du service (en permettant à l’utilisateur de les réactiver). Si ce n’est pas possible, permettre à l’utilisateur de supprimer ces fonctionnalités avec un bouton ou une interface directement accessible et visible sur l’interface utilisateur.\nRéduire la taille des ressources multimédia téléchargées et utilisées pour l’esthétisme du service.\nLimiter les fonds vidéo et/ou audios en lecture automatique (autoplay), permettre de les désactiver et le cas échéant, minimiser la taille des ressources de type image, vidéo voire sons téléchargées et utilisées uniquement pour l’esthétisme du service (qui n’ont donc pas de lien avec les fonctionnalités offertes par le service numérique).\nCharger des contenus vidéos et/ou sonores non indispensables au bon fonctionnement du service uniquement à la demande explicite de l’utilisateur.\nDès lors qu’une animation visuelle a une durée de plus de 5 secondes ou qu’un son a une durée de plus de 3 secondes, doter systématiquement l’objet multimédia des moyens de contrôle nécessaires : démarrage, arrêt, muet ou volume.\nNe pas utiliser de graphismes animés non contrôlables, ou encore partiellement contrôlables par l’utilisateur (images gif animées en particulier).",
+      "controle": "Le service numérique ne doit pas inclure de lecture automatique de contenu par défaut, ou si ce n’est pas possible, doit donner la possibilité à l’utilisateur de supprimer facilement le chargement ou le lancement automatique de vidéos ou contenu audios. Les possibilités de suppression doivent être mises en évidence dans le service numérique (par exemple, avec un bouton de désactivation apparent).\nIl conviendra également de réduire le nombre d’animations visuelles non contrôlables et fixer des objectifs quantitatifs à ne pas dépasser.\nLe critère est validé si le service ne repose pas sur une fonctionnalité de lecture automatique par défaut. Le service devra également limiter le recours à des animations visuelles non contrôlables, voire ne pas y avoir recours lorsqu’elles servent uniquement à l’esthétisme du service, sans lien avec ses fonctionnalités.",
       "difficulte": "Faible",
       "priorite": "Prioritaire"
     },{
       "id": "4.3",
       "critere": "Le service numérique affiche-t-il uniquement des contenus sans défilement de page infini ?",
       "thematique": "UX/UI",
-      "objectif": "Éviter le mur de contenus, la liste infinie, l'enchaînement infini de contenus.",
-      "miseEnOeuvre": "Mettre en place une pagination claire dont le chargement du contenu est à la demande de l'utilisateur et non au défilement du contenu.",
-      "controle": "Contrôler la mise en œuvre",
+      "objectif": "Les « murs de contenu » font partie des stratégies de captation de l’attention de certaines plateformes numériques qui contribue à l’augmentation de l’empreinte environnementale des services numériques. L’objectif est donc de réduire la conception de services numériques reposant sur un design de « mur de contenus », de liste ou d'enchaînement infinis de contenus, ce qui augmente le temps passé sur la page donc le poids de cette dernière ainsi que les ressources nécessaires.",
+      "miseEnOeuvre": "Éviter le « mur de contenus », la liste infinie, l’enchaînement infini de contenus pour amoindrir le poids de la page utilisée et optimiser l’expérience utilisateur.\nMettre en place une pagination facile d’utilisation et proportionnée au contexte d’utilisation dont le chargement du contenu est à la demande de l’utilisateur et non au défilement du contenu ou, par exemple, insérer un bouton « Voir plus ».",
+      "controle": "Le critère est validé si le design du service numérique repose sur un chargement à la demande du contenu proportionné au contexte d’utilisation (notamment la pagination), ou peut s’afficher en entier sur un écran.",
       "difficulte": "Moyen",
       "priorite": "Recommandé"
     },{
       "id": "4.4",
       "critere": "Le service numérique optimise-t-il le parcours de navigation pour chaque fonctionnalité principale ?",
       "thematique": "UX/UI",
-      "objectif": "Minimiser le temps passé par l'utilisateur sur le service numérique.",
+      "objectif": "Minimiser le temps passé par l’utilisateur sur le service numérique et maîtriser des impacts environnementaux des fonctionnalités principales du service tout améliorant l’expérience utilisateur.",
       "miseEnOeuvre": "Durant la phase de conception, éliminer les fonctionnalités non essentielles et optimiser le ou les parcours de navigation pour chaque unité fonctionnelle principale du service numérique. Puis, observer les statistiques de fréquentation et d'usage, couplé aux moyens d'observation UX (expérience utilisateur), afin d'améliorer cette optimisation de parcours.\nPar exemple, une unité fonctionnelle principale du service peut être \"réserver un billet\", \"rechercher un terme\", \"trouver une adresse\", \"contacter le support\", \"discuter\", etc.\nIl s'agit d'abord d'une analyse qualitative à mettre en place et pouvant être complétée par une analyse quantitative :\n* Bien définir les unités fonctionnelles principales du service (au sens de l'Analyse de Cycle de Vie).\n* Exploiter toutes les ressources et les outils disponibles en UX afin de comprendre au mieux les usages des utilisateurs, notamment en ce qui concerne leurs parcours de navigation de chaque unité fonctionnelle principale.\n* Mettre en place un système d'analyse non intrusif et respectueux de la vie privée afin d'identifier les parcours-type sur le service numérique. Analyser de temps en temps ces statistiques pour pouvoir améliorer l'expérience utilisateur et les impacts environnementaux de ces \"chemins-critiques\".\n* Mesurer également les indicateurs techniques des parcours identifiés : nombre de requêtes, poids des ressources téléchargées et les traduire en indicateurs d'impacts environnementaux.",
       "controle": "* Outils UX de conception, d'optimisation et de contrôle continu : tri de carte, sondage, interviews, enquêtes utilisateurs, tests-U, etc.\n* Contrôle de la mise en place des statistiques d'usage.\n* Analyse de cycle de vie.",
       "difficulte": "Moyen",
@@ -309,16 +309,16 @@
       "thematique": "UX/UI",
       "objectif": "Limiter le chargement de services tiers non nécessaires au bon fonctionnement du service. Par exemple, sans activation des cookies, certains lecteurs vidéo sont désactivés et en attente de consentement pour pouvoir visionner la vidéo.",
       "miseEnOeuvre": "Charger des contenus non indispensables qu'à la demande explicite de l'utilisateur. Ce critère rejoint une des obligations du RGPD sur la demande de consentement avant de charger du contenu tiers.",
-      "controle": "Contrôler la mise en œuvre",
+      "controle": "Le critère est validé si l’activation des services tiers intégrés au service numérique est conditionnée au consentement clair et explicite de l’utilisateur, du point de vue de la protection des données lorsqu’applicable, avec également une information spécifique sur le possible coût environnemental.",
       "difficulte": "Faible",
       "priorite": "Prioritaire"
     },{
       "id": "4.6",
       "critere": "Le service numérique utilise-t-il majoritairement des composants fonctionnels natifs du système d'exploitation, du navigateur ou du langage utilisé ?",
       "thematique": "UX/UI",
-      "objectif": "Les composants fonctionnels sont par exemple des composants d'interface (menu, bouton, formulaire...). Généralement, les composants natifs d'un système n'ont besoin que de peu de ressources pour fonctionner, contrairement à des composants développés en surcouche.",
-      "miseEnOeuvre": "Privilégier l'utilisation des composants fonctionnels natifs du système d'exploitation, du navigateur ou du langage utilisé pour répondre au besoin.",
-      "controle": "Si c'est le cas, évaluer la nécessité d'avoir choisi d'utiliser des composants non natifs (contrainte technique par exemple ?).",
+      "objectif": "Les composants fonctionnels sont par exemple des composants d’interface (menu, bouton, formulaire...). Généralement, les composants natifs d’un système n’ont besoin que de peu de ressources pour fonctionner, contrairement à des composants développés en surcouche. Dans cette perspective, il peut donc être préférable d’encourager l’utilisation de composants natifs d’un système plutôt que le recours à des composants développés en surcouche.",
+      "miseEnOeuvre": "Privilégier l’utilisation des composants fonctionnels natifs du système d’exploitation, du navigateur ou du langage utilisé pour répondre au besoin.\nEn complément, il est préférable de ne charger les ressources et des composants que lorsqu’ils sont effectivement utilisés.",
+      "controle": "Le critère est validé si le service favorise le recours à des composants fonctionnels natifs lorsque possible.\nDe plus, dans l’éventualité du recours à des composants non natifs, évaluer la nécessité d’avoir choisi d’utiliser de tels composants (contrainte technique par exemple ?). Documenter les raisons de les utiliser de manière à rendre ces choix auditables, par exemple dans la déclaration d’écoconception du service. Leur recours devra être régulièrement suivi en vérifiant le contenu des ressources chargées et leur utilisation effective.",
       "difficulte": "Moyen",
       "priorite": "Modéré"
     },{
