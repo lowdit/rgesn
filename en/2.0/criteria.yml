@@ -1832,245 +1832,371 @@ metiers:
     priorite: "Recommandé"
     application: N/A si le service n’utilise pas d’hébergement
     metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable des achats]
-  - id: "8.5"
-    critere: "Le service numérique utilise-t-il un hébergement dont la consommation d’électricité est majoritairement d’origine renouvelable ?"
-    thematique: "Hébergement"
-    objectif: |-
-      L’objectif de ce critère est de promouvoir la transparence sur l’origine de la consommation électrique des centres de données et d’œuvrer à la transition énergétique, en particulier au développement des énergies renouvelables.
-    miseEnOeuvre: |-
-      Demander à l’hébergeur sa politique en termes d’achat d’électricité. Les PPA (Power Purchage Agreement) des contrats d’énergie renouvelable de long terme sont considérés de meilleure qualité que les certificats d’origine de l’électricité.
+  - id: 8.5
+    critere: 8.5
+    thematique: Hosting Provider Renewable Energy Sourcing
+    objectif: |
+      Promote transparency on the origin of data centres' electricity consumption and work towards the energy transition, in particular the development of renewable energies.
 
-      Voir à ce sujet le rapport [Development of the EU Green Public Procurement (GPP) criteria for data centres, server rooms and cloud services](https://publications.jrc.ec.europa.eu/repository/handle/JRC118558). Ainsi la quantité annuelle d’énergie contractualisée devra être renseignée, incluant : via PPA sur le réseau français mais hors site, via autoconsommation donc sur site (potentiellement par PPA ou support complet des coûts de capital et autres) etvia des garanties d’origines. Pour les garanties d’origine renouvelable, l’additionnalité doit être prouvée.
+    miseEnOeuvre: |
+      Ask the hosting provider about its policy in terms of electricity purchase. PPAs (Power Purchase Agreements) for long-term renewable energy contracts are considered to be of higher quality than certificates of origin for electricity.
+      
+      See the report Development of the EU Green Public Procurement (GPP) criteria for data centres, server rooms and cloud services. The annual quantity of energy contracted will thus have to be reported, including:
+      • Via PPA on the French grid but off-site
+      • Via self-consumption therefore on site (potentially by PPA or full support of capital costs)
+      • Via guarantees of origin
+      
+      For guarantees of renewable origin, additionality must be proven.
+      
+      Secondarily, a standardised performance indicator can be monitored: the REF, the Renewable Energy Factor. The share of low-carbon electricity is also relevant data for understanding the environmental footprint of the hosting provider.
 
-      Secondairement, un indicateur de performance normé peut être suivi : le REF, le Renewable Energy Factor.
-    controle: |-
-      S’assurer de la transparence de l’hébergeur en matière d’énergies renouvelables.
+    controle: |
+      Ensure the hosting provider's transparency in terms of renewable energy.
+      
+      Ask for proof of the origin of the electricity consumed by the host:
+      • PPA – Power Purchase Agreement as a first choice
+      • Otherwise, Certificate of Origin of the electricity
+      
+      The criterion is validated if the digital service's host is transparent about its energy mix and documents a policy of majority use of renewable energies, having an actual impact in reducing demand for fossil energy.
+      
+      In addition to the REF indicator, the hosting provider must provide the annual quantity of energy contracted as described in the "implementation" section to document its renewable energy policy.
+      
+      Document the origin of the electricity consumed by the hosting provider service's Ecodesign declaration of conformity, e.g. by referring to their relevant detailed documentation.
 
-      Demander des justificatifs sur la provenance de l’électricité consommée par l’hébergeur (PPA en priorité, sinon certificat d’origine de l’électricité).
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the service does not use a hosting service
+    metiers:
+      - Web hosting manager
+      - CSR/digital sustainability manager
+      - Purchasing manager
 
-      Le critère est validé si l’hébergeur du service numérique est transparent sur son mix énergétique et documente une politique de recours majoritaire aux énergies renouvelables, ayant un impact effectif sur la réduction de la demande en énergie fossile. Au-delà de l’indicateur REF, l’hébergeur devra renseigner la quantité annuelle d’énergie contractualisée telle que décrite dans la section « Mise en œuvre » pour documenter sa politique de recours aux énergies renouvelables.
+  - id: 8.6
+    critere: 8.6
+    thematique: Hosting Provider Geographical Optimization
+    objectif: |
+      The goal is, first, to prefer hosting in a country where carbon intensity is low and, second, in a region where the majority of customers are located, to reduce the distance travelled by the data and thereby reduce the network infrastructure mobilised and its environmental footprint.
 
-      La provenance de l’électricité consommée par l'hébergement sera documentée dans la déclaration d’écoconception du service, par exemple en renvoyant vers la documentation détaillée pertinente du fournisseur.
-    difficulte: "Faible"
-    priorite: "Recommandé"
-    application: N/A si le service n’utilise pas d’hébergement
-    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable des achats]
-  - id: "8.6"
-    critere: "Le service numérique utilise-t-il un hébergement dont la localisation géographique est cohérente avec ses activités et qui minimise son empreinte environnementale ?"
-    thematique: "Hébergement"
-    objectif: |-
-      L’objectif est d’abord de privilégier un hébergement dans le pays où l’intensité carbone est peu élevée, et secondairement, dans une région où se situent la majorité des clients, afin de réduire la distance parcourue par les données et donc réduire l’infrastructure réseau mobilisée et son empreinte environnementale.
-    miseEnOeuvre: |-
-      Privilégier un hébergeur dont la localisation de ses serveurs est située dans un pays avec une électricité bas carbone (source : [Electricity Maps](https://app.electricitymaps.com/map)) et si possible, qui est proche des utilisateurs ou des activités identifiées (cela ne correspond pas à adopter les technologies Edge Computing mais à choisir un centre de données proche des utilisateurs).
-    controle: |-
-      Identifier la localisation des utilisateurs et la localisation des serveurs.
+    miseEnOeuvre: |
+      Choose a hosting provider whose servers are located in a country with low-carbon electricity (source: Electricity Maps). Whenever possible, it is also advisable to prioritise a hosting provider located close to identified users and businesses (this does not mean adopting Edge Computing technologies but rather choosing a data centre close to the service's users).
 
-      Par valider ce critère, il conviendra de vérifier que l’hébergeur du service numérique est situé dans un pays où l’intensité carbone de la consommation électrique est minimale. Pour cela, vérifier que cette intensité est en dessous du seuil annuel de 100 gCO₂eq/kWh , en lien avec la trajectoire de réduction des émissions de gaz à effet de serre telle que définie par l’initiative Science-Based Targets (SBTi) et conformément aux objectifs de l’Accord de Paris (à partir de 2030, le seuil à respecter est de 80 gCO₂eq/kWh puis 0 gCO₂eq/kWh à partir de 2050 – source : [Quick start guide for electric utilities (PDF – 2 Mo)](https://sciencebasedtargets.org/resources/legacy/2020/06/SBTi-Power-Sector-15C-guide-FINAL.pdf) De façon complémentaire (pas nécessaire pour la validation de ce critère), favoriser le choix d’un hébergement dans le pays où la majorité de ses utilisateurs sont localisés.
+    controle: |
+      Identify users' and the servers' location.
+      
+      The hosting company used to supply the digital service is located in a country whose electricity consumption has a carbon intensity that complies with the SBTi trajectory for reducing greenhouse gas emissions required by the Paris Agreement:
+      • Threshold of 100 gCO₂eq/kWh for the maximum annual carbon intensity up to 2030
+      • 80 gCO₂eq/kWh up to 2040
+      • 0 gCO₂eq/kWh thereafter
+      
+      If possible (not necessary for validation), locate in the country where the majority of users are located.
+      
+      Document the cities where the digital service is hosted in the Ecodesign declaration of conformity.
 
-      Documenter dans la déclaration d’écoconception, la localisation (pays, ville) de l’hébergement du service numérique.
-    difficulte: "Moyen"
-    priorite: "Recommandé"
-    application: N/A si le service n’utilise pas d’hébergement
-    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable Logistique]
-  - id: "8.7"
-    critere: "Le service numérique utilise-t-il un hébergement qui récupère la chaleur fatale produite par les serveurs ?"
-    thematique: "Hébergement"
-    objectif: |-
-      Encourager les initiatives permettant de diminuer ou de récupérer l’énergie produite, par exemple pour chauffer des bâtiments en hiver. Se reporter à la [Définition de la chaleur fatale selon l’ADEME](https://fondschaleur.ademe.fr/chaleur-fatale-2/).
-    miseEnOeuvre: |-
-      Sélectionner un hébergeur ou demander des engagements à un hébergeur de réutiliser la chaleur fatale générée (par exemple, pour chauffer directement les bureaux ou d’autres installations à proximité) ou à des mécanismes alternatifs permettant de gérer la température de serveurs et de minimiser l’empreinte environnementale de l’hébergement.
-    controle: |-
-      Le critère est validé si l’hébergeur a mis en place des initiatives assurant la récupération et la réutilisation de la chaleur fatale générée par son installation, et que celles-ci sont documentées dans la déclaration d’écoconception du service numérique. Il est nécessaire que le bilan environnemental global de la réutilisation de la chaleur produite soit positif, en tenant compte de l’investissement initial pour la construction ou de l’adaptation des installations pour la validation du critère.
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the service does not use a hosting service
+    metiers:
+      - Web hosting manager
+      - CSR/digital sustainability manager
+      - Logistics manager
 
-      De façon alternative, le critère peut être validé si le centre de données utilisé pour le service a un PUE inférieur à 1,3 en réel (ou un PUE by design inférieur ou égal à 1,2 si les installations de l’hébergeur sont entrées en activité depuis moins de deux ans – le critère est donc à réévaluer passé ce délai de deux ans d’activité des installations –). Un centre de données avec un PUE faible – bien qu’efficient énergétiquement – peut rendre impossible ou compliquée cette réutilisation de la chaleur fatale.
-    difficulte: "Faible"
-    priorite: "Recommandé"
-    application: N/A si le service n’utilise pas d’hébergement
-    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable]
-  - id: "8.8"
-    critere: "Le service numérique héberge-t-il de façon distincte les données « chaudes » et « froides » ?"
-    thematique: "Hébergement"
-    objectif: |-
-      Les données chaudes sont des données utilisées alors que les données froides sont des données archivées. Utiliser des hébergements différents permettrait de réduire les impacts environnementaux.
-    miseEnOeuvre: |-
-      Séparer les données chaudes des données froides en utilisant des solutions techniques adaptées au contexte d’utilisation. Il convient d’avoir une réflexion sur le mode de stockage des données froides : il existe plusieurs technologies sur le marché, toutes n’ont pas nécessairement le même impact.
+  - id: 8.7
+    critere: Does the digital service use a hosting provider that makes efficient use of the heat produced by its servers?
+    thematique: Server Heat Efficiency and Recovery
+    objectif: |
+      Encourage initiatives to reduce or recover the energy produced, for instance, to heat buildings in winter.
+      Refer to the ADEME definition of waste heat.
 
-      Par exemple les archives et les sauvegardes à conserver dans la durée peuvent être mises dans un stockage « froid ».
-    controle: |-
-      Vérifier la séparation des données chaudes et froides dans l'architecture du service numérique, par exemple en examinant la configuration des systèmes, en s'assurant qu'ils sont distincts pour les deux types de données.
+    miseEnOeuvre: |
+      Choose a hosting provider or request commitments from a hosting provider to recover and reuse the waste heat generated (e.g., to directly heat offices or other nearby facilities) or to alternative mechanisms to manage server temperatures and minimise the hosting service's environmental footprint.
 
-      Pour valider ce critère, s'assurer que des stratégies de stockage appropriées sont mises en place pour les données froides, en prenant en compte leur empreinte environnementale.
-    difficulte: "Fort"
-    priorite: "Modéré"
-    application: N/A si le service numérique repose sur l’hébergement de moins de l’équivalent de 10 To de données
-    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Architecte de bases de données]
-  - id: "8.9"
-    critere: "Le service numérique duplique-t-il les données uniquement lorsque cela est nécessaire ?"
-    thematique: "Hébergement"
-    objectif: |-
-      Réduire les ressources informatiques et les ressources de stockage utilisées.
-      Il s’agit de se poser la question du bon niveau de service sélectionné par rapport au besoin. Plus le taux de disponibilité demandé est haut, plus cela mobilise une infrastructure coûteuse financièrement et environnementalement.
-    miseEnOeuvre: |-
-      Se questionner sur la pertinence de la redondance du service. Est-ce critique si le service numérique n’est pas disponible pendant un certain temps ?
-      - Le Backup & Restore est ce qu’il y a de moins cher, parfaitement adapté aux applications qui ont un RTO (Recovery Time Objective) ou RPO (Recovery Point Objective) de quelques heures.
-      - Le Pilot Light, à savoir par exemple une base de données « mirrorée » / dupliquée mais avec des VMs éteintes. Procédé un peu plus cher qu’un Backup & Restore, cela fonctionne pour la plupart des applications qui n’ont pas des exigences SLA (Service Level Agreement) extrêmes (inférieures à 1 heure).
-      - Le Warm Standby, lorsque les VMs tournent déjà mais dans une scalabilité limitée, quasiment en temps réel mais potentiellement en qualité légèrement dégradée s’il y a un incident.
-      - Le Hot Standby Multi-Site : résilience totale pour des SLAs temps réel. Aucune perte de service n’est tolérée, mais forcément cela a un coût.
-    controle: |-
-      Pour valider ce critère, vérifier la présence d’un SLA (Service Level Agreement) ajusté selon les besoins.
-    difficulte: "Moyen"
-    priorite: "Recommandé"
-    application: N/A si le service n’utilise pas d’hébergement
-    metiers: [Responsable de l'hébergement, Ingénieur en stockage de données, Responsable de la sécurité informatique, Architecte/Ingénieur Systèmes]
-  - id: "8.10"
-    critere: "Le service numérique tient-il compte des contraintes externes pour minimiser l’impact environnemental des calculs et transferts de données asynchrones ?"
-    thematique: "Hébergement"
-    objectif:  |-
-      Planifier les calculs et transferts de données asynchrones (sauvegardes, mises à jour, entraînement…) énergivores en dehors des pics quotidiens de consommation électrique, pour les algorithmes et traitement consommateurs pouvant être décalés dans le temps.
+    controle: |
+      The criterion is validated if the hosting provider has implemented initiatives to ensure the recovery and reuse of the waste heat generated by its installations, and that these are documented in the digital service's Ecodesign declaration of conformity. The overall environmental performance of the reuse of the heat produced must be positive, factoring in the initial investment to build or adapt the installations to validate the criterion.
+      
+      Alternatively, the criterion can be validated if the data centre used for the service has a "real world" PUE of less than 1.3 (or a PUE by design of less than or equal to 1.2 if the host's facilities have been in operation for less than two years – the criterion must therefore be reassessed once the facilities have been operating for more than two years). While energy-efficient, a data centre with a low PUE can make this waste heat reuse impossible or complicated.
 
-      Ajuster la temporalité des calculs et transferts de données asynchrones pour éviter les moments où les serveurs ou les réseaux sont le plus sollicités, de façon à éviter l’achat de nouveaux équipements pour supporter les « pics ». Préférer les transferts de données d’un terminal mobile lorsque celui-ci est connecté au réseau filaire (qui est moins sensible aux usages que le réseau mobile en termes de ressources et de consommation énergétique).
-    miseEnOeuvre:  |-
-      Configurer les calculs et transferts de données asynchrones en prenant en compte ces paramètres :
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the service does not use a hosting service
+    metiers:
+      - Web hosting manager
+      - CSR/digital sustainability manager
 
-      - Énergie : Éviter de planifier les calculs ou transferts de données asynchrones au moment des pics quotidiens de consommation électrique (lorsque la production électrique est la plus carbonée) pour les opérations pouvant être décalées dans le temps (par exemple utiliser l’API Ecowatt développée par RTE et l’ADEME).
-      - Infrastructure : Décaler les calculs et mises à jour importantes lorsque la disponibilité des ressources de calcul est faible (afin d’éviter l’achat de nouveaux équipements).
-      - Réseau : Il s’agit de décaler les utilisations importantes, en limitant l’utilisation du réseau internet entre 19h00 et 23h00. Par exemple, si une mise à jour volumineuse est prête à être diffusée à 18h00, déclarer sa mise en production à 23h00. De façon complémentaire, Lorsque le service mobile est utilisé sur un terminal mobile ayant la possibilité de se connecter sur un réseau mobile et sur un réseau filaire, reporter les transferts de données non urgentes (par exemple : mises à jour non critiques, sauvegardes, remontées de statistiques) au moment où le terminal est connecté au réseau filaire (WiFi notamment).
-    controle:  |-
-      Le service numérique justifie dans la déclaration d’écoconception de la mise en œuvre de méthodes pour décaler les calculs et transferts de données asynchrones en fonction de la disponibilité de l’énergie électrique (éviter les pics quotidiens de consommation électrique qui impliquent une électricité plus carbonée), de la charge des infrastructures internet, et éventuellement en fonction de la disponibilité des ressources de calcul quand cela est pertinent.
-    difficulte: "Faible"
-    priorite: "Recommandé"
-    application: N/A si le service numérique n’inclut pas de calculs ou transferts de données asynchrones
-    metiers: [Responsable de la programmation, Ingénieur Logiciel, Responsable RSE/Numérique soutenable]
-  - id: "9.1"
-    critere: "Le service numérique a-t-il interrogé la nécessité d’une phase d’entraînement pour éviter un usage non justifié et déraisonné ?"
-    thematique: "Apprentissage"
-    objectif: |-
-      La phase d’apprentissage repose sur une infrastructure numérique qui, dans certains cas, peut nécessiter l’utilisation d’un important volume de données et de calculs. Largement répandue dans le domaine de l’intelligence artificielle, la phase d’entraînement peut engendrer une grande consommation d’énergie et de ressources. L’objectif est donc de réduire l’empreinte environnementale de la phase d’apprentissage en choisissant une méthode adaptée et proportionnée aux caractéristiques du service numérique.
+  - id: 8.8
+    critere: Does the digital service host “hot” and “cold” data differently?
+    thematique: Hot and Cold Data Hosting Differentiation
+    objectif: |
+      Hot data are employed data, while cold data are archived data. Using different hosting providers for the two is a way to reduce the service's environmental impact.
 
-      Il s’agira donc de s’interroger sur la nécessité d’inclure une phase d’entraînement dans le service numérique. Ne pas inclure une phase d’entraînement si ce n’est pas nécessaire pour améliorer le service.
-    miseEnOeuvre: |-
-      Identifier les cibles utilisatrices et leurs besoins (voir mise en œuvre de la pratique [1.2](#1.2)) vis-à-vis du service numérique. Lister les fonctionnalités du service essentielles à ces besoins et se poser la question de la nécessité ou non de l’inclusion d’une phase d’entraînement.
+    miseEnOeuvre: |
+      Separate hot data from cold data by using technical solutions adapted to the context of use. It is worth thinking about how cold data is stored: there are several technologies on the market, not all of which necessarily have the same impact.
+      
+      For example, archives and backups that need to be kept over time can be kept in "cold" storage.
 
-      Il conviendra de s’interroger régulièrement sur la valeur ajoutée espérée par la phase d’entraînement : l’ajout d’une phase d’entraînement améliore-t-il significativement le service numérique dans l’atteinte des besoins de ses cibles ? L’amélioration est-elle effectivement perceptible et utile pour l’utilisateur ?
-    controle: |-
-      Ne pas inclure une phase d’entraînement tant que le besoin n’est pas démontré et préférer les méthodes de recherches classiques, ou des solutions existantes déjà entraînées. Le cas échéant, il s’agira de cibler des publics, les besoins associés et de rendre accessible des documents de référence faisant état des études, entretiens, recherches, personas ayant permis de définir les cibles utilisatrices et leur besoin.
+    controle: |
+      Verify the separation of hot and cold data in the digital service architecture, for instance by reviewing the systems' configuration, ensuring that they are separate for the two types of data.
+      
+      To validate this criterion, ensure that appropriate storage strategies are in place for cold data, taking their environmental footprint into account.
 
-      Justifier dans la déclaration d’écoconception le lien avec les fonctionnalités du service et les raisons expliquant la nécessité (si pertinent) de l’inclusion d’une phase d’entraînement dans le service numérique, en particulier en termes de valeur ajoutée pour l’utilisateur. Si les besoins sont clairement établis, il conviendra de définir un niveau de satisfaction suffisant et de choisir une fréquence d’entraînement proportionnée.
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the digital service hosts the equivalent of less than 10 TB of data
+    metiers:
+      - Web hosting manager
+      - CSR/digital sustainability manager
+      - Database architect
 
-      Le critère est validé si le service n’intègre pas d’apprentissage non justifié et suit donc, dans l’éventualité de la mise en place d’une phase d’apprentissage, les critères de documentation susmentionnés démontrant l’utilité de la phase d’entraînement et son caractère proportionnel au regard de ses cibles ainsi que des fonctionnalités concernées.
-    difficulte: "Faible"
-    priorite: "Prioritaire"
-    application: Applicable à tous les services
-    metiers: [Porteur de projet, Responsable R&D, Responsable RSE/Numérique soutenable, Data Scientist]
-  - id: "9.2"
-    critere: "Le service numérique utilise-t-il une phase d’apprentissage avec un niveau de complexité minimisé et proportionné à l’usage effectif du service ?"
-    thematique: "Apprentissage"
-    objectif: |-
-      Mettre en question le choix de la méthode d’apprentissage pour le service numérique et choisir la méthode d’entraînement la plus frugale, adéquate et proportionnée à l’usage du service.
-    miseEnOeuvre: |-
-      Faire le choix de la frugalité en privilégiant des méthodes simples comme une régression ou à défaut des réseaux de neurones simples à des technologies de deep-learning plus consommatrices de ressources de calcul.
-    controle: |-
-      Vérifier la consommation énergétique et en ressources matérielles de la méthode d’entraînement utilisée par le service numérique : la méthode d’entraînement doit être testée ou reconnue comme pauvre en consommation d’énergie et ressources.
+  - id: 8.9
+    critere: Does the digital service duplicate data only when necessary?
+    thematique: Data Duplication Optimization
+    objectif: |
+      Reduce the IT and storage resources used.
+      This means tailoring the service level to actual need. The higher the required availability rate, the more financially and environmentally costly the required infrastructure will be.
 
-      Si le service ne repose pas sur des méthodes de régression ou autres méthodes peu coûteuses (low- complex, low-cost), justifier dans la déclaration d’écoconception du service le besoin de méthodes plus consommatrices par une référence à un état de l’art précisant la nécessité de méthodes plus complexes pour le cas d’usage cible.
+    miseEnOeuvre: |
+      Do not systematically duplicate all data. Identify the data that need to be duplicated (e.g., critical or high-demand data). 
+      A balance must be found between security (to avoid data loss) and dissemination (having too much of it everywhere).
+      
+      Consider the relevance of the service's redundancy, to achieve the right balance. Is it critical if one of the service's features is not available for a brief period?
+      
+      Redundancy strategies include:
+      • Backup & Restore is the cheapest solution, perfectly suited to applications that have an RTO (Recovery Time Objective) or RPO (Recovery Point Objective) of a few hours;
+      • Pilot Light, a "mirrored"/duplicated database but with VMs turned off, for instance. A slightly more expensive process than Backup & Restore, it works for most applications that do not have extreme SLA (Service Level Agreement) requirements (less than one hour);
+      • Warm Standby, when VMs are already running but with limited scalability, almost in real time but potentially in slightly degraded quality if there is an incident;
+      • Multi-site hot standby: total resiliency for real-time SLAs. No loss of service is tolerated, but it necessarily comes at a cost.
 
-      Le critère est validé si le choix de la méthode d’apprentissage est l’alternative la plus sobre disponible selon l’état de l’art et les caractéristiques du service et que ces choix sont documentés dans la déclaration d’écoconception associée et auditables par un tiers.
-    difficulte: "Moyen"
-    prioritée: Prioritaire
-    application: N/A si le service numérique n'inclut pas de phase d’entraînement
-    metiers: [Porteur de projet, Data Scientist, Architecte Logiciel, Responsable RSE/Numérique soutenable]
-  - id: "9.3"
-    critere: "Le service numérique a-t-il mis en place des mécanismes visant à limiter la quantité d’entraînement nécessaire à son fonctionnement ?"
-    thematique: "Apprentissage"
-    objectif: |-
-      Limiter la phase d’entraînement utilisée par le service numérique en choisissant des modèles déjà existants et pré-entraînés. Éviter le surentraînement en maitrisant la consommation énergétique du mécanisme choisi.
-    miseEnOeuvre: |-
-      Utiliser un modèle déjà entraîné ou, à défaut, un fine-tuning d’un modèle pré-entraîné.
+    controle: |
+      To validate this criterion, check the presence of an SLA (Service Level Agreement) that is tailored to need.
 
-      Mettre en œuvre les outils permettant la production de métriques de consommation de ressources (CPU / GPU / TPU / énergies, etc.) et les mettre en corrélation avec des métriques de qualité (précision, etc.) afin de limiter la consommation au juste nécessaire.
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the service does not use a hosting service
+    metiers:
+      - Web hosting manager
+      - Storage engineer
+      - IT security manager
+      - Systems architect/engineer
 
-      S’assurer de l’utilisation de CPU, de GPU ou de TPU efficaces, dont la localisation géographique est cohérente avec les activités concernées et qui minimise l’empreinte environnementale (en particulier, dans un pays à l’intensité carbone la plus faible possible).
-    controle: |-
-      Avant la conception du service, faire un état de l’art des modèles existants pouvant s’apparenter à la fonctionnalité visée. Utiliser un modèle pré-entraîné, si nécessaire en ajoutant des composants complémentaires (fine-tuning). Si le service n’utilise pas un modèle préexistant (déjà entraîné ou pré-entraîné), justifier dans la déclaration d’écoconception en quoi le cas d’usage est différent de ce qui existe dans l’état de l’art.
+  - id: 8.10
+    critere: 8.10
+    thematique: Asynchronous Computing and Data Transfers Optimization
+    objectif: |
+      Plan energy-intensive asynchronous computing and data transfers (backup, updates, training, etc.) outside of daily power consumption peaks, for consumer algorithms and processing that can be time shifted.
+      
+      Adjust the timing of asynchronous computing and data transfers to avoid times when servers and networks are the most stressed, to avoid having to purchase new equipment to handle spikes. Prefer data transfers from a mobile device when it is connected to the wireline network (which is less sensitive to traffic than mobile networks in terms of resources and energy consumption).
 
-      Par ailleurs, pour valider le critère, le service devrait avoir mis en place le suivi d’indicateurs de consommation de ressources et de qualité des fonctions de la phase d’apprentissage pour assurer l’optimisation de la quantité d’entraînement sous-jacente au fonctionnement du service.
-    difficulte: "Fort"
-    priorite: "Prioritaire"
-    application: N/A si le service numérique n'inclut pas de phase d’entraînement
-    metiers: [Porteur de projet, Data Scientist, Architecte Logiciel, Responsable RSE/Numérique soutenable]
-  - id: "9.4"
-    critere: "Le service numérique limite-il la quantité de données utilisées pour la phase d’apprentissage au strict nécessaire ?"
-    thematique: "Apprentissage"
-    objectif: |-
-      Il s’agit de s’interroger sur les données collectées et de minimiser les impacts environnementaux associés à leur collecte et à leur traitement pour la phase d’entraînement, en privilégiant des données existantes et en limitant la collecte de nouvelles données. Ce critère est pertinent pour la phase d’apprentissage, caractérisée le plus souvent par une forte obsolescence des bases de données utilisées.
+    miseEnOeuvre: |
+      1. Energy: avoid planning asynchronous computing or data transfers during daily peak power consumption times (when electricity production is the most carbon-intensive) for operations that can be time shifted (e.g. use the Ecowatt API developed by RTE and ADEME).
+      
+      2. Infrastructure: delay important calculations and updates when computing resource availability is low (to avoid having to purchase new equipment).
+      
+      3. Network: time shift heavy operations, by limiting the use of the internet between 7:00 p.m. and 11:00 p.m. For example, if a large update is ready to go live at 6:00 p.m., declare it ready to go live at 11:00 p.m.
+      
+      When the mobile service is used on a mobile device that can connect to both a mobile and a wireline network, postpone non-urgent data transfers (e.g. non-critical updates, backups, statistical feedback) until the device is connected to the wireline network.
 
-      Comme le souligne le rapport de la CNIL « Données, Empreinte et Libertés » (2023), certains impératifs de respect de la vie privée et objectifs d’écoconception se rejoignent.
-    miseEnOeuvre: |-
-      Veiller à réutiliser, si possible, des données existantes (notamment libres de droit) afin de limiter la collecte de nouvelles données et la puissance de calcul requise pour l’analyse incrémentielle de données. Questionner l’empreinte environnementale de l’acquisition de nouveau matériel de stockage contre celui du téléchargement systématique des données lorsque nécessaire.
+    controle: |
+      The digital service must substantiate the implementation of methods used to stagger asynchronous computing and data transfers according to:
+      - Power availability (avoiding daily power consumption peaks which mean more carbon-intensive electricity)
+      - Load on internet infrastructures
+      - Availability of computing resources (when relevant)
+      
+      These methods should be documented in the service's Ecodesign declaration of conformity.
 
-      Veiller à limiter la captation de nouvelles données pour la phase d’apprentissage.
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the digital service does not include asynchronous computing or data transfers
+    metiers:
+      - Programming manager
+      - Software engineer
+      - CSR/digital sustainability manager
 
-      Appliquer les critères 7.1 et 7.2 pour la mise en place de cache, de compression et de politique de gestion pour les données de la phase d’apprentissage.
-    controle: |-
-      Utiliser des bases de données existantes pour l’entraînement de son service numérique. Vérifier que la collecte de données est minimisée et mentionner les méthodes mises en œuvre dans la déclaration d’écoconception du service numérique.
+  - id: 9.1
+    critere: Has the digital service questioned the need for a training phase to avoid unsubstantiated and unreasonable usage?
+    thematique: Training Phase Necessity Assessment
+    objectif: |
+      The training (aka learning) phase is based on a digital infrastructure which, in some cases, may require the use of a large volume of data and calculations. Widely used in the field of artificial intelligence, the training phase can consume a great deal of energy and resources. The goal is therefore to reduce the environmental footprint of the learning phase by choosing a method that is adapted and proportionate to the digital service's characteristics.
+      
+      It will therefore be necessary to question the need to include a training phase in the digital service. Do not include a training phase if it is not required to improve the service.
 
-      Examiner également, la mise en place des critères 7.1 et 7.2 pour la mise en place de cache, de compression et de politique de gestion pour les données utilisées pour la phase d’apprentissage.
+    miseEnOeuvre: |
+      Identify target users and their needs (see implementation of criterion 1.2) with regard to the digital service. List the service's features that are essential to meeting these needs and question whether it is necessary to include a training phase.
+      
+      Regularly question the hoped-for added value from the training phase: does the addition of a training phase significantly improve the digital service's ability to meet the needs of its targets? Is the improvement actually noticeable and useful to the user?
 
-      Le critère est validé si le service utilise, dès que cela est possible, des bases de données existantes et applique les critères 7.1. et 7.2 pour la phase d’apprentissage tout en documentant sa gestion de données, et l’inclusion des enjeux de sobriété, dans sa déclaration d’écoconception.
-    difficulte: "Faible"
-    priorite: "Prioritaire"
-    application: N/A si le service numérique n'inclut pas de phase d’entraînement
-    metiers: [Data Scientist, Architecte Logiciel, Responsable RSE/Numérique soutenable, Responsable de la protection des données, Développeur]
-  - id: "9.5"
-    critere: "Le service numérique optimise-t-il l’occurrence de mise à jour et de réentraînement des modèles en fonction de ses besoins et des cibles utilisatrices ?"
-    thematique: "Apprentissage"
-    objectif: |-
-      Il s’agit de questionner la fréquence des mises à jour et des réentraînements des modèles sous-jacents au service numérique en fonction des besoins réels du service (en termes de qualité et de vérifiabilité) et des besoins des cibles utilisatrices. Chaque mise à jour ou nouvel entraînement est consommateur en ressources et génère des émissions de gaz à effet de serre.
-    miseEnOeuvre: |-
-      Etablir dès la conception du service les paramètres de déclenchement d’un réentraînement du modèle. Ces paramètres devront tenir compte des besoins réels du service et des utilisateurs, notamment en termes de qualité, de fiabilité et de vérifiabilité. Analyser les données d'utilisation du service numérique pour ajuster en continu les besoins en termes de mise à jour des modèles. Prendre en compte les retours des utilisateurs, les évolutions technologiques et les changements dans l'environnement concurrentiel pour déterminer la fréquence optimale des mises à jour et de réentraînement. Minimiser autant que possible le réentraînement des modèles algorithmiques du service.
-    controle: |-
-      Fixer les conditions de déclenchement du réentraînement ou de la mise à jour des modèles algorithmiques du service en se basant sur les besoins réels des utilisateurs ou sur d’éventuelles contraintes légales. Minimiser la fréquence de ces opérations dans une démarche de sobriété. Documenter ces périmètres et les choix effectués dans la déclaration d’écoconception du service, en justifiant la prise en compte des principes d’écoconception.
+    controle: |
+      Do not include a training phase until there is proven need for one, and prefer classic research methods or existing, already trained solutions. If necessary, target audiences and associated needs: make available the reference documents that draw on studies, interviews, research, and personas that have enabled the definition of target users and their needs.
+      
+      Substantiate the link with the service's features and the reasons for the need (if applicable) to include a training phase in the digital service in the Ecodesign declaration of conformity. If the needs are clearly established, define a sufficient level of satisfaction and choose a proportionate training frequency.
+      
+      Substantiate the addition of a training phase in the service in terms of the added value for the service's users.
+      
+      The criterion is validated if the service does not include unwarranted learning and therefore follows, in the event of the implementation, demonstrating the utility of the training phase and that it is proportionate to the needs of these targets and the features concerned.
 
-      Le critère est validé s’il est démontré que la fréquence de réentraînement est proportionnelle aux besoins du service et des cibles utilisatrices et est, autant que possible, minimisée grâce au suivi d’indicateurs (de performance, de satisfaction et de consommation en ressources).
-    difficulte: "Faible"
-    priorite: "Prioritaire"
-    application: N/A si le service numérique n'inclut pas de phase d’entraînement
+    difficulte: To be determined
+    priorite: To be determined
+    application: Applicable to all services
+    metiers:
+      - Project owner
+      - R&D manager
+      - CSR/digital sustainability manager
+      - Data Scientist
+
+  - id: 9.2
+    critere: Does the digital service use a training phase with a minimised level of complexity proportionate to the actual use of the service?
+    thematique: Training Phase Complexity Minimization
+    objectif: |
+      Question the choice of training method used for the digital service and choose the one that is the most frugal, adequate and proportionate to the use of the service.
+
+    miseEnOeuvre: |
+      Choose frugality by favouring simple methods, such as regression or, failing that, simple neural networks, over deep learning technologies that consume more computing resources.
+
+    controle: |
+      Verify the energy and hardware resources consumed by the digital service's training method, which must be tested or recognised as low in energy and resource consumption.
+      
+      If the service is not based on regression or other inexpensive methods (low-complex, low-cost), substantiate the need for more energy-intensive methods in the Ecodesign declaration of conformity by referencing a state of the art detailing the target use case's need for more complex methods.
+      
+      The criterion is validated if the choice of the learning method is the most sustainable alternative available according to the state of the art and the service's characteristics, and if these choices are documented in the associated Ecodesign declaration of conformity and auditable by a third party.
+
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the digital service does not include a training phase
+    metiers:
+      - Project leader
+      - Data Scientist
+      - Software architect
+      - CSR/digital sustainability manager
+
+  - id: 9.3 
+    critere: Has the digital service implemented mechanisms for limiting the amount of training needed for it to operate?
+    thematique: Training Phase Limitation Mechanisms
+    objectif: |
+      Limit the training phase used by the digital service by choosing existing and pre-trained models. Avoid overtraining by controlling the chosen mechanism's energy consumption.
+
+    miseEnOeuvre: |
+      Use a model that has already been trained or, failing that, fine-tune a pre-trained model.
+      
+      Implement tools to produce resource consumption metrics (CPU/GPU/TPU/energy, etc.) and correlate them with quality metrics (accuracy, etc.) to limit consumption to only what is strictly necessary.
+      
+      Ensure the use of efficient CPUs, GPUs and TPUs, whose geographical location is consistent with their operation, and which minimises their environmental footprint (in particular, in a country with the lowest possible carbon intensity).
+
+    controle: |
+      Before designing the service, make a state of the art of existing models that may be similar to the targeted feature. Use a pre-trained model, if necessary by adding supplementary components (fine-tuning). If the service does not use a pre-existing model (already trained or pre-trained), substantiate how the use case is different from what exists in the state of the art in the service's Ecodesign declaration of conformity.
+      
+      In addition, to validate the criterion, the service should have set up indicator monitoring for training phase functions' resource consumption and quality, to ensure optimisation of the amount of training underlying the service's operation.
+
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the digital service does not include a training phase
+    metiers:
+      - Project leader
+      - Data Scientist
+      - Software architect
+      - CSR/digital sustainability manager
+
+  - id: 9.4
+    critere: Does the digital service limit the amount of data used for the training phase to what is strictly necessary?
+    thematique: Data Minimization for Training Phase
+    objectif: | 
+      The goal is to question the data collected and to minimise the environmental impacts associated with their collection and processing for the training phase, by favouring existing data and by limiting the collection of new data. As highlighted in the CNIL report "Data, Footprint and Liberties" (2023), certain imperatives of respect for private life and eco-design objectives are aligned. This criterion is relevant for the learning phase, which is most often characterised by a high obsolescence of the databases used.
+
+    miseEnOeuvre: |
+      Ensure that existing data (including royalty-free data) is reused whenever possible to limit the collection of new data and the incremental computing power required for data analysis. Compare the environmental footprint created by the acquisition of new storage equipment versus that of systematically downloading data when necessary.
+      
+      Be sure to limit the capture of new data for the learning phase.
+      
+      Apply criteria 7.1 and 7.2 for setting up a caching, compression, and management policy for data in the training phase.
+
+    controle: |
+      Use existing databases to train the digital service. Verify that data collection is minimised and list the methods implemented in the digital service's Ecodesign declaration of conformity.
+      
+      Verify the implementation of criteria 7.1 and 7.2 for the implementation of a cache, compression and management policy for the data used for the training phase.
+      
+      The criterion is validated if the service uses existing databases and applies criteria 7.1. and 7.2 for the learning phase, as soon as possible, while documenting its data management and including its sustainability issues, in its Ecodesign declaration of conformity.
+
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the digital service does not include a training phase
+    metiers:
+      - Data Scientist
+      - Software architect
+      - CSR/digital sustainability manager
+      - Data protection manager
+      - Developer
+
+  - id: 9.5
+    critere: Does the digital service optimise model updates and retraining according to its own needs and those of target users?
+    thematique: Model Update and Retraining Optimization
+    objectif: |
+      Examine the frequency of updates and retraining of the models underlying the digital service with respect to the service's actual needs (in terms of quality and verifiability) and the needs of its target users. Each update and new training consumes resources and generates greenhouse gas emissions.
+
+    miseEnOeuvre: |
+      Establish the parameters for triggering model retraining at the service design stage. These parameters will have to take into account the actual needs of the service and the users, particularly in terms of quality, reliability and verifiability. Analyse digital service usage data to continuously adjust model update needs.
+      
+      Take into account user feedback, technological developments and changes in the competitive environment to determine the optimal frequency for updates and retraining. Minimise the retraining of the service's algorithmic models as much as possible.
+
+    controle: |
+      Set the conditions for triggering the retraining or updating of the service's algorithmic models based on the actual needs of the service and its users, and possible legal constraints. Minimise the frequency of these operations as part of a sustainability strategy.
+      
+      Document these parameters and the choices made in the service's Ecodesign declaration of conformity, substantiating the consideration of ecodesign principles. The criterion is validated if it is demonstrated that the frequency of retraining is proportionate to the needs of the service and its target users, and is minimised as much as possible by the ongoing monitoring of indicators (performance, satisfaction and resource consumption).
+
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the digital service does not include a training phase
+    metiers:
+      - Project leader
+      - Data Scientist
+      - Product marketing manager
+
     metiers: [Porteur de projet, Data Scientist, Chef de produit marketing]
-  - id: "9.6"
-    critere: "Le service numérique utilise-t-il des techniques de compression pour les modèles utilisées lors de la phase d’entraînement ?"
-    thematique: "Apprentissage"
-    objectif: |-
-      Compresser les modèles d’intelligence artificielle (réduction de complexité des modèles) pour réduire l’impact environnemental.
-    miseEnOeuvre: |-
-      Compresser les modèles via les méthodes suivantes :
-      - sparsification
-      - pruning
-      - unification
-      - local scaling (pour limiter l’impact de la quantification)
-      - batch norm folding (réduire la redondance de certains paramètres)
-      - quantification
-      - distillation
-      - …
-    controle: |-
-      Le critère est validé si le service numérique justifie de la mise en œuvre de méthodes de compression de modèles, en indiquant les gains réalisés dans la déclaration d’écoconception du service numérique.
-    difficulte: "Moyen"
-    priorite: "Recommandé"
-    application: N/A si le service numérique n'inclut pas de phase d’entraînement
-    metiers: [Data Scientist, Architecte Logiciel, Responsable RSE/Numérique soutenable]
-  - id: "9.7"
-    critere: "Le service numérique utilise-t-il une stratégie d’inférence optimisée en termes de consommation de ressources et des cibles utilisatrices ?"
-    thematique: "Apprentissage"
-    objectif: |-
-      Réduire l’empreinte environnementale des modèles algorithmiques utilisés dans le domaine de l’intelligence artificielle en optimisant le besoin en ressources de leur phase d’inférence. Ce critère est particulièrement important pour l’intelligence artificielle (IA) générative. Si la phase d’entraînement a longtemps été perçue comme la plus consommatrice en énergie, le développement de l’IA générative tend à accroître la part de consommation d’énergie de la phase d’inférence, du fait du nombre de requêtes utilisateurs pour les services massivement consommés par le grand public. L’optimisation de la phase d’inférence est nécessaire pour aboutir à des modèles d’intelligence artificielle plus frugaux.
-    miseEnOeuvre: |-
-      Définir une stratégie d’inférence qui minimise le besoin en ressources et répond strictement au besoin des cibles utilisatrices. Mettre en place des indicateurs de suivi de consommation d’énergie, besoin en ressources de calcul, nécessaires à la phase d’inférence. Ces métriques sont à analyser par rapport à la satisfaction des utilisateurs. Fixer des objectifs de minimisation de la consommation en ressources, en tenant compte du ratio entre ressources consommées et satisfaction des utilisateurs. S’assurer que la phase d’inférence permet d’optimiser le nombre de requêtes utilisateurs.
+  - id: 9.6
+    critere: Does the digital service use compression techniques for the models used during the training phase?
+    thematique: Model Compression Techniques
+    objectif: |
+      Compress artificial intelligence models (reduce model complexity) to reduce environmental impact.
 
-      Utiliser des CPU, GPU ou des TPU efficaces, dont la localisation géographique est cohérente avec leurs activités et minimise l’empreinte environnementale (en particulier, dans un pays à l’intensité carbone la plus faible possible).
-    controle: |-
-      La stratégie d’inférence du service est adaptée aux cibles utilisatrices en minimisant les ressources nécessaires à son fonctionnement et les requêtes inutiles. Des indicateurs de suivi de consommation en ressources et de satisfaction des utilisateurs sont mis en place pour ajuster la phase d’inférence, avec pour objectif la frugalité du modèle sous-jacent au service.
+    miseEnOeuvre: |
+      Compress models using the following methods:
+      • sparsification
+      • pruning
+      • unification
+      • local scaling (to limit the impact of quantification)
+      • batch norm folding (reduce the redundancy of certain parameters)
+      • quantisation
+      • distillation
+      • other applicable techniques
 
-      Le critère est validé si le service numérique démontre dans sa déclaration d’écoconception la mise en place de principes d’écoconception dans sa phase d’inférence, adaptée aux besoins des utilisateurs.
-    difficulte: "Faible"
-    priorite: "Prioritaire"
-    application: N/A si le service numérique n'inclut pas de phase d’inférence
-    metiers: [Porteur de projet, Data Scientist, Développeur]
+    controle: |
+      The criterion is validated if the digital service justifies the implementation of model compression methods, indicating the realised gains in the digital service's Ecodesign declaration of conformity.
+
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the digital service does not include a training phase
+    metiers:
+      - Data Scientist
+      - Software architect
+      - CSR/digital sustainability manager
+
+  - id: 9.7
+    critere: Does the digital service use an inference strategy that is optimised in
+terms of resource consumption and target users?
+    thematique: Inference Strategy Optimization
+    objectif: |
+      Reduce the environmental footprint of algorithmic models used in artificial intelligence by optimising the resource requirements of their inference phase. This is particularly important for generative AI. While the training phase has long been perceived as the most energy-intensive, the development of generative AI tends to increase the share of energy consumption in the inference phase, due to the number of user requests for services that are massively consumed by the general public. Inference phase optimisation is vital to achieving more frugal AI models.
+
+    miseEnOeuvre: |
+      Define an inference strategy that minimises the need for resources, and matches target users' needs. Set up indicators to monitor energy consumption and the need for computing resources required for the inference phase. Analyse these metrics in relation to user satisfaction. Set targets for minimising resource consumption, taking into account the ratio of resources consumed to user satisfaction. Ensure that the inference phase optimises the number of user requests.
+      
+      Use efficient CPUs, GPUs, or TPUs, whose geographical location is consistent with their operation and minimises their environmental footprint (especially, in a country with the lowest possible carbon intensity).
+
+    controle: |
+      The service's inference strategy is tailored to user targets by minimising the resources required to operate the service and unnecessary queries. Indicators for monitoring resource consumption and user satisfaction are set up to adjust the inference phase, with the goal of having a frugal model underlying the service.
+      
+      The criterion is validated if the digital service demonstrates the implementation of ecodesign principles in its inference phase, tailored to users' needs, in its Ecodesign declaration of conformity.
+
+    difficulte: To be determined
+    priorite: To be determined
+    application: N/A if the digital service does not include an inference phase
+    metiers: 
+      - Project leader
+      - Data Scientist
+      - Developer
