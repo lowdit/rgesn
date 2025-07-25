@@ -537,7 +537,7 @@ criteres:
     application: N/A pour les services numériques qui ne sont pas commercialisés avec un terminal associé
     metiers: [Porteur de projet, Architecte Logiciel, Responsable RSE/Numérique soutenable]
   - id: "3.5"
-    critere: "Le service numérique propose-t-il d’installer des mises à jour correctives indépendamment des mises à jour évolutives de façon transparente ? ?"
+    critere: "Le service numérique propose-t-il d’installer des mises à jour correctives indépendamment des mises à jour évolutives de façon transparente ?"
     thematique: "Architecture"
     objectif: |-
       Depuis l’ordonnance n° 2021-1247 en date du 29 septembre 2021 relative à la garantie légale de conformité pour les biens, les contenus numériques et les services numériques, le Code de la consommation prévoit plusieurs obligations concernant les mises à jour logicielles afin de garantir la réception des mises à jour nécessaires à la conformité des biens pendant toute la durée de garantie légale de conformité (deux ans ou plus), ou toute la durée du contrat si la fourniture du bien est garantie au-delà de deux ans. Par ailleurs, plusieurs obligations sont définies pour les vendeurs concernant les mises à jour non nécessaires à la conformité du bien en termes d’information au consommateur et de possibilité de refus et de désinstallation de la mise à jour par ce dernier.

@@ -1,0 +1,2076 @@
+---
+title: "General policy framework for the ecodesign of digital services"
+description: "The general policy framework for the ecodesign of digital services was thus drafted by Arcep and Arcom in collaboration with ADEME. DINUM (the Inter-ministerial Directorate in charge of the State’s digital transformation), the Internet freedoms and innovation watchdog, CNIL, and the National Institute for Research in Digital Science and Technology, Inria, also made a significant contribution to this policy framework."
+version: "v2"
+updated_at: "2024-05-22"
+author:
+  name: "MiNumEco, sustainable ICT/Mission interministérielle numérique écoresponsable"
+thematiques:
+  - id: 1
+    nom: Strategy
+    description: |-
+      The Strategy makes it possible to determine and track the relevance, issues and challenges, and management of the digital service’s design.
+  - id: 2
+    nom: Specifications
+    description: |-
+      Regardless of the type of project management, this theme includes the project framing elements, the means implemented, the goals and constraints of the project over the entire life of the digital service.
+  - id: 3
+    nom: Architecture
+    description: |-
+      This section concerns the design and coordination of application components between the frontend and backend.
+  - id: 4
+    nom: User experience and user interface (UX/UI)
+    description: |-
+      Digital services’ design stages and methods to define the best user interface solutions
+  - id: 5
+    nom: Content
+    description: |-
+      All informative documents and media added to the digital service by contributors and available to end users.
+  - id: 6
+    nom: Frontend
+    description:  |-
+      All of the components operating on a device that make it possible to use a digital service.
+  - id: 7
+    nom: Backend
+    description: |-
+      All of the components operating on the server side that allow a digital service to run.
+  - id: 8
+    nom: Hosting
+    description: |-
+      The means implemented on the hosting end to enable a digital service’s design/development, use, and, if applicable, training. The entire hosting chain used for the service's critical features (data centres, Content Delivery Network, etc.) must be taken into account to validate this section’s criteria.
+  - id: 9
+    nom: Algorithmics
+    description: |-
+      In computer science, algorithmics is used in various applications, particularly in the field of artificial intelligence, which is notable for the use of machine learning techniques. This section aims to implement principles of ecodesign and frugality in the training and inference of algorithmic models used for artificial intelligence. The training (or learning) phase refers to the process by which a system performs calculations, using data and algorithmic models, to provide functionalities. This is followed by an inference phase, implementing the trained models.
+criteres:
+- id: "1.1"
+  critere: "Has the digital service been assessed favourably in terms of utility, taking its impact on the environment into account?"
+  thematique: "Strategy"
+  objectif: "Take the digital service's utility into account from the design stage, and seek to satisfy at least one of the sustainable design goals (SDG), one of the planetary boundary issues and/or the targets of any other similar policy framework."
+  miseEnOeuvre: |-
+    To assess the service's utility, refer to other standards and policies and determine up front if the project is useful, and particularly:
+    - The UN's 17 sustainable development goals (SDG)
+    - The 9 planetary boundaries
+    - The European framework to facilitate sustainable investment
+    - The CSRD Directive – Corporate Sustainability Reporting Directive
+    - ISO standards, particularly ISO 26 000 (non-certifiable)
+    - Global Reporting Initiative
+
+    If the service's utility is not part of these policy frameworks, establishing why the service is useful contributes to the general interest or supports a public policy. This analysis must factor in the benefit analysis of the digital solution compared to an alternative solution and the rebound effects, if applicable.
+
+    Verify one or several of the following, for instance: its relevance, its utility, its value creation, its validity, contribution to the public interest, how it satisfies essential needs, contribution to the creation of digital commons, etc.
+  controle: |-
+    Detail how the service was assessed, e.g. which sustainable development goals are attached to the service, how planetary boundary issues are addressed, which other policy frameworks are used (specify), and how they are relevant in the digital service's Ecodesign declaration of conformity.
+
+    A digital service validates this criterion if it is the subject of a study whose purpose is to assess and substantiate the environmental and social impacts.
+
+    The report will contain at least one answer to the following questions:
+    - Is a digital technology required to provide this service?
+    - Is there any non-digital solutions that could satisfy this need?
+    - What are the real needs that justify the creation of this service?
+    - Does the service's value added justify the use of resources needed to create it? Is more value being created than destroyed?
+    - For each feature: Is this capability really necessary? Can it be done differently?
+    - What would happen if it did not exist?
+
+    This study must also include a qualitative analysis of the potential direct and indirect environmental impacts tied to the service, which will mean producing an issue tree according to the ADEME Level 1 Project footprint method.
+  difficulte: "Fort"
+  priorite: "Prioritaire"
+  application: "Applicable à tous les services"
+  metiers: 
+    - "Project leader"
+    - "CSR/Digital sustainability manager"
+- id: "1.2"
+  critere: "Has the digital service defined its target users, the target users' actual job-related needs and expectations?"
+  thematique: "Strategy"
+  objectif: "To satisfy the needs of the digital service's users as fully as possible, having knowledge of one's targets, their usage patterns, needs and behaviours is crucial, to avoid overloading digital services with features and content, or stripping them down to the point of failing to meet expectations. If primary and secondary user categories are not identified, it is hard to design the digital service properly. Uncertainties often lead to extrapolating needs beyond actual expectations. One might also fail to meet 'right needs' due to a lack of knowledge of one's users, or only doing what the project owner requested. All of this ends up being a waste of resources, of time and has a negative impact on the environment. All non-essential features must be avoided. In addition, it is important to check that one or several other services do not already satisfy this need, to avoid duplicating them."
+  miseEnOeuvre: |-
+    To define target users, mobilise the tools and components of the UX Research phase: competition analysis, analysis of existing products, define user personas, conduct user interviews or surveys, observation, etc.
+
+    These could be the stages used to identify target users' job-related needs:
+    • interviews with the different stakeholders and occupations affected;
+    • UX research with target users;
+    • define primary and secondary users;
+    • adjunct practice: agile methodologies;
+    • observation of usage statistics in the case of an existing service.
+  controle: |-
+    Give access to these research stage reference documents: user interviews, UX research, benchmarks, user personas, marketing studies, etc. that make it possible to obtain a detailed definition of target users. Based on these elements, research, observations, surveys, etc. should also be accessible to be able to obtain an accurate expression of job-related needs and target users' other actual expectations.
+
+    To validate this criterion, the target user profile that analyses users' job-related needs and expectations should be clearly detailed in the digital service's Ecodesign declaration of conformity, along with the choices made in this area.
+  difficulte: "Moyen"
+  priorite: "Important"
+  application: "Applicable to all services"
+  metiers: 
+    - "Project leader"
+    - "Product marketing manager"
+- id: "1.3"
+  critere: "Does the digital service have at least one identified ecodesign supervisor?"
+  thematique: "Strategy"
+  objectif: "The ecodesign of sustainable digital services covers a very large scope that is hard to tackle fully during each stage of the project. It is vital that the team members working on the project be able to rely at all times one or several resource people to assist them in the best practices to deploy. The function of the ecodesign supervisor is important for guaranteeing consistency between the implementation of ecodesign measures, their monitoring and their sustainability."
+  miseEnOeuvre: |-
+    The internal or external supervisor(s) ensure the project team's acculturation to digital service ecodesign, to encourage its assimilation into all projects.
+
+    The ecodesign supervisor will maintain internal technical documentation, so that the ecodesign techniques are written down and shared with the team in charge of the digital service, to ensure their future sustainability.
+
+    They will also be responsible for implementing a periodic review, taking stock of the service's ecodesign strategy, and for updating the Ecodesign declaration of conformity.
+
+    They verify that the teams involved in designing the digital service are aware of (and possibly trained in) ecodesign.
+  controle: |-
+    The name of the supervisor(s) and any certification or qualifications obtained.
+
+    The supervisor(s) could, in particular, be tasked with monitoring the implementation of the general policy framework for the ecodesign of digital services.
+
+    The criterion is validated if a (titular/named or generic) supervisor is stipulated in the service's Ecodesign declaration of conformity and all other public and easily accessible document.
+  difficulte: "Moyen"
+  priorite: "Important"
+  application: "Applicable to all services"
+  metiers: 
+    - "Project leader"
+    - "CSR/digital sustainability manager"
+- id: "1.4"
+  critere: "Does the digital service perform regular reviews to ensure compliance with its ecodesign strategy?"
+  thematique: "Strategy"
+  objectif: "Depending on the context, a digital service can evolve: the team changes, users add content, increasingly resource-hungry processing, etc. To ensure that this ecodesign approach is sustained over time, reviews need to be performed on a regular basis. The publication of an Ecodesign declaration of conformity also leads to greater transparency on digital service' environmental performance for users and stakeholders."
+  miseEnOeuvre: |-
+    Conducting a regular review, self-assessment or audit, by applying this policy framework. Moreover, performing performance audits and load tests on the application/component/micro-service, identifying bottlenecks, resources used, etc. The frequency of these procedures should be tailored to the size and nature of the digital service.
+
+    Providing an account of this (self) assessment in the Ecodesign declaration of conformity, which must be updated regularly, at least when any significant change is made to the service. The Ecodesign declaration of conformity should also list the actions planned to improve the service's environmental performance.
+  controle: |-
+    To validate this criterion, implement a process of regular review or self-assessment applying this policy framework and providing an account of it in the service's Ecodesign declaration of conformity. Conduct regular performance audits and load tests.
+  difficulte: "Moyen"
+  priorite: "Important"
+  application: "Applicable to all services"
+  metiers: 
+    - "CSR/digital sustainability manager"
+    - "IT Manager"
+    - "Developer"
+- id: "1.5"
+  critere: "Has the digital service set itself goals to reduce or limit its own environmental impacts?"
+  thematique: "Strategy"
+  objectif: "Measuring and reducing the digital service's environmental footprint. This implies having a global understanding of the digital service's impact, at each stage (beginning, operation, end), and incorporating the environmental impacts of the equipment used in the product and use of this digital service."
+  miseEnOeuvre: |-
+    Define environmental indicators to be tracked, if possible following a diagnosis based on a multicriteria life cycle assessment analysis (LCA) methodology, to identify those indicators that create the ability to document the majority of the service's or the organisation's environmental footprint (see the European Commission's "Product Environmental Footprint" and "Organisation Environmental Footprint" methodologies and ISO 14040 and ISO 14044 standards).
+
+    The environmental impact indicators to be considered as top priority – according to available data – are:
+    - Primary energy consumption
+    - GHG emissions
+    - Blue Water footprint (i.e. direct consumption of surface and groundwater)
+    - Abiotic resource (at least metals and minerals) depletion
+
+    The scope of the LCA can be expanded, for instance to include production methods: environmental impact of design equipment, online services used (test and QA environments…), team members' travel, etc.
+
+    Set (short, medium and long-term) reduction targets for the digital service's environmental footprint based on the projected number of users. The top priority monitored indicators must pertain to primary energy consumption, GHG emissions, Blue Water footprint and abiotic resource depletion. Depending on the context, it should be stipulated whether the indicators are in absolute (kg CO2e) or relative (kg CO2e/user) value.
+  controle: |-
+    Environmental indicators have been identified to obtain information on the digital service's environmental footprint. If data availability permits, these environmental indicators should be based on the LCA methodology.
+
+    Pay particular attention to the following questions when reviewing the document:
+    • What indicators have been defined? At the very least, the top priority indicators listed in the implementation section must be included.
+    • How will these indicators be monitored?
+    • Will they be published/openly available and, if yes, where?
+    • Is the methodology for assessing the monitored indicators publicly accessible?
+
+    At what regularity will the assessment be performed? Moreover, environmental footprint reduction targets are set for the service for the monitored environmental indicators. They will concern, at least, primary energy consumption, GHG emissions, Blue Water footprint and abiotic (metal/mineral) resource depletion.
+
+    These targets can be part of the trajectory set at the system or organisational level. For some environmental issues such as climate change, trajectories must be aligned with the Paris Agreement (e.g. based on SBTi standards, or Recommendation ITU-T L.1470 for ICT).
+
+    The criterion is validated if the service's environmental footprint has been assessed – using a recognised methodology, if possible a (multicriteria) LCA assessing the service's impacts across its life cycle – and if the service has impact reduction targets. These elements must be monitored regularly and be recorded in a public and auditable document, e.g. the service's Ecodesign declaration of conformity.
+  difficulte: "Fort"
+  priorite: "Prioritaire"
+  application: "Applicable to all services"
+  metiers: 
+    - "CSR/digital sustainability manager"
+    - "Project leader"
+- id: "1.6"
+  critere: "Does the digital service collect data in a responsible and judicious manner?"
+  thematique: "Strategy"
+  objectif: "Encourage responsible and judicious data collection to complement the legal obligation to comply with the principle of 'data minimisation' set forth in the General Data Protection Regulation (GDPR) with respect to personal data. The aim is to work on decreasing the amount of data that are collected, processed and stored by the service, including non-personal data and metadata, to optimise the use of IT resources."
+  miseEnOeuvre: |-
+    Clearly define the data needed for the service to operate, consistent with target users and their expectations as defined in criterion 1.2 of this policy framework.
+
+    If a datum does not contribute directly to improving the user experience or the service's operation, consider not collecting it.
+
+    The collection of metadata for the purpose of user profiling should be avoided.
+
+    For each type of data deemed essential to the service's operation and to users' needs, define collection terms and conditions that comply explicitly with GDPR provisions regarding personal data.
+
+    For non-personal data, their conservation period must also be minimised to reduce excessive data storage.
+
+    Implement complete information, the right to refuse and/or the need to obtain explicit consent to use all of the collected data, including non-personal data.
+  controle: |-
+    Monitor the type and quantity of data that are collected, processed and stored by the service.
+
+    Regarding personal data, independent of ecodesign issues, the minimisation of this data collection is a GDPR imperative and must be strictly monitored by the data controller.
+
+    From a broader perspective, for all of the collected data (including non-personal):
+    - Substantiate the need for this collection in the service's Ecodesign declaration of conformity with respect to its target users (criterion 1.2)
+    - Limit their processing and period of conservation
+    - Document the tools used to obtain consent, if applicable
+
+    As concerns personal data, a referral could be made back to the records of processing activities on personal data stipulated in the GDPR.
+
+    Do not collect metadata used to profile users, unless:
+    - This collection process is vital to meeting the needs of the service's end users (criterion 1.2) or its operation
+    - The user has given their express and informed consent
+    - The user can disable this collection at any time
+
+    If applicable, these elements must be documented in the digital service's Ecodesign declaration of conformity.
+  difficulte: "Moyen"
+  priorite: "Important"
+  application: "Applicable to all services"
+  metiers: 
+    - "Data Scientist"
+    - "Chief legal officer"
+- id: "1.7"
+  critere: "Does the digital service use an encryption level tailored to its needs?"
+  thematique: "Strategy"
+  objectif: "Promote the minimisation of encryption's environmental cost while factoring in the required security constraints. Encryption increases power consumption through computing needed for encryption and decryption, storage, and communication network load, but can also help lighten IT systems' load in some cases."
+  miseEnOeuvre: |-
+    For a given security level, find the optimum choices for preserving resources:
+    • Perform comparative measures of different encryption algorithms to select the one that introduces the smallest amount of processor resources for an equivalent performance
+    • Assess the need for encryption considering the nature of the data and associated risks
+    • When encryption is planned, implement an algorithm and implementation process that minimise the service's environmental footprint (without compromising the required level of security)
+
+    Use encryption mechanisms that provide the ability to generate proof without having to keep or divulge the file to be proven (e.g. proof of the supply of an ID card, etc.).
+
+    Keep the encrypted and compressed archives (free tools such as 7zip and Zed! operate on this principle).
+  controle: |-
+    If the service relies on encryption mechanisms, document:
+    • Reasons for implementing encryption mechanisms
+    • Service's IT security risks
+    • Minimisation of the associated environmental footprint
+
+    These details should be included in the service's Ecodesign declaration of conformity.
+  difficulte: "Moyen"
+  priorite: "Important"
+  application: "N/A if the service does not use an encryption mechanism"
+  metiers: 
+    - "IT security expert"
+    - "Data protection officer"
+- id: "1.8"
+  critere: "Has the digital service taken steps to embrace open source?"
+  thematique: "Strategy"
+  objectif: "Open source means that the code can be used for other projects, thereby avoiding a waste of dedicated resources. The publication of a digital service's source code in open source also helps extend the service's lifespan by relying on collaboration with the community of developers and researchers to fix any bugs and add new features. It also makes it easier to audit and be more transparent, including from an environmental standpoint."
+  miseEnOeuvre: |-
+    Publishing a digital service's source code as open source (licence-free) for those elements that are not covered by confidentiality obligations, and in accordance with any applicable intellectual property rights.
+
+    Whenever possible, use open source code for the service's design and development.
+  controle: |-
+    The digital service's source code is published as open source when it is not subject to confidentiality restrictions or intellectual property rights.
+
+    If some parts of the digital service's code are not published as open source, the reasons for that choice need to be substantiated in the digital service's Ecodesign declaration of conformity, so that it can be audited by a third party.
+
+    If applicable, the provider must show that it has made an effort to open all or part of its source code.
+
+    Whenever possible, the digital service should use open source code for its own operation.
+
+    The criterion is validated if the service's code is published with a royalty-free licence, and if the choices and efforts made in this area are substantiated in the digital service's Ecodesign declaration of conformity.
+  difficulte: "Moyen"
+  priorite: "Important"
+  application: "Applicable to all services"
+  metiers: 
+    - "Project leader"
+    - "Development manager"
+    - "Chief legal officer"
+- id: 1.9
+  critere: "Has the digital service been designed using standard, interoperable technologies rather than dedicated, closed-source technologies?"
+  thematique: Strategy
+  objectif: >
+    The goal is to combat the equipment’s software-induced obsolescence. Any digital service that strives to be the most stable and sustainable over time will extend the devices’ useful life. Typically, the use of new application programming interfaces (APIs) or new standards not supported by older devices is likely to hasten devices’ obsolescence. As a result, standards interoperability is a crucial means of extending the devices’ useful life and their lifespan. As another example, native applications may need the latest OS (operating system) versions or even the latest versions of equipment to function, which leads to hardware obsolescence.
+  miseEnOeuvre: >
+    Well in advance of development, assess feasibility with standard technologies (e.g., web rather than native applications) to meet the needs of users and occupations/team members. It is also a question of ensuring that the APIs used are standard and are well supported (JavaScript APIs in web browsers, for instance). Relying on interoperable technologies creates the ability to combat software obsolescence. Similarly, building your service from open source components enables ongoing control over the maintenance of the code used, thereby improving the code’s longevity and reducing the risk of the hardware’s software-induced obsolescence. 
+    
+    In the event that a native application is required (e.g., in some cases, if the digital service requires particularly sensitive data processing), ensure that it uses standards that are compatible with the main operating systems.
+  controle: >
+    Verify that the digital service can be used by the same interface on all relevant devices (e.g. a Web app). If the digital service is a native application, assess the need to have chosen to develop a native application: technical constraints, control over target hardware? The criterion is validated if the service is based on interoperable standards that are common to the main ecosystems (devices, operating systems, browsers, etc.).
+  difficulte: "Moyen"
+  priorite: "Important"
+  application: Applicable à tous les services
+  metiers: 
+    - IT Manager
+    - Developer
+- id: 1.10
+  critere: "Does the digital service use documented and open APIs to interact with the hardware?"
+  thematique: Strategy
+  objectif: >
+    A connected object or device interacts with its environment via APIs (dedicated program access interfaces),
+    typically called via a "pilot" or "driver" program, or an application on a smartphone.
+
+    - When these APIs are not open, it is often impossible to extend the object's lifespan beyond that of
+      the application or driver originally designed for the object: if this software is abandoned, a perfectly
+      functional object or peripheral becomes unusable.
+    
+    - When the APIs are open (documented and open use), a third-party developer can develop an
+      alternative application and extend the life of the object or peripheral.
+
+    For connected objects marketed with an application or driver, the obsolescence of the application or driver
+    marks the end of life for the object.
+
+    Open source software makes it possible to compensate for this obsolescence provided the APIs and formats
+    are documented and open, the only way for third-party software developers to develop alternatives and
+    extend the life of these objects or devices. It also makes it possible to run the connected object or device on
+    operating systems that are not supported by the hardware designer.
+  miseEnOeuvre: >
+    If the software/driver is associated with a piece of equipment, device or peripheral, the designer must
+    provide open and documented APIs (application programming interfaces) to allow alternative digital services
+    to be used on the device in the event of a software defect or abandonment, to extend the life of the object
+    or device.
+  controle: >
+    If the digital service is based on the use of a device, equipment or peripheral, the provider must make
+    available the APIs necessary to operate the connected object. The peripheral's APIs must be documented
+    and open use, so that an alternative program or driver can be created to extend the object or device's
+    lifespan.
+  difficulte: "Fort"
+  priorite: Recommandé
+  application: "N/A if the digital service does not rely on a connected object or peripheral device"
+  metiers: 
+    - "IT Manager"
+    - "Developer"
+    - "Systems architect"
+- id: 2.1
+  critere: "Has the digital service drawn up a list of the hardware profiles that users will be able to employ to access it?"
+  thematique: Hardware Compatibility and Accessibility
+  objectif: >
+    A digital service that uses only the latest generation of technical resources can push users to replace their
+    equipment to be able to access it (hardware obsolescence). As a result, some uses may be constrained by
+    their devices. To allow for a wider choice of devices, including old ones, and to reduce the need to replace
+    them, it is important to profile the hardware that users will be able to employ, both today and in future:
+    minimum internet connection speed, screen size, microprocessor speed, number of Gb of RAM, touch screen
+    or not, smartphone, tablet, etc. laptop, desktop computer, etc.
+  miseEnOeuvre: >
+    Define the profile of supported hardware, as old as possible, to avoid any hardware obsolescence.
+  controle: >
+    The criterion is validated if the profile of the equipment supported by the service, as old as possible, is defined
+    and included in the service's Ecodesign declaration of conformity.
+    If some features require a newer version, indicate the minimum versions with and without support for those
+    features.
+    Indicate any future changes to the minimum hardware requirements.
+  difficulte: 
+  priorite: 
+  application: "Applicable to all services"
+  metiers: 
+    - "IT Manager"
+    - "CSR/digital sustainability manager"
+    - "Developer"
+  - id: 2.2
+  critere: "Can the digital service be used on older model devices?"
+  thematique: Device Longevity and Sustainability
+  objectif: >
+    According to the ADEME-Arcep study, devices – and their production in particular – account for 65% to 90%
+    of ICT's environmental footprint, depending on the indicator considered. Extending devices' lifespan is
+    therefore an essential lever for reducing the environmental impacts of digital technology. The digital service
+    must limit its contribution to their obsolescence by running on the oldest possible devices.
+  miseEnOeuvre: >
+    Ensure that the digital service is compatible with old equipment for each feature. For instance, this criterion
+    can be added in tests or QA (Quality Assurance) audits.
+
+    Clarification of the criterion:
+    - This refers to compatibility with hardware and not with an operating system or any other software
+      running the digital service (e.g. a browser). It is therefore not a question of making the digital service
+      compatible with software or operating systems for which security updates have not been made.
+    - The definition of "usable" here: degraded mode accepted but without loss of essential or critical
+      functionality or content for the service.
+    - If the digital service is a native application: the digital service must be usable on equipment put on
+      the market seven or more years ago, using the latest version of the operating system offered by this
+      equipment.
+    - If the digital service runs on a web browser: the digital service must be usable on devices equipped
+      with a microprocessor that was put on the market ten years ago or more.
+    - For other digital services, their use must be guaranteed on devices or peripherals put on the market
+      seven or more years ago.
+    - A longer compatibility period is recommended. In this case, specify the goal, e.g. in the Ecodesign
+      declaration of conformity.
+    - This criterion does not exclude the use of recent features enabling a reduction in the environmental
+      impacts as long as the service remains available on older versions (principle of continuous
+      improvement).
+  controle: >
+    Monitor implementation according to the nature of the service by verifying the following:
+    - If the digital service is a native application: test the digital service's critical features on an older device
+      (e.g. a smartphone, tablet or smart TV), in other words that was put on the market seven or more
+      years ago, using the latest version of the operating system offered by this equipment.
+    - If the digital service runs on a web browser: the critical features must work on a laptop – or other
+      device, as long as this is consistent with the devices most commonly used by the service's target
+      users, defined by criterion 1.2 – equipped with a microprocessor that was put on the market ten
+      years ago or more.
+    - For other digital services: test the service's critical features on a device (e.g. connected device) that
+      was released on the market seven years ago or more.
+
+    Indicate the hardware and software characteristics of the old equipment that allows the service to operate
+    in the service's Ecodesign declaration of conformity.
+    Take into account when the assessment was performed and not the date the service went live.
+    The criterion is validated if the service is usable under the above
+  difficulte: moyen
+  priorite: prioritaire
+  application: "Applicable to all services"
+  metiers: 
+    - "IT Manager"
+    - "CSR/digital sustainability manager"
+    - "Developer"
+  - id: 2.3
+  critere: "Can the digital service be used with a low-speed connection or offline?"
+  thematique: Connectivity and Accessibility
+  objectif: >
+    If the digital service is aimed at a large audience, it will have no control over the level of connectivity. It is
+    necessary to ensure that certain users who do not have broadband access are not excluded. In addition to
+    bridging the digital divide, it is also a best practice for the environment. Indeed, users are not always aware
+    of what slows down a digital service: the network connection, the digital service or the device being used. A
+    lighter digital service therefore requires far fewer network resources to function.
+  miseEnOeuvre: >
+    Test the service's usability with low-speed connections, measure and improve response time. Content can
+    be delivered in degraded quality when necessary.
+    It is recommended that native applications include an offline mode for features that it is technically possible
+    to provide offline.
+  controle: >
+    Test the service's usability with low-speed connections (3G mobile and 512 Kbit/s fixed) and offline. The
+    criterion is validated if the digital service can be used without a network connection or with a dial-up
+    connection. The minimum speed will be stipulated in the Ecodesign declaration of conformity.
+  difficulte: Moyen
+  priorite: Recommandé
+  application: "Applicable to all services"
+  metiers: 
+    - "IT Manager"
+    - "CSR/digital sustainability manager"
+    - "Developer"
+  - id: 2.4
+  critere: "Can the digital service be used with older versions of the operating system and web browsers?"
+  thematique: Software Compatibility and Longevity
+  objectif: >
+    The aim is to allow older operating systems and web browsers to be used, to extend their lifespan. As
+    operating systems and browsers are sometimes linked to a device, this practice can partially reduce the digital
+    service's contribution to their obsolescence. This criterion takes into account European provisions to ensure
+    the availability of patch updates for five-year old operating systems.
+  miseEnOeuvre: >
+    If the digital service is a native application, it must support the latest versions of supported operating systems
+    and be usable on older versions of these OS (excluding patch updates), up to five years old, taking into
+    account the first release of a stable version.
+    If the digital service runs on a web browser, it must support the latest versions of web browsers (excluding
+    patch updates) and be usable on older versions of major web browsers, up to two years old, taking into
+    account the first release of a stable version.
+  controle: >
+    Monitor implementation according to the nature of the service by verifying the following:
+    - If the digital service is a native application: test the digital service's critical features on supported
+      operating systems that are five years old, taking into account the first release of a stable version.
+    - If the digital service runs on a web browser: test that critical features work on major web browsers
+      in a version that is at least two years old, taking into account the first release of a stable version.
+
+    The digital service's Ecodesign declaration of conformity must specify:
+    - If the digital service is a native application: the minimum versions of the supported operating
+      systems.
+    - If the digital service runs on a web browser: list the software requirements and minimum versions of
+      compatible web browsers and their year of release. The cause of the incompatibility of the previous
+      version should be added, if said cause can be diagnosed.
+
+    If some features require a newer version, indicate the minimum versions with and without support for those
+    features.
+  difficulte: 
+  priorite: 
+  application: "N/A if the digital service does not rely on an OS or a web browser"
+  metiers: 
+    - "IT Manager"
+    - "CSR/digital sustainability manager"
+    - "Developer"
+  - id: 2.5
+  critere: "Does the digital service adapt to different types of display devices?"
+  thematique: Display Adaptability and User Interface
+  objectif: >
+    The digital service should help limit the purchase of new devices by running on equipment with various screen
+    sizes, including the smallest (old smartphones, for instance). A digital service's ability to adapt to low-
+    definition screens can help combat software-induced hardware obsolescence.
+  miseEnOeuvre: >
+    Only if applicable, make the digital service's interface adaptable to the size of the screen without loss of
+    usability ("responsive design").
+
+    To avoid the proliferation of devices used to access different services, it is recommended that digital services
+    be adaptive and able to be displayed equally perfectly on a mobile phone's small screen and a PC's large
+    screen. It is best to avoid duplicating the digital service with a specific version for each device. It is also
+    recommended that the menus be available in touch mode and through a keyboard.
+
+    When relevant, the development of the "mobile first" version's design can enable adoption of a more
+    streamlined interface.
+  controle: >
+    Test the digital service's critical features on different display sizes (desktop computer, tablet, and mobile):
+    - The service must adapt its display mode dynamically according to the size of the screen (responsive
+      web design).
+    - Check that the various typical menu components are accessible via any type of interface, including
+      touch or not, with or without a mouse.
+    - Ensure that the service is fully displayed in a viewing area 1200 pixels wide (which corresponds to
+      the definition of standard 17-inch computer screens in 5:4 format with 80 pixels used by a launch
+      bar).
+    - For interfaces that do not allow the display to be scrolled up and down, ensure that the service is
+      fully displayed in a viewing area 720 pixels high (which corresponds to the definition of computer
+      monitors with a screen height of 800 pixels, with 80 pixels used by a launch bar).
+
+    The criterion is validated if the abovementioned conditions are met. Document the tests conducted in the
+    Ecodesign declaration of conformity.
+  difficulte: 
+  priorite: 
+  application: "N/A if the digital service has no on-screen user interface"
+  metiers: 
+    - "Developer"
+    - "IT Manager"
+    - "Designer"
+- id: 2.6
+  critere: "Has the digital service planned for a design review and a code review whose goals include reducing each feature's environmental impacts?"
+  thematique: Sustainable Design and Development
+  objectif: >
+    To achieve as sustainable a solution possible while meeting this need, one must harness the collective
+    intelligence of the entire team. To this end, it is not enough to simply validate the design through a code
+    review, a best practice that is now quite widespread. Rather it is necessary, and this will be positive for both
+    the team and the project, to think about design and architecture choices ahead of any development, one of
+    whose goals will be minimising environmental impacts.
+  miseEnOeuvre: >
+    By involving the entire team, and all the occupations, a design review is conducted prior to development to
+    choose the solution that meets the need in question, while minimising environmental impacts. Then, if code
+    has been produced to implement the solution, a code review is conducted post development.
+  controle: >
+    What is the development process in place?
+    The criterion is validated if:
+    - A design review taking into account the service's environmental footprint was conducted: from the
+      design stage, the project team should be able to define an issues tree for the digital service by
+      depicting the digital service's direct and indirect impacts by feature, so that the whole team might
+      validate the features with full awareness of the potential environmental impacts (cf. ADEME's Project
+      Footprint methodology).
+    - For code-based services, a code review aimed at minimising the service's environmental cost was
+      produced after the service was designed.
+
+    Where applicable, these reviews shall be mentioned in the Ecodesign declaration of conformity.
+  difficulte: 
+  priorite: 
+  application: "Applicable to all services"
+  metiers: 
+    - "Software architect"
+    - "Developer"
+    - "CSR/digital sustainability manager"
+- id: 2.7
+  critere: "Has the digital service planned for a maintenance and decommissioning strategy?"
+  thematique: Service Lifecycle Management
+  objectif: >
+    The goal is to scrap technical environments that are still active but no longer in use: Production, QA (Quality
+    Assurance), Testing, Development Environment, Backup, etc. These environments can take up IT resources
+    unnecessarily. It is also a question of planning for the possible end of life of all or part of the service.
+  miseEnOeuvre: >
+    Define and regularly update a maintenance and decommissioning strategy for environments and callback
+    dates. More broadly, in the event of non-use or a significant drop in use, consider whether it is appropriate
+    to shut down parts of the service (or the entire service) to reduce its impacts, taking into account the
+    underlying equipment to be repurposed to extend its lifespan. In the event of decommissioning, it will be
+    necessary to give a new life to the equipment and resources freed up (reuse, repurposing, recycling, etc.) and
+    to anticipate the future of the non-personal data collected to provide, for instance, for its deletion or its
+    release into open data. In the event of the end of life of a proprietary digital service, it is recommended that
+    the service's source code be published in open source.
+  controle: >
+    List the features, components and active environments, specifying their operating condition. The criterion is
+    validated if a maintenance and decommissioning strategy is defined for the service that includes recall dates
+    for unused items and planned actions to optimise the second life or end-of-life of the resources freed up in
+    the event of decommissioning. The results must be documented in the Ecodesign declaration of conformity.
+
+    In the event of the end of life of all or part of the service, the management of non-personal data and the
+    equipment used for their service must be planned, in such a way as to reduce the associated environmental
+    impacts.
+  difficulte: 
+  priorite: 
+  application: "Applicable to all services"
+  metiers: 
+    - "IT Manager"
+    - "Software architect"
+  - id: 2.8
+  critere: "Does the digital service require its suppliers to guarantee a strategy to reduce their environmental impacts?"
+  thematique: Sustainable Supply Chain
+  objectif: >
+    A project is rarely conducted with every aspect being handled in house. A great many external resources are
+    mobilised over the course of the project's life and must be aligned with its strategy. The ecodesign of a digital
+    service should be based on the environmental sustainability of the entire value chain, including that of
+    outside suppliers. It is crucial to ensure that suppliers have a strategy to reduce their environmental impacts.
+  miseEnOeuvre: >
+    Identify the necessary resources and associate them with environmental requirements. The scope of the
+    strategy relates to the digital service's design (not to the supplier itself).
+    
+    Refer to the following documents:
+    - A Practical Guide to Sustainable Digital Procurement (PDF – two Mb).
+    - "ISO 20400, Sustainable Procurement – Guidelines", an international standard published by ISO in
+      April 2017 that provides recommendations for achieving corporate social responsibility goals
+      throughout the supply chain.
+  controle: >
+    The criterion is validated if the environmental characteristics of the suppliers used to design the digital service
+    are taken into account in the service's procurement and partnership policy, with a view to the associated
+    environmental impacts being documented in the Ecodesign declaration of conformity.
+
+    In particular, the recommendations of the Practical Guide for Sustainable Digital Procurement and/or the ISO
+    20400 standard may be considered.
+  difficulte: 
+  priorite: 
+  application: "N/A if the digital service does not use outside suppliers"
+  metiers: 
+    - "Partnership manager"
+    - "CSR/digital sustainability manager"
+    - "Project leader"
+- id: 2.9
+  critere: "Has the digital service considered the environmental impacts of the off-the-shelf interface components used?"
+  thematique: Interface Component Sustainability
+  objectif: >
+    Know the environmental impacts of interface components (buttons, forms, etc.), and the design systems that
+    are overlays to operating system interfaces, used in the digital service.
+  miseEnOeuvre: >
+    Compare the environmental impacts of off-the-shelf interface components used in the digital service. For
+    instance, measuring and comparing their weight in terms of resources (file size, amount of data transferred).
+  controle: >
+    Verify that the interface components used are designed to reduce their environmental impacts.
+    
+    To do this, take into account or carry out, where appropriate, comparative measurements between the
+    different similar components and choose those with the best environmental performance. The following
+    criteria can be taken into account: the use of efficient compression methods, the optimisation of resources,
+    the minimisation of data transfers, the use of lightweight design techniques, etc.
+
+    The criterion is validated if the majority of the interface components used by the service are considered to
+    be environmentally efficient, taking into account the above-mentioned criteria in particular, when applicable
+    to the targeted feature. The choices made and the minimisation of the components' environmental footprint
+    should also be documented in the Ecodesign declaration of conformity.
+  difficulte: 
+  priorite: 
+  application: "N/A if the digital service does not rely on OTS UI components"
+  metiers: 
+    - "Designer"
+    - "Developer"
+    - "IT Manager"
+-  id: 2.10
+  critere: "Has the digital service considered the environmental impacts of third-party services used when selecting them?"
+  thematique: "Third-Party Service Sustainability"
+  objectif: >
+    Third-party services are services supplied by outside providers (developers, organisations or companies) that
+    provide ready-to-use features (e.g. audience tracking, video player, social media news feed, captcha
+    mechanism, etc.) thereby saving from having to redevelop them in-house. The goal is thus to reduce the
+    environmental impacts of third-party services, i.e. which are not the product of in-house development.
+  miseEnOeuvre: >
+    In most instances, a measurement from an A/B analytical testing tool will reveal its environmental impacts
+    and so help in decision-making on the environmental aspect. Take into account the measurements provided
+    by the third-party service with regard to environmental impact reduction by conducting assessments or
+    comparisons to validate the choice.
+  controle: >
+    Monitor implementation. In particular, check whether the third-party services on which the digital service
+    relies validate the following criteria:
+
+    - For all of the third-party services provided, validation of criteria 1.4 and 1.5;
+    - As a supplementary measure:
+      - If the analysed third-party service is a video, check validation of the following criteria: 4.4,
+      4.11, 4.12, 4.15, 5.3, 5.4 and 5.5;
+      - If the analysed third-party service is a social network, have the third-party service check
+      validation of the following criteria: 4.1, 4.6, 4.9, 4.12, 4.13 and 4.15;
+      - If the analysed third-party service is an image generator, have the third-party service check
+      validation of the following criteria: 4.6, 4.11, 4.12, 4.13 and 4.15.
+
+    List the third-party services used and record their progress with respect to these criteria in the Ecodesign
+    declaration of conformity
+  difficulte: 
+  priorite: 
+  application: "N/A if the digital service does not use third-party services"
+  metiers: 
+    - "Partnership manager"
+    - "Software architect"
+    - "CSR/digital sustainability manager"
+- id: 3.1
+  critere: "Is the digital service based on an architecture, resources and components designed to reduce their own environmental impacts?"
+  thematique: "Sustainable Architecture and Components"
+  objectif: >
+    The digital service can depend on an architecture and components that are not developed by the same team
+    or that are provided by production frameworks. The aim is to ensure that these dependencies are also
+    designed in such a way as to reduce their own environmental impacts. Some components are particularly
+    heavy consumers of energy and resources and should be avoided (e.g. mining, virtual/augmented reality
+    requiring the acquisition of dedicated devices, certain learning algorithms, etc.).
+  miseEnOeuvre: >
+    Ensure that the architecture, resources and components used by the digital service, including for the frontend
+    and backend, are deliberately designed to minimise their environmental impacts. Do they meet the policy
+    framework's criteria? More specifically:
+
+    - Framework assessment: Examine the frameworks used for frontend and backend development in
+    terms of ecodesign. The analysis may take into account: the efficient use of hardware and energy
+    resources, the use of efficient compression techniques, the optimisation of client-server requests.
+    - Component assessment: Verify that components, whether internal or external, adhere to ecodesign
+    principles. The analysis may take into account: the efficient use of hardware and energy resources,
+    the use of efficient compression techniques, the optimisation of client-server requests.
+
+    See also criteria 2.9 and 2.10 for consideration of interface components' and third-party services' impacts.
+  controle: >
+    Verification of implementation: by analysing and optimising the environmental footprint to assess the
+    components' and frameworks' energy performance. In particular, check that the service does not rely on
+    particularly energy-intensive and resource-intensive technological building blocks (machine learning, mining,
+    metaverse in particular). When using this type of technology, the most resource-efficient solution should be
+    used by default and the choice should be documented in the digital service's Ecodesign declaration of
+    conformity.
+
+    Documentation of the choice of architecture and components in the Ecodesign declaration of conformity,
+    with regard to their environmental impact (in particular by verifying these elements' validation of this policy
+    framework's criteria 2.9 of 2.10), including a comparison with the other possible options.
+
+    The criterion is validated if the choice of the architecture's framework and components has been made taking
+    into account their environmental footprint and ecodesign, and that it is documented in the service's
+    Ecodesign declaration of conformity.
+  difficulte: 
+  priorite: 
+  application: "N/A if the service does not rely on components"
+  metiers: 
+    - "Systems architect"
+    - "Developer"
+    - "CSR/digital sustainability manager"
+- id: 3.2
+  critere: "Does the digital service run on an architecture that can tailor resource use to the service's consumption?"
+  thematique: "Dynamic Resource Allocation"
+  objectif: >
+    The goal is to avoid an oversized architecture and opt one that can dynamically adjust resource use based on
+    demand from the service, and scale up when necessary. This helps to optimise energy efficiency and avoid
+    wasting unnecessary resources.
+  miseEnOeuvre: >
+    Obtain a detailed assessment of the need and the number of users to adapt the required IT resources
+    accordingly. Ensure that the architecture can adapt in an optimal fashion, so that only IT resources that are
+    strictly necessary to meeting the service's fluctuating demand are allocated.
+  controle: >
+    The digital service runs on an architecture that can adapt allocated resources to demand. Several means of
+    testing can be considered to ensure this, for instance:
+
+    - Monitoring the evolution of the ratio between allocated and consumed resources: build a
+    comparison between allocated and consumed resources over a period of time and correct existing
+    shortcomings in terms of adaptation. Resource monitoring tools can also be set up to collect data on
+    CPU usage, memory, bandwidth, etc.
+    - Scale-up simulation: Verify whether the architecture is able to automatically detect increased
+    demand and dynamically allocate the resources needed to maintain performance. Real-world
+    scalability tests are also useful.
+    - Self-tuning mechanisms: These self-tuning mechanisms are triggered automatically based on load
+    conditions (e.g., using auto-scaling mechanisms to dynamically create instances of the service based
+    on demand).
+
+    Demonstrate that the architecture's resource consumption is tailored to the service's needs in the Ecodesign
+    declaration of conformity.
+  difficulte: 
+  priorite: 
+  application: "N/A if the service does not use server resources"
+  metiers: 
+    - "Systems architect"
+    - "Developer"
+    - "CSR/digital sustainability manager"
+- id: 3.3
+  critere: "Can the digital service support protocols' ongoing technical development?"
+  thematique: "Protocol Sustainability and Interoperability"
+  objectif: >
+    The choice of protocols underlying the network exchanges associated with the developed digital service
+    affects the demand on infrastructures, as well as the digital service's lifespan. Technical developments in
+    protocols that are not supported by the digital service can lead to malfunctions in certain modules or their
+    features. Taking these obsolescence risks into account to make the best choices in terms of protocol will limit
+    the updates/upgrades required, and thus make the digital service more robust and sustainable. The goal is
+    therefore to prevent the service's obsolescence induced by the obsolescence of the protocol used, for
+    instance:
+
+    - given the shortage of IPv4 addresses and the ubiquity of IPv6 (in the medium term, some internet
+    access lines will no longer offer IPv4 connectivity) by guaranteeing its interoperability and
+    sustainability;
+    - a service available in IPv6 makes it possible to limit the number of platforms needed and the
+    associated energy consumption for operators using IPv4-sharing between customers. IPv6 does not
+    need to go through the CG-Nat platform which is expensive in terms of both hardware and power
+    (See the video presentation "IPv6 Addressing and Transition" from December 2023);
+    - browsers are tending to block HTTP and forcing the mandatory use of HTTPS;
+    - because older versions of TLS (TLS v1.0 and TLS v1.1) are no longer supported by web browsers;
+    - ensure that the choice of protocol aligns with the type of content exchanged.
+  miseEnOeuvre: >
+    For instance:
+
+    - Define an IPv6 testing strategy that includes testing on a device where IPv4 connectivity is disabled.
+    Goal: to detect code or functions that run solely in IPv4-only, which will be unusable in the medium
+    term, with the phasing out of IPv4.
+    - In a context where users access the digital service through their browser, HTTPS must be employed
+    instead of HTTP (Article 32 of the GDPR requires an appropriate level of security to be implemented
+    for personal data transfers).
+    - The TLS version used must support the most recent version (at the time of this writing: TLS v1.3). For
+    instance, with Apache, the recommended line configuration is "SSL Protocol all -SSLv3 -TLSv1 -
+    TLSv1.1", which provides the ability to enable new versions of TLS when they are available and to
+    disable TLS versions that are problematic from a security viewpoint.
+    - Multiple protocols exist, each with its own set of advantages and disadvantages. It is recommended
+    that a comparison be made between the available protocols according to the types of target content
+    and features. This assessment should take into account criteria such as data transfer efficiency,
+    latency, compatibility with the technologies used, as well as the environmental impact of each
+    protocol. E.g.:
+      - for video: Multicast, HTTP Live Streaming (HLS), Real-Time Messaging Protocol (RTMP), Web
+      Real-Time Communications (WebRTC)...
+      - for APIs: REST, SOAP, GraphQL, Protocol Buffers...
+  controle: >
+    Check that the digital service's various components are working properly:
+
+    - in IPv6 and do not use any IPv4-only service, and that the service uses DNS names and not hard coded
+    IP addresses;
+    - in HTTPS and not HTTP;
+    - verify that the latest version of TLS (at the time of writing this policy framework: TLS v1.3) is properly
+    supported.
+    - Assess the adequacy of the protocol used in relation to the content being transferred, taking into
+    account its environmental footprint. This can be achieved by performing the following actions:
+      - Analyse the protocol's technical characteristics with respect to the service's needs, or even
+      conduct test scenarios or performance comparisons.
+      - Consider the environmental impact of the protocol used, including the power consumption
+      and underlying computing resource use.
+
+    The criterion is validated if the choice of protocol used by the service aligns with the type of content and
+    features targeted, while minimising its environmental cost, and is documented, if possible, in the
+    Ecodesign declaration of conformity.
+  difficulte: 
+  priorite: 
+  application: "N/A if the service does not use server resources"
+  metiers: 
+    - "Systems architect"
+    - "Developer"
+    - "CSR/digital sustainability manager"
+- id: 3.4
+  critere: "Does the digital service guarantee the supply of patch updates throughout the entire expected lifespan of the devices and software tied to the service?"
+  thematique: "Software Maintenance and Longevity"
+  objectif: >
+    The obsolescence of software marketed with a device linked to a digital service (e.g. operating system,
+    connected object software, voice assistants, etc.) often renders the equipment unusable, whereas its lifespan
+    could be extended if the software were maintained for a longer period of time. This is particularly important
+    in the context of the development of the Internet of Things (IoT), characterised by connected equipment that
+    requires continuous maintenance to ensure optimal operation, security, and interoperability. The goal is
+    therefore to limit the contribution to obsolescence of service-related equipment by ensuring the availability
+    of patch updates throughout their expected lifetime.
+  miseEnOeuvre: >
+    Maintain the digital service for the duration of device's expected lifespan. This means providing an
+    appropriate support infrastructure, technical and financial resources, and long-term maintenance planning
+    – consistent with the hardware's estimated lifespan. Dedicated equipment and connected objects (IoT) are
+    targeted here, for instance.
+  controle: >
+    To validate this criterion, indicate the duration of the service's maintenance in the Ecodesign declaration of
+    conformity and verify that updates are actually available throughout the life of the associated devices.
+  difficulte: 
+  priorite: 
+  application: "N/A for digital services that are not marketed with an associated device"
+  metiers: 
+    - "Project leader"
+    - "Software architect"
+    - "CSR/digital sustainability manager"
+  - id: 3.5
+  critere: "Does the digital service provide the ability to install patch updates independently of features updates, in a transparent fashion?"
+  thematique: "Software Update Management"
+  objectif: |
+    Since Ordinance No. 2021-1247 of 29 September 2021 on the legal guarantee of conformity for goods, digital content and digital services, the Consumer Code sets forth several obligations relating to software updates to guarantee the receipt of the updates necessary for the conformity of the goods throughout the duration of the legal guarantee of conformity (two years or more), or the entire duration of the contract if the supply of the goods is guaranteed for more than two years. 
+    
+    In addition, several obligations are defined for vendors concerning updates that are not necessary for the conformity of the goods in terms of informing consumers, the right to refuse and to disable and installation of the update by said vendor. 
+    
+    In line with these provisions, the goal of the practice is thus to curtail any contribution to the user equipment's obsolescence by allowing the user to opt for only the updates necessary to the service's or device's proper functioning, security and compliance. 
+    
+    This "segregation" can also prevent the addition of "convenience" features that may be unusable on one's device or require additional hardware or computing resources that can lead to rapid device obsolescence. 
+    
+    This criterion also aims to promote long-term support policies and enable the digital service to run on older generation operating systems. It will also increase the transparency of information on the type of updates installed and prevent the risk of bloatware.
+  miseEnOeuvre: |
+    This criterion is particularly relevant for a digital service such as an API/ components /library /framework / open source tools and, far more rarely, a product intended for end users. 
+    
+    The ability to install patch updates in a segregated manner, as well as any other updates essential to the digital service or user device's compliance and security, features updates that are not necessary for the good's/product's/compliance. 
+    
+    In addition, the frequency of unnecessary features updates must be monitored. If the nature of the service permits, the possibility of installing patches should be allowed independently of features updates, at the user's request. 
+    
+    In general, features updates should not prevent the digital service from operating during the entire maintenance period for the supported operating systems (provided there are no technical or security constraints). 
+    
+    There must be guaranteed transparency on the changes made, by keeping a changelog. In addition, an optimal version control strategy should be encouraged, e.g. with the proposal of "Long term support" releases.
+  controle: |
+    To validate this criterion:
+    • Indicate in an application's update description (changelog) when it is a security or maintenance update ("hotfixes") or if it is a rolling update that adds functionality.
+    • Ensure that features updates that are not critical to service compliance do not prevent the service from operating for any maintenance period for supported operating systems.
+    • Whenever possible, ensure that updates that are essential to the digital service or user device's compliance and security can be installed separately from features updates that are not necessary for the product's compliance.
+    • If possible, check for the presence of a release management strategy with "Long term support" releases.
+  difficulte: "Level of difficulty:"
+  priorite: "Level of priority:"
+  application: "Target: N/A if the digital service does not provide (non-essential) features updates"
+  metiers: 
+    - "Software architect"
+    - "Project leader"
+    - "Quality control manager"
+  - id: 3.6
+  critere: "Does the digital service offer incremental updates, to avoid replacing the entire code with each update?"
+  thematique: "Update Optimization"
+  objectif: |
+    Updating applications can consume a great deal of data if the digital service's entire code is updated. 
+    
+    This criterion aims to drastically reduce the amount of data needed for an update. This means limiting updates to incremental additions.
+  miseEnOeuvre: |
+    Favour incremental updates (only modified data are transferred) or separating binary code into small chunks that are only downloaded if their code has changed. 
+    
+    The goal is not to replace the program's entire code every time an update is delivered.
+  controle: |
+    Whenever possible, use an update mechanism that does not require replacing the program's entire code with each update. 
+    
+    If necessary, a full update of the program code can be provided for "reset" or "self-healing" features.
+    
+    The criterion is validated if incremental updates are favoured for the digital service, aside from "reset" and "self-healing" features.
+  difficulte: "Level of difficulty:"
+  priorite: "Level of priority:"
+  application: "Target: N/A if the digital service does not provide updates"
+  metiers: 
+    - "Software architect"
+    - "Project leader"
+    - "Quality control manager"
+    - "CSR/digital sustainability manager"
+  - id: 3.7
+  critere: "Does the digital service optimise the use of development, preproduction and test environments according to its needs?"
+  thematique: "Environment Resource Management"
+  objectif: |
+    Running unused servers or virtual machines consumes resources. 
+    
+    This criterion aims to limit this loss by optimising the use of development, pre-production or test environments by pooling or shutting down their operation during the time slots when they are not used.
+  miseEnOeuvre: |
+    Rely on multi-tenant development, pre-production, or test environments (e.g., virtual machines).
+    
+    If this is not possible, disable them during time slots when they are not used (e.g. at night). 
+    
+    The return to service can be done automatically at a given time, via a signal indicating that it could be used soon, or manually.
+  controle: |
+    The criterion is validated if the service relies on multi-tenant development/pre-production/test environments, or if these environments are disabled during time slots when they are not used.
+    
+    Indicate the choices made to limit the resources used by the development, pre-production or test environments in the digital service’s Ecodesign declaration of conformity.
+  difficulte: "Level of difficulty:"
+  priorite: "Level of priority:"
+  application: "Target: N/A if the digital service does not use a server"
+  metiers: 
+    - "Systems architect"
+    - "Software architect"
+    - "CSR/digital sustainability manager"
+- id: 4.1
+  critere: "Does the digital service only have animations, videos and sounds whose automatic playback is disabled?"
+  thematique: "User Experience and Resource Optimization"
+  objectif: |
+    The more time a user spends on a site or application, the higher the environmental footprint associated with that use, as network and system resources on the device will be mobilised for a longer period of time. 
+    
+    While it is of course up to the user to decide how much time they wish to devote to a particular use, the concerned site or application's development practices may have a direct impact on this duration, in particular through the use of attention-grabbing practices.
+    
+    Auto playing content, especially videos, is part of the mechanisms put in place to keep the user captive. 
+    
+    Triggering content and pre-loading it without the user's consent must be avoided with a view to promoting sustainability.
+    
+    This criterion gives the user the power to limit the use of unnecessary resources.
+  miseEnOeuvre: |
+    Disable automatic loading and playback of video and/or audio content by default in the service settings. 
+    
+    If this is not possible, allow the user to remove these features with a button or interface that is directly accessible and visible on the user interface.
+    
+    As much as possible, do not use animated graphics that the user cannot control or only partially control (animated gifs in particular). 
+    
+    In particular, auto-playing video and/or audio backgrounds should be avoided if they are purely aesthetic.
+    
+    For animations deemed essential to the service's functionality, offer the user the ability to pause these elements. 
+    
+    When the visual animation lasts more than four seconds or a sound lasts more than two seconds, systematically equip the multimedia object with the necessary means of control: start, stop, mute or volume.
+    
+    Allow them to be simply disabled as soon as the content exceeds four seconds and minimise its size (see criteria 5.3, 5.4. and 5.5).
+  controle: |
+    The digital service must not include content autoplay by default or, if this is not possible, must provide the user with the ability to easily remove the automatic loading or playback of videos or audio content. 
+    
+    Deletion options must be highlighted in the digital service (e.g. with a clearly visible "disable" button).
+    
+    It will also be necessary to limit the number of non-controllable visual animations to what is strictly necessary, and to set quantitative thresholds. 
+    
+    Non-controllable animations deemed essential to the service's features must be able to be paused by the user as soon as they exceed four seconds for visual animation and two seconds for audio.
+    
+    The criterion is validated if the service does not rely on a default and uncontrolled autoplay feature, limits the use of uncontrollable visual animations, flashing or auto-scrolling, according to the abovementioned conditions.
+  difficulte: "Level of difficulty:"
+  priorite: "Level of priority:"
+  application: "Target: Applicable to all services"
+  metiers: 
+    - "Developer"
+    - "UX/UI designer"
+    - "Quality control manager"
+- id: 4.2
+  critere: "Does the digital service only display content without infinite scroll?"
+  thematique: "User Experience and Resource Optimization"
+  objectif: |
+    "Content walls" are part of some digital platforms' attention-grabbing strategies that contribute to increasing digital services' environmental footprint. 
+    
+    The goal is therefore to reduce the design of digital services based on the creation of an infinite "wall of content", of an infinite scroll or sequence of content, which increases the time spent on the page and therefore the size of the page and the resources required.
+  miseEnOeuvre: |
+    Avoid "content walls" offering infinite scrolls, never-ending sequences of content, to reduce the size of the page used and optimise the user experience.
+    
+    Set up easy-to-use browsing that is proportionate to the context of use, whose content is loaded at the user's request with, for instance, a "See more" button that allows users to continue browsing, or using pagination.
+  controle: |
+    The criterion is validated if the digital service's design is based on on-demand loading of content proportionate to the context of use (in particular the implementation of a "See more" button to continue browsing or pagination), or can be displayed in its entirety on a screen.
+  difficulte: "Level of difficulty:"
+  priorite: "Level of priority:"
+  application: "Target: N/A if the digital service does not have any human-machine interaction (HMII)"
+  metiers: 
+    - "Developer"
+    - "Designer"
+    - "UX/UI designer"
+- id: 4.3
+  critere: "Does the digital service optimise the clickstream for each main feature?"
+  thematique: "User Experience and Resource Optimization"
+  objectif: |
+    Minimise the time that users spend on the digital service and control the environmental impacts of the service's main features, while improving the user experience.
+  miseEnOeuvre: |
+    During the design stage, eliminate non-essential features and optimise the clickstream(s) for each of the digital service's core functional units. 
+    
+    Observe the visitor and traffic statistics, coupled with UX (user experience) monitoring, to improve clickstream optimisation. 
+    
+    This will ensure the utility and use of each feature by the user.
+    
+    Implement a qualitative analysis that can be completed by a quantitative analysis:
+    • Clearly define the service's main functional units
+    • Exploit UX resources to understand user habits and browsing paths
+    • Implement a non-intrusive and privacy compliant analysis system to identify typical clickstreams
+    • Measure technical indicators of identified clickstreams: number of requests, weight of resources downloaded
+  controle: |
+    Verify the implementation of UX tools for design, optimisation and continuous control.
+    
+    Monitor the implementation of tags to collect information on traffic statistics and users' clickstreams.
+    
+    Define technical indicators for the identified paths.
+    
+    The criterion is validated if:
+    1) Clickstreams are optimised and recentred around essential features
+    2) Technical indicators for the identified clickstreams have been or are in the process of being put in place
+  difficulte: "Level of difficulty:"
+  priorite: "Level of priority:"
+  application: "Target: N/A if the service does not use clickstreams"
+  metiers: 
+    - "Developer"
+    - "UX/UI designer"
+    - "Quality control manager"
+- id: 4.4
+  critere: "Does the digital service give users the ability to enable a third-party service?"
+  thematique: "Service Integration and Data Privacy"
+  objectif: |
+    Limit the loading on of third-party services that are not necessary for the service to operate properly. 
+    
+    For instance, without cookies enabled, some video players are disabled and awaiting consent to be able to watch the video.
+  miseEnOeuvre: |
+    If not critical to the service's essential features, only load third-party services underlying the digital service at users' explicit request.
+    
+    If the third-party service requires the processing of personal data, this criterion aligns with a GDPR obligation to request consent before any processing of personal data, including as part of the provision of a third-party service.
+  controle: |
+    The criterion is validated if the activation of third-party services incorporated into the digital service is conditional on the clear and explicit consent of the user, from a data protection standpoint where applicable.
+  difficulte: "Level of difficulty:"
+  priorite: "Level of priority:"
+  application: "Target: N/A if the service does not rely on third-party services"
+  metiers: 
+    - "Developer"
+    - "Quality control manager"
+    - "Data protection manager"
+- id: 4.5
+  critere: "Does the digital service use mainly functional components that are native to the operating system, browser or language used?"
+  thematique: "System Component Optimization"
+  objectif: |
+    Functional components are, for instance, interface components (menu, button, form, etc.). 
+    
+    Typically, a system's native components require few resources to function, unlike components developed on top of it.
+    
+    As a result, it may be preferable to encourage the use of components native to a system rather than the use of components developed or overlayed on top of them.
+  miseEnOeuvre: |
+    Prioritise the use of the native functional components of the operating system, browser, or language used to meet the need.
+    
+    Moreover, it is best to load resources and components only when they are actually being used.
+  controle: |
+    The criterion is validated if the service favours the use of native functional components where possible.
+    
+    In the event of the use of non-native components, assess the need to have chosen to use such components (technical constraints, for instance). 
+    
+    If applicable, document the reasons for using them in the Ecodesign declaration of conformity. 
+    
+    Their use should be regularly monitored by verifying the content of the resources loaded and their actual use.
+  difficulte: "Level of difficulty:"
+  priorite: "Level of priority:"
+  application: "Target: Applicable to all services"
+  metiers: 
+    - "Developer"
+    - "Software architect"
+  id: 4.6
+  critere: Does the digital service use only video, audio and animated content that contains information?
+  thematique: Media Content Relevance
+  objectif: |
+    A significant portion of internet traffic is tied to watching videos. Audio and animated content is also larger than text and image-based content.
+
+    Under an ecodesign approach, it is advisable to minimise the use of heavy media content with a purely
+    aesthetic purpose and to favour alternative solutions when possible.
+  miseEnOeuvre: |
+    Verify the relevance of the use of videos, animations and audio content, i.e. that these media are provided as part of the service's critical functions and/or carry information. Do not use video, animated or audio content that is purely decorative and does not deliver any information to the user.
+  controle: |
+    Evaluate the relevance of the choice to display an animation or video or audio content.
+    The criterion is validated if the service does not contain video, audio or animation content for purely decorative purposes, i.e. that does not concern the service's critical functions. Document the reason for using video, animated and audio content to demonstrate that it serves the service's critical functions and/or provides the user with information in the service's Ecodesign declaration of conformity
+  difficulte: Level of difficulty
+  priorite: Level of priority
+  application: Applicable to all services
+  metiers: 
+    - Developer
+    - Designer
+- id: 4.7
+  critere: Does the digital service opt for the most sustainable choices between text, images, audio and video, according to users' needs?
+  thematique: Media Resource Optimization
+  objectif: |
+    Reduce the size of the resources used, knowing that a video, even encoded with the most efficient process, usually weighs much more than a text containing images.
+  miseEnOeuvre: |
+    Challenge and document the need to display media (video, animation, or audio recording). If necessary, choose the most sustainable solution possible while meeting the user's needs. As an indication: text typically weighs less than an image, an image weighs less than an audio file and an audio file weighs less than a video file.
+  controle: |
+    Assess the appropriateness of choosing to display a video, animation, or audio recording. The criterion is validated if the service does not use video, audio or animated content or if the use of video, audio or animation has been decided by opting for the most sustainable solution available, with regard to the service's needs and essential features. The choices made must be substantiated in a public document (e.g. in the Ecodesign declaration of conformity). The substantiation will take into account target users' needs (refer to criterion 1.2.) and the environmental impact of the chosen audiovis
+  difficulte: Level of difficulty
+  priorite: Level of priority
+  application: Applicable to all services
+  metiers: 
+    - Developer
+    - Designer
+    - Quality control manager
+  - id: 4.8
+    critere: Does the digital service limit the number of downloaded fonts?
+    thematique: Font Resource Management
+    objectif: |
+      Downloading fonts can burden a digital service and the IT resources needed to run it. Minimising the number of fonts downloaded makes the digital service load faster, potentially decreases data transfers to third parties, and reduces the service's environmental footprint. The goal is therefore to limit the number of fonts used and to prefer, when possible, natively available fonts, to avoid having to download a specific font separately. Reduce the size of uploaded fonts.
+    miseEnOeuvre: |
+      Set the goal of using a maximum of two different fonts and a maximum of four variants in total per page or "display unit" if pagination is not used (or if a threshold per file size is more appropriate, aim for a maximum size of 400kb for uploaded fonts). Check the fonts' compression and the use of necessary glyphs. In the context of a website, also pay attention to the I/O mode: blocking, non-blocking, etc.
+    controle: |
+      Assess the number and file size of fonts used. The criterion is validated if the fonts downloaded for the service meet at least one of these conditions: the number of fonts downloaded is limited to two (with a maximum of four variants in total) per page or "display unit" (if pagination is not used for the service)
+    difficulte: Level of difficulty
+    priorite: Level of priority
+    application: N/A if the digital service does not use text
+    metiers: 
+      - Developer
+      - Software architect
+  - id: 4.9
+    critere: Does the digital service limit server requests during user input?
+    thematique: Network Request Optimization
+    objectif: |
+      Part of a digital service's energy footprint is linked to the volume of data exchanged on networks. The goal is therefore to reduce the volume of data for a given service by avoiding unnecessary client/server requests. For instance, in the context of a form, suggesting results, etc. In most cases, this reduction can be done without degrading the user experience.
+    miseEnOeuvre: |
+      To reduce client-server exchanges, it is important for digital services to reduce calls to third-party APIs, scripts, libraries and fonts. It is advisable to limit online autocomplete. These autocomplete or suggestion mechanisms, which aim to auto-complete or suggest options, require a great many requests to the server. If such a mechanism is put in place because it is substantiated from the user point of view, it is recommended to wait, for instance, to have three characters and 500 ms after each input before launching a network request. Alternatively, it is possible to let the user choose to enable auto-complete if they wish (opt in) using a settings option.
+    controle: |
+      To validate the criterion, ensure the service does not offer autocomplete and, in the opposite case, ensure that autocomplete is substantiated from a user point of view, and periodically check that autocomplete waits for at least 500 ms before activating and at least three characters are entered. The user interface provides the option of disabling autocomplete. Monitor the number of HTTP requests between client and server and track this number over time. Periodically check for identical and redundant queries. Verify that external requests made by calling the site (by clearing the cache or using an appropriate extension) are indeed those needed to run the service.
+    difficulte: Level of difficulty
+    priorite: Level of priority
+    application: N/A if the digital service has no HMI
+    metiers: 
+      - Developer
+      - Software architect
+
+  id: 4.10
+critere: Does the digital service inform users of the expected input format, avoiding unnecessary server requests when submitting a form?
+thematique: Form Input Validation
+objectif: |
+  Limit client-server exchanges by verifying input on the user device side, thereby reducing input errors and incorrect form submissions that would require feedback to the server for correction.
+miseEnOeuvre: |
+  The expected input formats should be defined and indicated clearly and explicitly when the user enters their information before submitting the form (e.g. in the form of help texts, examples or restricted default formats). In the event of an error, the relevant field and the correction to be made should be clearly indicated. Validate mandatory data entries and formats when submitting a form without a server request whenever possible. This can be achieved by using validation features built into web programming languages, such as JavaScript. N.B.: Pre-validating data on the frontend does not exempt validation on the backend. Additional server-side validation is therefore still required to ensure data integrity.
+controle: |
+  Monitor implementation by testing the service's browsing path or by conducting a design review of the digital service's source code to ensure that the expected format indications are properly listed on the user device. Test the service by filling out the form with incorrect or missing data and verifying that appropriate error messages are displayed to flag input errors. The criterion is validated if the user is informed of the expected input formats before the form is submitted. The service's mandatory data entries and formats will also need to be validated first on the client side before the form is submitted.
+difficulte: Level of difficulty
+priorite: Level of priority
+application: N/A if the digital service does not use forms
+metiers: 
+  - UX/UI designer
+  - Developer
+
+  - id: 4.11
+    critere: Does the digital service inform users pre-transfer of the expected file size and formats?
+    thematique: File Transfer Information
+    objectif: |
+      Limit the exchange of large files between clients and servers by informing the user of the expected requirements.
+    miseEnOeuvre: |
+      • Downloaded files: Clearly indicate to the user, at least for files larger than 10 MB and before transfer, the expected file sizes and formats: file type, maximum image size, etc. • Uploaded files: A form cannot be submitted if the indicated requirements of file size and format are not met. However, the imposed limit must take all uses into account, including those requiring the transfer of large files, as blocking the user's digital process would be counterproductive. It is also important to support new file formats (e.g., WebP and AVIF images in addition to JPEG and PNG images) to avoid forcing the user to go through a counterproductive conversion step. It should be noted that the limitations must be defined in a proportionate manner to avoid having a negative side effect on the service's accessibility, taking target users into account.
+    controle: |
+      The criterion is validated if: • Downloaded files: information about the service's expected file sizes and formats is correctly displayed to the user before the transfer, at least for files larger than 10 MB. One way to test this may be to check the information displayed pre-file transfer with different file types and sizes. • Uploaded files: caps on file size and formats are implemented and clearly displayed to the digital service's users (except in specific situations where such limitations would hinder the use of the service). Monitor implementation by verifying that file size and format limits are specified and then properly applied when submitting the form.
+    difficulte: Level of difficulty
+    priorite: Level of priority
+    application: N/A if the digital service is not based on client/server file transfers as part of a form
+    metiers: 
+      - UX/UI designer
+      - Developer
+      - Software architect
+
+- id: 4.12
+  critere: Does the digital service flag features with significant environmental impacts to users?
+  thematique: Environmental Impact Awareness
+  objectif: |
+    Make users aware of the environmental impacts of the most costly actions. Inform users in advance of the feature's environmental impacts, when the latter is more costly than the rest of the service.
+  miseEnOeuvre: |
+    Inform users ahead of time for each feature of the service that is considered to have significant environmental impacts. For instance, for each downloadable file, "high quality" video, or resource-intensive media viewed, or for a long process, such as a data export, information about the size of the file or the time required for the operation is displayed to the user beforehand. If possible, offer a substitute feature with a lower impact (e.g. audio-only mode instead of watching a "high quality" video, see criterion 5.5). In the event that it is possible to add information concerning equivalences in terms of environmental impacts, be sure to specify the source and methodology, and to favour a multi-criteria approach (not only in terms of CO2 equivalent). The impact assessment described in criterion 1.5 can be used to identify features with significant environmental footprint.
+  controle: |
+    Monitor implementation by verifying that features with a significant environmental impact are identified and reported to the user. This examination must be documented and can be audited by a third party: if possible, it should be reported in the Ecodesign declaration of conformity. The criterion is validated if the service does not include features with a significant environmental impact or if environmental impact information is correctly displayed for the specific features identified as having significant consequences in terms of bandwidth, energy, or computing resource consumption. Adding an equivalence with environmental indicators in the information displayed to users is not required to validate the criterion.
+  difficulte: Level of difficulty
+  priorite: Level of priority
+  application: N/A if the digital service has no HMI
+  metiers: 
+    - UX/UI designer
+    - Developer
+    - Software architect
+    - CSR/digital sustainability manager
+
+  - id: 4.13
+    critere: Does the digital service limit the use of notifications, while giving users the ability to disable them?
+    thematique: Notification Management
+    objectif: |
+      Many apps are configured by default to send users notifications to their device. These are incentives to use the service and the associated device (if applicable). The goal is therefore to reduce the use of computing resources by avoiding unnecessary attention-grabbing or IT resource consumption. The goal, then, is to minimise the number of notifications, consider whether to include them by default when designing the digital service and giving the users the ability to disable them.
+    miseEnOeuvre: |
+      The notifications planned by the digital service serve the needs of the user. Also avoid multiple notifications on different redundant channels (SMS, emails, app notification, interface notification, pop-in, etc.). Provide a default configuration that limits notifications. The user can turn off notifications or choose how often they are received.
+    controle: |
+      Monitor the frequency and quantity of notifications, and set quantified targets. Document the choices made to reduce notifications to an absolute minimum, so that these choices can be audited in the Ecodesign declaration of conformity. The criterion is validated if the digital service: • offers no notifications or a limited number of notifications by default (a target threshold of fewer than five per day); • gives users the ability disable and reduce the service's notifications, via its interface, in a simple and quick way for the user (for instance, a clearly visible button on the UI). The options to disable or reduce the number of notifications must be easily accessible.
+    difficulte: Level of difficulty
+    priorite: Level of priority
+    application: N/A if the digital service has no HMI
+    metiers: 
+      - UX/UI designer
+      - Developer
+
+  - id: 4.14
+    critere: Does the digital service avoid the use of dark patterns in its user interface?
+    thematique: User Interface Ethics
+    objectif: |
+      Prevent the use of dark patterns or manipulative processes in the user interface to ensure that users have control over their digital uses. Dark patterns are design elements that are intentionally designed to deceive or manipulate users to influence user behaviour. Since the entry into force of the Digital Services Act (DSA, Regulation 2022/2065) in 2022, online platform providers' design or operation of online interfaces that are misleading or intended to manipulate the recipient of their service has been prohibited. In line with these legal obligations, the goal of this criterion is to avoid the use of dark patterns in the user interface that are likely to lead to additional online usage, responsible for incremental environmental costs.
+    miseEnOeuvre: |
+      Prevent the implementation of dark patterns in the design of the user interface. If the service is already in use, review its digital service UI to identify and eliminate the use of dark patterns. Here are some examples of dark pattern practices to avoid: - setting up "labyrinthine" browsing pathways that complicate users' ability to take certain actions (unsubscribing, unregistering) or makes it difficult to access information on legal notices, or the service's environmental footprint for instance; - disguised advertising or exit pop-up ads without user selection or choice; - setting a pre-selected option for the user, often in the form of a pre-checked box, in an effort to entice them to accept something they may not have chosen deliberately; - show a countdown timer for a special offer, but every time the countdown reaches zero, it starts again, creating a false sense of urgency. The Designers Ethiques Association's guide can also help identify and correct any misleading elements of the user interface.
+    controle: |
+      Do not include dark patterns in the service's design and perform a regular assessment of the user interface to detect the presence of manipulative processes. This assessment should take into account the work of the European Commission (including the Guidelines issued pursuant to Article 25 of Regulation 2022/2065). The criterion is validated if the UI does not contain manipulative design elements.
+    difficulte: Level of difficulty
+    priorite: Level of priority
+    application: N/A if the digital service has no HMI
+    metiers: 
+      - UX/UI designer
+      - Developer
+      - Marketing manager
+  - id: 4.15
+    critere: Does the digital service provide users with a means to monitor their usage to be able to track and reduce their associated environmental impacts?
+    thematique: User Environmental Impact Awareness
+    objectif: |
+      The goal is to limit the environmental impact by giving users the autonomy to limit their own environmental footprint.
+    miseEnOeuvre: |
+      The digital service should inform users about the time spent using the service and the environmental impact associated with that use. This information, like any environmental claim, must use recognised norms and standards to quantify and calculate impacts (e.g., the "Product Category Rule", developed for digital services by ADEME). Users should also have the ability, by default or upon request, to choose "sustainable" display and browsing modes that reduce the resources used and the energy consumed. With regard to video services and content, it is advisable to refer to Recommendation Article 26 of the Act of 15 November 2021 on reducing the ICT's environmental footprint (REEN Act), published by Arcom, in conjunction with Arcep and ADEME, regarding the information that television services, on-demand audiovisual media services and video-sharing platform services provide to users on the energy consumed and greenhouse gas equivalent emissions generated from the data traffic tied to the use of these services.
+    controle: |
+      The criterion is validated if the digital service meets the following cumulative conditions: • the service displays information for users on its UI regarding the environmental footprint created by using the service; • the digital service offers a sustainable display and browsing mode, by default or whose activation is left to the user's discretion, to reduce the environmental footprint associated with their use of the digital service. The user will be able to access information detailing the parameters of this "energy sobriety" mode and the associated environmental gains. Document the actions implemented in the Ecodesign declaration of conformity, in particular the environmental information provided to users and the configuration of the "energy sobriety" mode, including the associated environmental gains.
+    difficulte: Level of difficulty
+    priorite: Level of priority
+    application: N/A if the digital service has no HMI
+    metiers: 
+      - UX/UI designer
+      - Developer
+      - CSR/digital sustainability manager
+  - id: "5.1"
+    critere: "Le service numérique utilise-t-il un format de fichier adapté au contenu et au contexte de visualisation de chaque image ?"
+    thematique: "Contenus"
+    objectif: |-
+      La réduction des volumes de données transmises associées aux images matricielles (ou images bitmap) est un levier d’optimisation du trafic internet et de minimisation de la consommation en ressources associée. L’objectif est donc d’optimiser le poids des fichiers téléchargés par les utilisateurs en utilisant des formats d’image performants.
+    miseEnOeuvre: |-
+      Choisir le format image adapté à la typologie d’image et au contexte d’affichage :
+
+      - Format vectoriel (exemple SVG) : utiliser ce format lorsque cela est possible (illustrations, icônes, logos, graphes…) ;
+      - Format matriciel, compression sans perte ou « lossless » (c’est le mode de compression du PNG) : pour des illustrations avec aplats de couleur (remplacer le PNG peu efficace par des images WebP ou JPEG XL, en mode « compression sans perte ») ;
+      - Format matriciel, compression avec perte (c’est le mode de compression du JPEG) : pour des photos ou des illustrations avec des milliers de couleurs (remplacer le JPEG peu efficace par des images WebP, AVIF ou JPEG XL en mode « compression avec perte »).
+    controle: |-
+      Vérifier périodiquement que les images matricielles ne sont plus dans les formats JPEG, PNG ou GIF. Utiliser WebP, AVIF, JPEG XL ou un format d’image plus performant pour les images matricielles. Le critère est validé si plus de 75 % des images matricielles utilisées pour le service numérique sont dans un format efficace (WebP, AVIF, JPEG XL ou un format d’image plus performant).
+
+      Un service numérique qui propose chaque image dans deux formats (exemple : JPEG XL avec un fallback vers JPEG / PNG pour les navigateurs non compatibles) valide également le critère si un des formats est WebP, AVIF, JPEG XL ou un format d’image plus performant.
+    source: |-
+      **Support des formats d’image selon les navigateurs web :**
+
+      Une [étude de Greenspector](https://greenspector.com/fr/quel-format-dimage-choisir-pour-reduire-sa-consommation-denergie-et-son-impact-environnemental/), réalisée par Olivier Philippot en 2022, montre que la consommation électrique d’un smartphone (Samsung Galaxy S10 sous Android 10 avec une connexion Wi-Fi) est légèrement plus faible en présence d’image WebP ou AVIF, comparé à la compression JPEG.
+
+      **WebP** est un format d'image matricielle développé et mis à disposition du public par Google en 2010 (2012 pour la compression sans perte de qualité). Aujourd’hui WebP est supporté par l’ensemble des navigateurs web et procurerait de 30 % à 80 % de réduction d'espace face à JPEG et PNG, sans dégrader la qualité.
+
+      **AVIF** est un format d’image plus récent et plus efficace en termes de compression que WebP. AVIF se montre également plus économe en énergie que les formats précédents. Développé par le consortium Alliance for Open Media et finalisé en 2019, AVIF est supporté par l’ensemble des navigateurs web, mais compte tenu du temps pour que les utilisateurs réalisent les mises à jour, il n’est pas encore pris en charge par l’ensemble du parc des versions installées.
+
+      **JPEG XL** est un format d’image matricielle plus récent et plus efficace en termes de compression que WebP / AVIF en mode avec/sans perte. Contrairement à WebP ou AVIF, JPEG XL n’est pas, à date, supporté par l’ensemble des navigateurs web.
+
+      **SVG** est un format d’image vectoriel. La principale problématique provient de la façon de gérer les caractères dans les images SVG. Afin de permettre une compatibilité avec toutes les plateformes, il est préférable de convertir le texte en chemin vectoriel, afin de ne pas faire appel à des polices de caractères externes.
+
+      Voici un tableau détaillant le support des formats d’image par navigateur, afin d’aider au choix du format à utiliser :
+
+      |                  | Jpeg / PNG / GIF Oui | WebP                      | AVIF              |
+      | ---------------- | -------------------- | ------------------------- | ----------------- |
+      | Google Chrome    | Oui                  | Oui (depuis 2012)         | Oui (depuis 2020) |
+      | Vivaldi          | Oui                  | Oui (toutes les versions) | Oui (depuis 2020) |
+      | Opera            | Oui                  | Oui (depuis 2012)         | Oui (depuis 2020) |
+      | Samsung Internet | Oui                  | Oui (depuis 2013)         | Oui (depuis 2021) |
+      | Mozilla Firefox  | Oui                  | Oui (depuis 2019)         | Oui (depuis 2021) |
+      | Safari sur iOS   | Oui                  | Oui (depuis 2020)         | Oui (depuis 2022) |
+      | Safari sur macOS | Oui                  | Oui (depuis 2020)         | Oui (depuis 2022) |
+      | Microsoft Edge   | Oui                  | Oui (depuis 2018)         | Oui (depuis 2024) |
+
+      Un service numérique peut choisir d’encoder ses images dans deux formats d’image : JPEG XL avec un fallback en JPEG / PNG ou WebP sera présent, afin de prendre en charge les navigateurs web qui ne supportent pas encore le format JPEG XL.
+    difficulte: "Faible"
+    priorite: "Recommandé"
+    application: N/A si le service numérique n’utilise pas d’image matricielle (ou images bitmap)
+    metiers: [Développeur, Architecte Logiciel]
+  - id: "5.2"
+    critere: "Le service numérique propose-t-il des images dont le niveau de compression est adapté au contenu et au contexte de visualisation ?"
+    thematique: "Contenus"
+    objectif: |-
+      Réduire le poids des images téléchargés par les utilisateurs en augmentant le niveau de compression (et donc en dégradant légèrement la qualité) ou/et en proposant des résolutions multiples.
+    miseEnOeuvre: |-
+      Lors de la génération d’une image matricielle, en mode compression avec perte (c’est le mode de compression du JPEG), la compression à une qualité de 70% (JPEG), 72% (WebP) ou 56% (AVIF) peut être visuellement acceptable.
+
+      Tableau pour faire une conversion approximative de la qualité de compression(en %)  entre JPEG, WebP et AVIF : (source [industrialempathy.com](https://www.industrialempathy.com/posts/avif-webp-quality-settings/))
+      | Jpeg | WebP (compression avec perte) | AVIF (compression avec perte) |
+      |:----:|:----:|:----:|
+      | 50 (qualité faible) |55 |48 |
+      | 60 |64 |51 |
+      | 70 |72 |56 |
+      | 80 (qualité élevée) |82 |64 |
+
+      Les formats de compression sans perte de la qualité de l’image (PNG, WebP en mode « compression sans perte », JPEG XL en mode « compression sans perte ») ne disposent pas de paramétrage de qualité, la compression ne dégradant pas la qualité de l’image. Il est toutefois possible de réduire significativement la taille en réduisant la palette de couleurs de l’image avant compression.
+
+      Des résolutions multiples peuvent être pertinentes, via les attributs « srcset » et « sizes », afin de s’adapter automatiquement à la résolution du terminal depuis lequel est consulté le site. Il faut toutefois faire attention que cela n’empêche pas le service d’adopter un « Responsivedesign ».
+    controle: |-
+      Évaluer la qualité et le poids des images matricielles affichées sur différents types de terminaux.
+
+      Pour le mode de compression avec perte, documenter dans la déclaration d’écoconception la politique de paramétrage de la qualité lors de la génération ou conversion des images.
+    difficulte: "Moyen"
+    priorite: "Recommandé"
+    application: N/A si le service numérique n’utilise pas d’image matricielle (ou images bitmap)
+    metiers: [Développeur, Architecte Logiciel]
+  - id: "5.3"
+    critere: "Le service numérique utilise-t-il, pour chaque vidéo, une définition adaptée au contenu et au contexte de visualisation ?"
+    thematique: "Contenus"
+    objectif: |-
+      Il arrive parfois que le contenu vidéo soit en haute définition alors que le contexte de visualisation n’en a pas besoin, ce qui a pour effet d’augmenter la consommation énergétique du terminal et la quantité de données transférées. Il est donc important d’ajuster précisément la définition vidéo par défaut au terminal utilisé et de donner de l’autonomie à l’utilisateur pour limiter les impacts environnementaux de ses usages en lui permettant de réduire ou d’augmenter la définition de la vidéo.
+
+      L’objectif est ainsi de limiter les ressources informatiques et la consommation énergétique associée au visionnage de vidéos. Le critère est applicable aux vidéos diffusées en unicast, terme définissant une connexion réseau point à point, c'est-à-dire d'un hôte vers un (seul) autre hôte. C’est le mode de diffusion utilisé sur internet.
+
+      Le critère n’est pas applicable au multicast/broadcast, puisque cela engendrerait une multiplication des flux contreproductive. Les diffusions de type multicast/broadcast concernent uniquement certains modes de diffusion TV (par exemple : TNT, certains flux transmis via le décodeur TV) et désigne une forme de diffusion d’un émetteur unique vers un groupe de récepteurs.
+    miseEnOeuvre: |-
+      La mise en œuvre diffère selon le fait que le service numérique est en mesure ou pas de proposer de multiples définitions vidéo pour un même contenu.
+
+      Si le service numérique est en en mesure de proposer de multiples définitions vidéo pour un même contenu :
+
+      - Etablir une définition par défaut ne doit pas dépasser les définitions du mode « qualité standard » défini ci-après.
+      - Définir un mode « sobriété énergétique » (qui peut également être appelé « économie de données ») doit être facilement accessible sur l’interface. Son activation baisse la définition, de manière à ne pas dépasser les définitions du mode « sobriété énergétique » défini ci-après. Le service numérique doit être en mesure de mémoriser ce choix et de l’appliquer pour les prochaines lectures de vidéos.
+      - De manière optionnelle, proposer un mode « haute qualité » =, utilisé uniquement sur demande de l’utilisateur (en l’informant le cas échéant que le recours à ce mode « haute qualité » peut avoir un impact sur la quantité de données transmises et la consommation énergétique).
+
+      Définition maximum selon le terminal et le mode :
+
+      |                      | Mode « sobriété énergétique » | Mode « qualité standard » | Mode « haute qualité » | AV1 GPU 2020 à 2024                         |
+      |----------------------|-------------------------------|---------------------------|------------------------|---------------------------------------------|
+      | Smartphone           | 480p maximum                  | 720p maximum              | Pas de contrainte      | Oui (depuis 2018)                           |
+      | Tablette             | 720p maximum                  | 1080p maximum             | Pas de contrainte      | Support partiel (Soc A17 Pro et + récents)  |
+      | PC                   | 720p maximum                  | 1080p maximum             | Pas de contrainte      | Support partiel (Soc Apple M3 et + récents) |
+      | TV                   | 1080p maximum                 | 1440p maximum             | Pas de contrainte      | Oui (depuis 2024)                           |
+      | Type d’écran inconnu | 720p maximum                  | 1080p maximum             | Pas de contrainte      | Oui (depuis 2019)                           |
+      | Samsung Internet     | Oui (toutes les versions)     | Oui (depuis 2016)         | Support partiel        | Oui (depuis 2020)                           |
+      | Opera                | Oui (depuis 2014)             | Oui (depuis 2013)         | Support partiel        | Oui (depuis 2018)                           |
+
+      Si le service numérique unicast qui ne peut pas gérer de multiples définitions vidéo pour un même contenu, choisir la plus faible définition possible sans que cela altère sa compréhension ou l’expérience utilisateur : définition vidéo de 720p pouvant être portée à 1080p pour un contenu difficilement lisible (par exemple : vidéos avec du texte dans une petite police de caractères).
+    controle: |-
+      Tester, y compris périodiquement, la lecture des vidéos sur différents terminaux afin de vérifier que ces vidéos en mode « qualité standard » et « sobriété énergétique » ont un format adapté à ces terminaux.
+
+      Contrôlez la facilité d’accès au mode « sobriété énergétique » (qui peut également être appelé « économie de données ») tel que décrit dans la partie « Mise en œuvre ».
+
+      Pour valider ce critère, documenter dans la déclaration d’écoconception les définitions proposées selon les types de terminaux, l’action du mode « sobriété énergétique », son emplacement et sa capacité à mémoriser le choix de l’utilisateur.
+    source: |-
+      **Les différentes définitions à utiliser lors de l’encodage vidéo**
+
+      Plusieurs leviers peuvent être déployés pour optimiser l’impact environnemental de la vidéo en agissant en particulier sur la définition et l’encodage de la vidéo.
+
+      Pour proposer différentes définitions de vidéos au terminal, il faut avoir au préalable encodé chaque vidéo dans différentes définitions.
+
+      L’encodage vidéo entraîne deux types de coûts environnementaux :
+
+        -  Coût processeur pour l’encodage ;
+        -  Coût de stockage.
+
+      Un service écoconçu doit limiter le nombre d’encodages. Certains services vidéo proposent plus de 20 encodages d’une même vidéo, afin de couvrir plusieurs codecs et définitions vidéo.
+
+      Exemple d’une solution sobre, avec seulement trois définitions :
+
+        -  Encodage 480p : pour le mode « sobriété énergétique » ;
+        -  Encodage 720p : pour le mode « qualité standard » ;
+        -  Encodage 1080p : pour le mode « haute qualité ».
+    difficulte: "Faible"
+    priorite: "Prioritaire"
+    application: N/A pour la diffusion de vidéos par multicast/broadcast
+    metiers: [Développeur, Architecte Logiciel, Porteur de projet]
+  - id: "5.4"
+    critere: "Le service numérique propose-t-il des vidéos dont le niveau de compression est adapté au contenu et au contexte de visualisation ?"
+    thematique: "Contenus"
+    objectif: |-
+      La majeure partie du trafic sur internet est liée au visionnage de vidéos (la vidéo représente près de 66% du trafic internet en 2022 selon le rapport Sandvine The Global Internet Phenomena Report). Or le transport de données numériques s’appuie sur des infrastructures et l’usage d’équipements et de terminaux qui ont une empreinte environnementale à minimiser. L’emploi d’un codec vidéo efficace permet de réduire significativement la bande passante utilisée.
+
+      Par ailleurs, le mode de décodage du codec vidéo par le terminal influe directement sur la consommation énergétique de l’appareil. Si le codec n’est pas accéléré matériellement par le processeur graphique (GPU), la lecture vidéo sera possible, mais via le microprocesseur (CPU) et dans ce cas-là, la consommation d’énergie du terminal sera plus importante, ce qui va diminuer l’autonomie d’un terminal sur batterie et possiblement sa durée de vie.
+
+      L’objectif est donc d’optimiser la taille des flux téléchargés par les utilisateurs et les ressources mobilisées grâce à l’utilisation d’un codec et d’un encodage efficace.
+    miseEnOeuvre: |-
+      Les vidéos sont proposées avec au moins un codec performant (à date : AV1, VP9 et HEVC) tenant compte de l’efficacité de compression du codec et son accélération matérielle dans les définitions 720p et au-delà. H.264 peut être proposé en complément du codec performant.
+
+      Pour économiser de la bande passante sur les scènes simples à encoder, un encodage à débit variable doit être préféré. Ce mode d’encodage peut dans certains cas être associé à un plafond pour le débit maximal afin d’assurer que les contenus plus complexes restent lisibles avec une connexion internet à bas débit.
+
+      Par ailleurs, la qualité d’encodage de la vidéo devrait être adaptée au besoin de l’utilisateur. Par exemple, utiliser le niveau de qualité le plus faible sans dégrader la vidéo visuellement dans le contexte d’utilisation.
+
+      La qualité d’encodage des flux audio devrait être adaptée au besoin de l’utilisateur :
+
+      - Optimisation du bitrate (débit), du ratio (taux de compression) et de la fréquence d’échantillonnage au sein du format ;
+      - Choix adapté de nombre de canaux : stéréo pour de la musique ou mono pour des dialogues (voir critère 5.6. dédié à l’audio).
+    controle: |-
+      Le critère est validé si le service remplit les conditions suivantes :
+
+      - Les vidéos sont encodées avec un débit variable, quel que soit le codec vidéo utilisé. Ce mode d’encodage peut dans certains cas être associé à un plafond pour le débit maximal afin d’assurer que les contenus plus complexes restent lisibles avec une connexion internet à bas débit.
+      - Les vidéos disponibles sur le service numérique ont une définition inférieure à 720p ou sont proposées avec un codec vidéo efficace, à date AV1, VP9 ou HEVC (pour les vidéos encodées en 720p ou plus). Le codec H.264 peut être utilisé en secours, en cas d’incompatibilité, à condition qu’un codec plus performant soit proposé aux terminaux compatibles.
+      - Le ou les codecs utilisés sont accélérés matériellement par la majorité du parc des terminaux.
+      - Sont documentés dans la déclaration d’écoconception du service numérique le(s) codec(s) vidéo et audio utilisé(s) pour chaque définition vidéo, le type d’encodage vidéo : débit fixe, variable, variable avec débit maximum/présence de HDR, et le type d’encodage audio : débit, nombre de canaux.
+    source: |-
+      | Codec et année d’introduction de l’accélération GPU* | H.264 (AVC) GPU 2006 à 2014 | VP9 GPU 2015 à 2017 | HEVC (H.265) GPU 2014 à 2017 | AV1 GPU 2020 à 2024                         |
+      |------------------------------------------------------|-----------------------------|---------------------|------------------------------|---------------------------------------------|
+      | Google Chrome                                        | Oui (toutes les versions)   | Oui (depuis 2013)   | Support partiel              | Oui (depuis 2018)                           |
+      | Safari sur iOS                                       | Oui (depuis 2010)           | Oui (depuis 2024)   | Oui (depuis 2017)            | Support partiel (Soc A17 Pro et + récents)  |
+      | Safari sur macOS                                     | Oui (depuis 2008)           | Oui (depuis 2020)   | Oui (depuis 2017)            | Support partiel (Soc Apple M3 et + récents) |
+      | Microsoft Edge                                       | Oui (toutes les versions)   | Oui (depuis 2018)   | Non (extension nécessaire)   | Oui (depuis 2024)                           |
+      | Mozilla Firefox                                      | Oui (depuis 2015)           | Oui (depuis 2014)   | Non                          | Oui (depuis 2019)                           |
+      | Samsung Internet                                     | Oui (toutes les versions)   | Oui (depuis 2016)   | Support partiel              | Oui (depuis 2020)                           |
+      | Opera                                                | Oui (depuis 2014)           | Oui (depuis 2013)   | Support partiel              | Oui (depuis 2018)                           |
+
+      \* Il convient de noter que l’introduction de l’accélération matérielle GPU correspond à l’année de sortie du processeur avec cette accélération matérielle. La date d’introduction de l’accélération matérielle doit être comparée avec la date de lancement du processeur graphique et non du terminal.
+
+      Pour la mise à disposition de vidéos sur internet en 2024, quatre codecs vidéo récents sont principalement utilisés : H.264, HEVC (ou H.265), VP9 et AV1.
+
+      H.264 AVC : le codec vidéo le plus utilisé
+
+      H.264, également appelé MPEG-4 AVC, est utilisé par la quasi-totalité des plateformes proposant de la vidéo sur internet (certaines plateformes proposent leurs vidéos dans plusieurs codecs, mais H.264 est presque systématiquement proposé). Il semble consommer davantage de données que les codecs plus récents à ce jour.
+
+      Le codec est bien supporté matériellement et logiciellement. Le codec vidéo H.264 est aussi supporté par l’ensemble des navigateurs web depuis 2015. Cependant les codecs vidéo développés plus récemment présentent des performances plus avancées en termes d’efficacité de compression.
+
+      HEVC : le codec de la TNT UHD
+
+      HEVC, également appelé H.265, a été spécifié en 2013. HEVC permet un gain en compression sur H.264. Il s’agit d’un codec dont les droits d’utilisation sont payants.
+
+      Si HEVC est bien pris en charge dans l’écosystème Apple et sur les box TV, ce n’est pas le cas des navigateurs web, à l’exception de Safari.
+
+      VP9 : le codec ouvert le plus répandu
+
+      VP9 est un codec vidéo ouvert et sans redevance, développé par Google. VP9 permet, comme HEVC, un gain en compression sur H.264. Autre point qu’il partage avec HEVC : la très grande majorité des terminaux utilisés en France ont une accélération matérielle, permettant une faible consommation d’énergie sur le terminal lors de la lecture de vidéos ayant recours à ce codec.
+
+      Le codec VP9 est supporté par tous les navigateurs web depuis 2018, sauf sur Safari sur iPhone et iPad où la version 17.4 de iOS / iPadOS est nécessaire (version proposée depuis avril 2024).
+
+      AV1 : le codec le plus récent
+
+      AV1 est le codec vidéo présent le plus récent, spécifié en 2018 par l’Alliance for Open Media. Il est ouvert et sans redevance. AV1 semble permettre un gain en compression sur VP9 ou HEVC et un débit divisé par deux par rapport à H.264, sans dégradation de la qualité.
+
+      Néanmoins, l’accélération matérielle de ce codec vidéo est limitée à certains terminaux de dernière génération. Toutefois, le parc de terminaux avec un décodage matériel d’AV1 augmente rapidement.
+
+      Pour les années 2024 à 2026, le codec VP9 semble l’un des meilleurs compromis en termes d’écoconception (au-delà de 2026, cela pourrait être AV1) :
+
+          Performant : le taux de compression de VP9 semble sensiblement moindre que celui d’AV1, mais il permet aux vidéos d’avoir un gain moyen de 30 % de bande passante sur H.264.
+          Faible consommation d’énergie : la prise en charge matérielle de la quasi-totalité des terminaux permet d’avoir une consommation d’énergie très faible. Sur un smartphone ne prenant pas en charge AV1, c’est le codec le plus économe en énergie.
+          Pris en charge par tous les navigateurs récents.
+      Sources :
+      - [Rapport sur l’état de l’Internet en France, Arcep, 2022](https://www.arcep.fr/uploads/tx_gspublication/RA-2023-TOME3_etat-internet-france_juillet2023.pdf)
+      - [Etude ‘VP9 encoding/decoding performance vs. HEVC/H.264’, Ronald S. Bultje,2015](https://blogs.gnome.org/rbultje/2015/09/28/vp9-encodingdecoding-performance-vs-hevch-264/)
+      - [Etude ‘AV1 beats x264 and libvpx-vp9 in practical use case’, Meta, 2018](https://engineering.fb.com/2018/04/10/video-engineering/av1-beats-x264-and-libvpx-vp9-in-practical-use-case/)
+    difficulte: "Fort"
+    priorite: "Prioritaire"
+    application: N/A si le service numérique ne propose pas de vidéos
+    metiers: [Développeur, Responsable IT]
+  - id: "5.5"
+    critere: "Le service numérique propose-t-il un mode « écoute seule » pour ses vidéos ?"
+    thematique: "Contenus"
+    objectif: |-
+      Une partie significative du trafic vidéo sur internet est constitué de vidéos qui sont écoutées (source : [étude de Chris Priest, de l’université de Bristol au Royaume-Uni sur l’usage d’un bouton « audio-seul » sur l’application YouTube](https://dl.acm.org/doi/fullHtml/10.1145/3290605.3300627) de mai 2019) :
+
+      - Vidéos musicales utilisées en fond sonore ;
+      - Podcasts filmés écoutés et non visionnés ;
+      - Émissions écoutées pendant une autre activité.
+
+      Le premier objectif est de réduire le trafic en permettant à l’utilisateur de couper son flux vidéo via une option « écoute seule », « audio only » , ou « zéro pixel » afin de réduire le trafic généré par la vidéo qui n’est pas regardée.
+
+      Le second objectif est de réduire la consommation d’énergie des terminaux en leur permettant d’activer l’écoute de la piste audio d’une vidéo lorsque l’écran est éteint.
+    miseEnOeuvre: |-
+      Proposer une option permettant à l’utilisateur de basculer en mode « écoute seule » simplement sur le lecteur vidéo (et si possible de repasser en mode vidéo, s’il souhaite regarder de nouveau la vidéo). En mode « écoute seule », le flux vidéo n’est plus téléchargé par le lecteur vidéo, qui se limite au flux audio.
+
+      Basculer automatiquement les vidéos en « écoute seule » quand le service numérique détecte que le média n’est plus visualisé ou que l’utilisateur éteint son écran. Par exemple :
+
+      - Utilisation de service numérique sur smartphone / tablette / équipement connecté (application native ou via un navigateur web) : le fait d’appuyer sur le bouton de mise en veille doit basculer la vidéo en mode audio seul, de façon à permettre à l’utilisateur de continuer à écouter la vidéo en limitant fortement la consommation d’énergie, l’écran étant éteint et seules les données nécessaires à l’audio étant transférées.
+      - Si le service numérique est utilisé dans un navigateur web, le fait de passer dans un autre onglet que celui de la vidéo doit déclencher le mode « écoute seule ». Quand l’utilisateur affiche de nouveau l’onglet de la vidéo, celle-ci peut rebasculer en mode vidéo.
+
+      Dans le cas d’un service numérique qui utilise une plateforme de vidéo ne proposant pas de mode « écoute seule », une alternative est de proposer sous la vidéo un lien vers la version audio, afin de permettre à l’utilisateur de choisir son mode de diffusion.
+    controle: |-
+      Le critère est validé si :
+
+        - Le service propose un mode « écoute seule » sur les vidéos, activable à la demande de l’utilisateur et qui s’enclenche lorsqu’il peut être détecté que la vidéo n’est pas affichée sur le terminal (par exemple : changement d’onglet dans un navigateur ou d’application sur un terminal, fermeture d’écran, etc.). Dans l’éventualité où les vidéos du service sont déjà hébergées par un service tiers qui ne propose pas ce mode « écoute seule », il est possible de valider le critère en proposant un enregistrement « écoute seule » sous chaque vidéo (sans préchargement de la vidéo associée).
+        - Sont documentés dans la déclaration d’écoconception du service numérique l’emplacement et le fonctionnement du mode « écoute seule ».
+    difficulte: "Fort"
+    priorite: "Prioritaire"
+    application: N/A si le service numérique ne propose pas de contenu vidéo avec piste audio
+    metiers: [Développeur, Responsable IT]
+  - id: "5.6"
+    critere: "Le service numérique propose-t-il des contenus audios dont le mode de compression est adapté au contenu et au contexte d’écoute ?"
+    thematique: "Contenus"
+    objectif:  |-
+      Réduire la taille des contenus audio téléchargés par les utilisateurs et donc les ressources informatiques nécessaires.
+    miseEnOeuvre: |-
+      Afin de réduire la taille des contenus audio, envisager les actions suivantes :
+
+      - Utiliser des codecs audio efficaces (à date : Opus, AAC, HE-AAC, HE-AAC v2, HD-AAC, Dolby E-AC-3 ou Dolby AC-4), en évitant les formats les plus volumineux. L’ensemble des navigateurs web supportent un flux audio seul (sans vidéo accompagnant le flux audio) avec le codec Opus, dans un conteneur WebM et avec le codec AAC, dans un conteneur MP4.
+      - Optimiser le bitrate (débit), le ratio (taux de compression) et la fréquence d’échantillonnage au sein du format.
+      - Faire un choix adapté : stéréo pour de la musique ou mono pour des dialogues.
+      - Éviter le ratio poids en mégaoctet/durée en minute supérieur à 1.
+    controle: |-
+      Le critère est validé si le service remplit les conditions suivantes :
+
+      - Les contenus audio disponibles sur le service numérique sont proposés avec un codec audio efficace, à date Opus, AAC ou Dolby AC-4 (un codec non efficace peut être proposé en fallback, à condition qu’un codec plus performant soit proposé aux terminaux compatibles).
+      - Le(s) codec(s) audio utilisé(s) et le type d’encodage audio (débit, nombre de canaux) sont documentés dans la déclaration d’écoconception du service numérique.
+    difficulte: "Faible"
+    priorite: "Modéré"
+    application: N/A si le service numérique ne propose pas de contenu audio
+    metiers: [Développeur, Responsable IT]
+  - id: "5.7"
+    critere:
+      Le service numérique utilise-t-il un format de fichier adapté au contenu et au contexte d’utilisation pour chaque document ?
+    thematique: "Contenus"
+    objectif: |-
+      Réduire le poids des fichiers téléchargés ou utilisés par les utilisateurs.
+    miseEnOeuvre: |-
+      Définir les paramètres de compression des documents afin de générer des fichiers de taille réduite.
+
+      Prendre en compte les besoins spécifiques du contenu et du contexte d'utilisation pour déterminer le format de fichier le plus approprié. Par exemple utiliser une image vectorielle si c’est plus pertinent qu’une image matricielle (ou images bitmap), constituée de pixels.
+
+      Avoir notamment recourt à un format de fichier optimisé pour une visualisation en ligne, lorsque le document est destiné à être consulté en ligne.
+    controle: |-
+      Évaluer le poids du document en fonction de son contenu. Le critère est validé si les documents utilisés pour l’opération du service numérique sont compressés de façon à réduire leur poids et à s’adapter au contexte de visualisation, d’utilisation, et à leur contenu. La stratégie de compression des documents doit être documentée et auditable par un tiers, par exemple en étant détaillée dans la déclaration d’écoconception du service numérique.
+    difficulte: "Moyen"
+    priorite: "Modéré"
+    application: N/A si le service ne gère pas de contenu
+    metiers: [Architecte logiciel, Data Scientist, Responsable de la sécurité informatique, Responsable Juridique]
+  - id: 5.8
+    critere: Does the digital service have an automatic or manual archiving and deletion strategy for obsolete or outdated content?
+    thematique: Content Management and Data Lifecycle
+    objectif: |
+      Relieving databases and physical servers of useless data.
+    miseEnOeuvre: |
+      Define a strategy for archiving and deleting content that is obsolete, expired, outdated, or does not need to be kept by the digital service. This policy can be automated by setting an expiration date and an automatic archiving and/or purge process. In addition to automatic archiving mechanisms, there should also be manual deletion mechanisms for specific content that needs to be assessed by a human. This strategy is mandatory for the subset of personal data collected by the services, which requires the definition and communication of a retention period for personal data (GDPR Art.13-2).
+    controle: |
+      To validate this criterion, verify the existence of a clearly defined archiving and deletion policy, the existence of automatic mechanisms and manual processes for content that requires human intervention to process. This strategy can be monitored by regularly assessing the occupancy rate of databases and physical servers.
+    difficulte: Level of difficulty
+    priorite: Level of priority
+    application: N/A if the service does not manage content
+    metiers: 
+      - Software architect
+      - Data Scientist
+      - IT security manager
+      - Chief legal officer
+  - id: "6.1"
+    critere: Le service numérique s’astreint-il à un poids maximum et une limite de requête par écran ?
+    thematique: "Frontend"
+    objectif: Réduire ou limiter les données téléchargées
+    miseEnOeuvre: |-
+      Par écran, il est entendu ici « écran virtuel » et non physique. Si le service numérique est un site web, l’écran désigne la page, pour une API, l’écran désigne la réponse du serveur.
+
+      Définir et suivre des indicateurs de :
+
+      - Poids maximum par écran, en tenant compte de toutes les ressources téléchargées (composants d’interface, données, contenus, scripts, feuilles de style…). Par exemple pour une page web (avec toutes les ressources chargées) qui pèse 2 Mo, l’objectif serait de descendre à 1 Mo. Selon le contexte, cet objectif peut être beaucoup plus bas.
+      - Requêtes client/serveur maximum par écran, en tenant compte de toutes les ressources téléchargées (composants d’interface, données, contenus, scripts, feuilles de style…). Par exemple, pour un site web, il serait intéressant d’avoir moins de 30 requêtes par page au lieu de 100.
+    controle: |-
+      Afficher dans la déclaration d’écoconception :
+
+      - Le poids maximum par écran défini et proportionné, et respecter cette limite ;
+      - Le nombre de requêtes maximum par écran défini, en précisant si la limitation du nombre de requêtes porte sur le seul chargement de la page web ou également sur son fonctionnement (par exemple : pour une page web comportant un formulaire de saisie ; est-ce que le nombre de requêtes intègre les requêtes de contrôle de champs ?).
+    difficulte: "Moyen"
+    priorite: "Recommandé"
+    application: N/A si le service numérique ne repose pas sur l’utilisation d’un écran
+    metiers: [Développeur, Concepteur UX / UI, Responsable Produit]
+  - id: "6.2"
+    critere: Le service numérique utilise-t-il des mécanismes de mises en cache pour la totalité des contenus transférés dont il a le contrôle ?
+    thematique: "Frontend"
+    objectif: |-
+     L’objectif est de réduire le poids des données échangées. Une partie de l’empreinte énergétique des services numériques est liée à la volumétrie des données échangées sur les réseaux, en particulier lorsque les données sont transmises sur des réseaux radio (réseaux mobiles par exemple). La réduction de la volumétrie des données échangées sur les réseaux pour une application donnée est donc un axe important d’écoconception. Dans la plupart des cas, cette réduction pourra se faire sans dégradation de l’expérience utilisateur.
+    miseEnOeuvre: |-
+      La stratégie de cache doit être adaptée au contexte d’application, au type de contenus (images, fichiers CSS, JavaScript, etc.) qui sont transférés fréquemment depuis le serveur vers le client et au scénario d’usage. Mettre en place un mécanisme de cache côté utilisateur, en frontend (cache HTTP par exemple). La gestion du mode déconnecté (offline) est parfois très pertinente, parfois non.
+
+      Lorsqu’une même information est susceptible d’être requêtée plusieurs fois, privilégier un stockage temporaire local pour éviter un trafic réseau inutile. Par exemple, il est possible de stocker des données souvent utilisées dans le navigateur web, afin de limiter les échanges avec le serveur.
+
+      Vérifier qu’aucune des données destinées à être échangées n’est superflue et que les informations transmises ne sont pas redondantes.
+
+      Le critère 6.2 traite du cache côté client. Le cache côté serveur est, quant à lui, traité dans le critère 7.1.
+    controle: |-
+      Pour valider ce critère, un mécanisme de cache côté utilisateur est mis en place, quand la solution est pertinente. En termes de moyens de test, accéder à plusieurs reprises au service et vérifier si les contenus sont récupérés à partir du cache plutôt que du serveur.
+
+      Expliciter dans la déclaration d’écoconception du service la stratégie de cache frontend, y compris son optimisation au regard du type de contenu, du contexte d’application et des scénarios d’usage.
+
+    difficulte: "Moyen"
+    priorite: "Recommandé"
+    application: N/A si le service numérique ne repose pas sur l’utilisation d’un serveur
+    metiers: [Administrateur Système, Développeur, Architecte Logiciel]
+  - id: "6.3"
+    critere: Le service numérique a-t-il mis en place des techniques de compression sur la totalité des ressources transférées dont il a le contrôle ?
+    thematique: "Frontend"
+    objectif: |-
+      Réduire la quantité de ressources transférées sur le réseau via la compression des données.
+    miseEnOeuvre: |-
+      Mettre en place la compression, minification des fichiers de scripts. Attention toutefois à ne pas générer de la consommation de ressources s’il y a besoin de puissance de calcul pour « décompresser » les fichiers : la compression systématique de type « .tgz » par exemple pour des petits fichiers peut être contre-productive. Ce critère s’applique uniquement aux fichiers texte (HTML, CSS, JavaScript par exemple).
+
+      Mettre en place une compression de bout en bout (Exemple: [Documentation Mozilla sur la compression dans HTTP](https://developer.mozilla.org/fr/docs/Web/HTTP/Compression)). Faire appel à des mécanismes de compression de flux pour minimiser le volume du trafic échangé. Favoriser, lorsque cela est possible, le mécanisme de compression le plus efficace.
+
+      Par exemple, pour HTTP plusieurs protocoles de compression existent, tels en particulier Brotli et GZIP.
+
+      Ne pas confondre avec le critère [5.2](#5.2) sur la compression des images (qui n’aborde pas la compression lors du transfert).
+    controle: |-
+      Le critère est validé si les requêtes du service numérique utilisent un mécanisme de compression des données au niveau du frontend. Pour le protocole HTTP et la compression HTML, les mécanismes de compression Brotli ou GZIP sont conseillés.
+    source: |-
+      **Comment activer Brotli ?**
+
+      Ce module est intégré par défaut à la plupart des navigateurs.
+
+      Plus généralement, les 3 serveurs web majeurs à ce jour : Apache, Nginx et Microsoft IIS proposent d’activer Brotli :
+      - Apache : le module « [mod_brotli](https://httpd.apache.org/docs/2.4/fr/mod/mod_brotli.html) » permet d’ajouter le support de Brotli ;
+      - Nginx : le module « [ngx_brotli](https://github.com/google/ngx_brotli) » ;
+      - Microsoft IIS : extension « [IIS Brotli](https://github.com/saucecontrol/Brotli-IIS) ».
+
+      Certains fournisseurs de CDN proposent d’activer Brotli.
+    difficulte: "Faible"
+    priorite: "Modéré"
+    application: N/A si le service numérique ne repose pas sur l’utilisation d’un serveur
+    metiers: [Administrateur Système, Développeur, Architecte Logiciel]
+  - id: "6.4"
+    critere: "Le service numérique affiche-t-il majoritairement des éléments graphiques et des médias dont les dimensions d’origine correspondent aux dimensions du contexte d’affichage ?"
+    thematique: "Frontend"
+    objectif: |-
+      Réduire ou limiter les données téléchargées en proposant un redimensionnement côté serveur pour les images dans une définition trop importante. Il s’agit également de minimiser la consommation d’énergie du terminal.
+    miseEnOeuvre: |-
+      Les images matricielles (ou images bitmap) proposées par un service numérique sont soit affichées dans leur taille d’origine, soit proposées dans de multiples définitions, afin de ne pas charger une image avec une définition significativement supérieure à celle du contexte d’affichage utilisé par le client.
+
+      Lors de l’ajout des images matricielles au service numérique, les dimensions d’affichage sont requises ou un redimensionnement est réalisé côté serveur, lors de l’ajout du fichier par un contributeur.
+    controle: |-
+      Pour être valider ce critère, les images du service numérique doivent entrer dans une des trois catégories suivantes :
+
+      - Images vectorielles ;
+      - Images matricielles, affichées dans leur taille d’origine (pas de redimensionnement) ;
+      - Dans le cas d'images fluides (l'image occupe un pourcentage de la largeur du parent), plusieurs variantes d'images existent avec des définitions différentes, et la meilleure est proposée à l'écran, en fonction du contexte d’affichage.
+
+      Si le service numérique permet à un contributeur d’ajouter des images, un redimensionnement doit être réalisé côté serveur pour les images qui dépasseraient une certaine taille (exprimée en pixels ou en octets) ou définition d’image.
+    difficulte: "Moyen"
+    priorite: "Recommandé"
+    application: N/A si le service numérique n’inclut pas de graphiques et/ou médias
+    metiers: [Développeur, Concepteur UX / UI]
+  - id: "6.5"
+    critere: "Le service numérique évite-t-il de déclencher le chargement de ressources et de contenus inutilisés pour chaque fonctionnalité ?"
+    thematique: "Frontend"
+    objectif: |-
+      Réduire ou limiter les données téléchargées et optimiser la consommation énergétique des terminaux. Il est souvent plus simple pour l’équipe de développement de charger tous les composants, packagés dans un fichier compressé quelle que soit la fonctionnalité. Il en résulte que l’utilisateur charge des composants qui ne seront pas forcément utilisés. N’utiliser que ce qui est effectivement nécessaire au fonctionnement du service permet d’économiser de la ressource informatique.
+    miseEnOeuvre: |-
+      Ressources et composants ne doivent être chargés que lorsqu’ils sont effectivement utilisés. Prévoir des mécanismes de chargement progressif pour les éléments graphiques et les médias qui nécessitent un téléchargement. Par exemple : streaming pour la vidéo, chargement uniquement des images ou ressources affichées à l’écran (« lazy loading ») lorsque l'utilisateur les atteint en faisant défiler la page (Illustration : [Documentation MDN sur le chargement progressif](https://developer.mozilla.org/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading)).
+    controle: |-
+      Vérifier le contenu des ressources chargées et leur utilisation effective en s'assurant qu'elles correspondent aux fonctionnalités effectivement utilisées : pour valider ce critère, il ne doit pas y avoir de ressources chargées inutilement..
+    difficulte: "Fort"
+    priorite: "Recommandé"
+    application: N/A si le service numérique n’utilise pas d’interface graphique
+    metiers: [Développeur, Concepteur UX / UI]
+  - id: "6.6"
+    critere: "Le service numérique restreint-il l’usage des capteurs des terminaux utilisateurs au besoin du service ?"
+    thematique: "Frontend"
+    objectif: |-
+      Réduire ou limiter les données échangées, dont des données personnelles (comme la webcam, le micro ou la géolocalisation, par exemple), avec le service numérique.
+    miseEnOeuvre: |-
+      Prévoir des mécanismes d’alerte, d’information et de consentement et une validation avant tout déclenchement de capteur du terminal par l’utilisateur. Il s’agit de limiter l'activation des capteurs aux moments où ils sont réellement nécessaires au bon fonctionnement du service, ou par l’activation d’une fonctionnalité expressément demandée par l’utilisateur. La définition du « moment où ils sont réellement nécessaires » doit être objectivée pour chaque usage : l’usage des capteurs doit être minimal par défaut, mais peut également être proposé à l’utilisateur un « mode dégradé » permettant de répondre à l’usage essentiel souhaité, optimisant les ressources matérielles et en particulier la batterie, sans aller jusqu’au fonctionnement nominal ou idéal.
+    controle: |-
+      Vérifier l’affichage de mécanismes d’alerte et de consentement avant tout déclenchement de capteur du terminal accepté par l’utilisateur. Examiner périodiquement que la durée d’utilisation des capteurs des terminaux utilisateurs est minimisée.
+
+      Le critère est validé si un mécanisme d’alerte et de consentement s’enclenche pour tout déclenchement de capteur du terminal.
+    difficulte: "Moyen"
+    priorite: "Modéré"
+    application: N/A si le service numérique fonctionne sans l’usage de capteurs des terminaux des utilisateurs
+    metiers: [Administrateur Système, Développeur, Architecte Logiciel]
+  - id: "6.7"
+    critere: "Le service numérique héberge-t-il les ressources statiques transférées dont il est l’émetteur sur un même domaine ?"
+    thematique: "Frontend"
+    objectif: |-
+      Permettre de diminuer la taille des échanges et de requêtes en utilisant HTTP/2 ou HTTP/3 à la place de HTTP/1.1 et en limitant le nombre de domaines différents pour les ressources utilisées. Il s’agit ainsi d’optimiser la sollicitation des serveurs.
+    miseEnOeuvre: |-
+      Activer HTTP/2 ou HTTP/3 et limiter le nombre de domaines différents pour les ressources utilisées afin notamment de profiter du multiplexage proposé par HTTP/2 ou HTTP/3.
+    controle: |-
+      Le critère est validé si (conditions cumulatives) :
+
+      - L’ensemble de ses ressources prennent en charge HTTP/2 ou HTTP/3 ;
+      - Les ressources statiques, hors services tiers, sont transférées via un seul nom de domaine à un instant « t ».
+    difficulte: "Faible"
+    priorite: "Modéré"
+    application: N/A si le service numérique n’utilise pas le protocole HTTP
+    metiers: [Administrateur Système, Développeur, Architecte Logiciel]
+  - id: "7.1"
+    critere: "Le service numérique a-t-il recours à un système de cache serveur pour les données les plus utilisées ?"
+    thematique: "Backend"
+    objectif: Limiter la consommation de ressources informatiques.
+    miseEnOeuvre: |-
+      Identifier les données, entrées API, ressources les plus utilisées à mettre en cache afin d’éviter de les régénérer. Configurer une durée d’expiration pour les rafraîchir par exemple en invalidant automatiquement le cache après une durée déterminée ou en utilisant des mécanismes de purge du cache lorsqu'une mise à jour des données est effectuée.
+
+      Le critère 7.1 concerne le cache côté serveur, à ne pas confondre avec le critère 6.2 qui traite du cache côté client.
+    controle: |-
+      Pour valider ce critère :
+
+      - Vérifier la configuration des systèmes de cache serveurs utilisés et s’assurer que les ressources les plus utilisées sont mises en cache ;
+      - Examiner la présence et les règles d’expiration qui doivent être correctement paramétrées en fonction des caractéristiques de chaque fonctionnalité (ressources statiques, contenu dynamique, données en temps réel, informations personnalisées…) ;
+      - S’assurer de la présence d’un mécanisme de rafraîchissement du cache.
+      - Expliquer la stratégie de gestion de cache côté serveur dans la déclaration d’écoconception du service.
+    difficulte: "Moyen"
+    priorite: "Recommandé"
+    application: N/A si le service repose sur des requêtes ne pouvant être mises en cache ou s’il ne s’appuie pas sur la réponse d’un serveur
+    metiers: [Administrateur Système, Développeur, Architecte Logiciel]
+  - id: "7.2"
+    critere: "Le service numérique met-il en place des durées de conservation sur les données et documents en vue de leur suppression ou archivage passé ce délai ?"
+    thematique: "Backend"
+    objectif: |-
+      Le stockage des données n'est ni illimité, ni gratuit, il a un impact environnemental et doit être optimisé. Certains services traitent de grandes quantités de données qui ne sont jamais consultées, car l'utilisateur a cessé d'utiliser le produit (mais n'a, par exemple, pas supprimé le compte) ou parce que les données sont obsolètes depuis longtemps. La limitation des durées de conservation des données personnelles figure d’ailleurs dans les obligations du RGPD.
+
+      L’objectif est d’alléger les bases de données et les serveurs physiques de données non utiles.
+    miseEnOeuvre: |-
+      Définir des dates d’expiration sur les données (fichiers, entrées en base de données…) permettant par la suite d’archiver et/ou de supprimer ces données. Implémenter des fonctionnalités qui aident les utilisateurs à identifier des données obsolètes grâce à des indicateurs et ou des suggestions de localisation où les données peuvent être supprimées.
+
+      Mettre en place un processus (de préférence automatique) d’archivage ou de suppression des données (fichiers, entrées en base de données…) dont la durée de conservation est dépassée.
+
+      Dans la mesure du possible, archiver les informations rarement consultées et intégrer une interface de « récupération à partir de l'archive » dans les interactions de l'utilisateur. Supprimer les archives inutilisées après une durée communiquée à l’utilisateur.
+
+      Déplacer le cas échéant les archives (données froides) sur un autre support que celui utilisé pour les données actives (données chaudes), voir critère 8.8.
+    controle: |-
+      Pour valider ce critère, définir des dates d’expiration pour les informations obsolètes et mettre en place un mécanisme d’archivage ou de suppression des données dépassant la durée de conservation définie.  Un suivi de l’évolution du poids des fichiers stockés et des bases de données.
+    difficulte: "Moyen"
+    priorite: "Recommandé"
+    application: N/A si le service numérique ne repose pas sur l’utilisation d’un serveur
+    metiers: [Administrateur Système, Développeur, Responsable Produit, Architecte Logiciel]
+  - id: "7.3"
+    critere: "Le service numérique informe-t-il l’utilisateur d’un traitement en cours en arrière-plan ?"
+    thematique: "Backend"
+    objectif: |-
+      Éviter les requêtes simultanées provoquées par l’utilisateur s’il ne sait pas que son action est en cours de prise en compte.
+    miseEnOeuvre: |-
+      Rendre indisponible l’action qui génère le traitement (par exemple un bouton de soumission de formulaire) lorsqu’elle est initiée par l’utilisateur lorsque la requête est en cours de traitement. Il conviendra également d’informer l’utilisateur que le traitement est en cours, éventuellement une durée approximative de traitement.
+    controle: |-
+      Réaliser des tests fonctionnels permettant de vérifier que lorsqu'une action est en cours de traitement, le bouton ou l'élément déclencheur est désactivé et qu'un indicateur visuel ou un message d'attente est présent pour informer l'utilisateur.
+    difficulte: "Faible"
+    priorite: "Modéré"
+    application: N/A si le service numérique ne fait pas de traitement en arrière-plan
+    metiers: [Développeur, Responsable Produit]
+  - id: "7.4"
+    critere: Le service numérique s’appuie-t-il sur un mécanisme de consensus qui minimise sa consommation de ressources ?
+    thematique: "Backend"
+    objectif: |-
+      L’empreinte énergétique des services numériques reposant sur une technologie blockchain publique dépendra essentiellement du mécanisme de consensus choisi. Contrairement aux blockchains privées et de consortium, les blockchains publiques sont ouvertes à tout participant et doivent donc s’appuyer sur un mécanisme de consensus particulièrement sécurisé. La preuve de travail est le mécanisme de consensus utilisé qui consomme le plus d’énergie, car s’appuyant sur le minage. L’objectif est donc de réduire l’impact environnemental de la blockchain en évitant tout algorithme de consensus reposant sur le minage et en choisissant un mécanisme de consensus moins énergivore, et plus généralement, moins consommateur en ressources.
+    miseEnOeuvre: |-
+      Prendre en compte le critère de la consommation d’énergie dans le choix de la blockchain.
+
+      Choisir un mécanisme de consensus alternatif à la preuve de travail ne reposant pas sur le minage et s’assurer que l’algorithme de consensus a une consommation énergétique réduite. Par exemple :
+      - Preuve d’enjeu
+      - Preuve d’enjeu déléguée
+      - Preuve d’autorité
+
+      Si possible, définir les paramètres de la blockchain de manière à minimiser sa consommation énergétique et en ressources matérielles (exemples : la fréquence des validations ou la gestion de la taille des blocs).
+    controle: |-
+      Vérifier la consommation d’ énergie et en ressources matérielles du mécanisme de consensus utilisé par le service numérique : l’algorithme doit être testé ou reconnu comme pauvre en consommation d’énergie et ressources. Selon les fonctionnalités du service, choisir l’algorithme de consensus de la blockchain permettant de minimiser la consommation énergétique requise. Vérifier que les paramètres de la blockchain minimisent son impact environnemental.
+
+      Si le service repose sur une blockchain ayant recours à la preuve de travail ou un algorithme de consensus reposant sur le minage et, de façon générale, associée à une consommation énergétique et en ressources élevée, le critère n’est pas validé.
+    source: |-
+      Sources :
+      - [Consommation énergétique des technologies blockchain – EcoInfo (cnrs.fr)](https://ecoinfo.cnrs.fr/2021/11/05/consommation-energetique-des-technologies-blockchain/)
+      - [Enjeux technologiques des blockchains (chaînes de blocs) (Dossier législatif en version repliée) - Assemblée nationale (assemblee-nationale.fr)](https://www.assemblee-nationale.fr/dyn/15/dossiers/enjeux_technologiques_blockchains_rap-info)
+      - [Les différents algorithmes de consensus sur la blockchain (coinacademy.fr)](https://coinacademy.fr/academie/differents-algorithmes-consensus-blockchain/)
+      - [Promesses et (dés)illusions (openedition.org)](https://journals.openedition.org/terminal/9059#tocto1n2)
+    difficulte: "Fort"
+    priorite: "Prioritaire"
+    application: N/A si le service ne repose pas sur un mécanisme de consensus
+    metiers: [Développeur, Administrateur Système, Architecte Logiciel]
+  - id: "8.1"
+    critere: "Le service numérique utilise-t-il un hébergement ayant une démarche de réduction de son empreinte environnementale ?"
+    thematique: "Hébergement"
+    objectif: |-
+      Les centres de données représentent environ 15 % de l’empreinte carbone du numérique en France et leur empreinte environnementale ne se limite pas aux émissions de GES (étude ADEME-Arcep). Il est donc important de prendre en compte dans le choix de la solution d’hébergement les pratiques du centre de données en matière environnementale. Il convient de favoriser un hébergement qui suit son empreinte environnementale et a engagé une démarche proactive pour la réduire.
+    miseEnOeuvre: |-
+      Sélectionner un hébergeur transparent sur son empreinte environnementale et ayant des engagements environnementaux pour la réduire. Une ACV est recommandée, ou a minima, la publication des indicateurs suivants : émissions de GES (market-based et location-based), consommation énergétique, en eau, en ressources abiotiques (minérales/métalliques). Plus précisément, l’hébergeur devra avoir pris des engagements pour minimiser son empreinte environnementale, visant a minima les indicateurs suivants : émissions de GES (market-based et location-based), consommation énergétique, en eau, en ressources abiotiques (minérales/métalliques). Afin de vérifier les engagements environnementaux pris par l’hébergeur, ceux-ci devront se baser sur des cadres ou normes existantes, spécifiquement :
+
+      - Code de conduite européen sur les centres de données, établi par la Commission européenne ;
+      - Norme environnementale : [ISO 14001](https://www.iso.org/fr/standard/60857.html)… ;
+      - Certification environnementale : [ISO 14001](https://www.iso.org/fr/standard/60857.html), [LEED](https://www.usgbc.org/leed), [BREAM](https://bregroup.com/products/breeam/), [HQE](https://competences.afnor.org/formations/hqe-et-qeb-integrer-ces-demarches-dans-vos-projets-de-construction)... ;
+      - mesure et communication des impacts via des référentiels reconnus (ex : Product Category Rule (PCR), Bilan Carbone/[GHG Protocol](https://ghgprotocol.org/), [ISO 14063](https://www.iso.org/fr/standard/72888.html), normes ITU, [Carbon Disclosure Project]() (CDP), [Science Based Targets](https://sciencebasedtargets.org/) (SBTi)...) mutualisation des ressources machines ;
+      - Type de refroidissement minimisant la consommation de l’environnement technique en fluides frigorigènes, en eau et en énergie ;
+      - Mécanisme de récupération de la chaleur fatale ;
+      - Mise en place d’effort d’amélioration de la performance énergétique de l’hébergement via une certification [ISO 50001](https://www.iso.org/fr/standard/69426.html) ;
+      - Analyse d’impact environnemental du « move to cloud » pour les acteurs ayant leur cloud on premise voire calculettes proposées par les fournisseurs en amont de la migration ;
+      - Politique de construction du centre de données et minimisation de l’artificialisation des sols ;
+      - Charte, politique RSE certifiée etc.
+
+      Il convient de rester vigilant au greenwashing lorsqu’il s’agit de communications sur la neutralité carbone, d’une charte, d’une politique ou d’une feuille de route interne, sans possibilité de vérifier la mise en œuvre ou sans un tiers indépendant qui certifie la mise en œuvre.
+    controle: |-
+      Fournir un justificatif, si possible dans la déclaration d’écoconception du service, qui rend compte de la mise en place des engagements environnementaux en question des hébergeurs. Ces engagements doivent être communiqués dans un document public, auditable par un tiers et aborder des voies de minimisation des impacts environnementaux suivants : émissions de GES, consommation énergétique et consommation d’eau.
+    source: |-
+      Des références à consulter en ligne :
+
+      - [Qu’est-ce que le Code de conduite européen sur les datacentres ?](https://ecoinfo.cnrs.fr/2020/05/19/guide-des-bonnes-pratiques-du-code-de-conduite-europeen-sur-les-datacentres/)
+      - [Liste des centres de données déclarés signataires du Code de conduite européen sur les datacentres (JRC)](https://e3p.jrc.ec.europa.eu/node/575)
+    difficulte: "Moyen"
+    priorite: "Prioritaire"
+    application: N/A si le service ne repose pas sur l’activité d’un centre de données
+    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable des achats, Administrateur Système]
+  - id: "8.2"
+    critere: "Le service numérique utilise-t-il un hébergement qui fournit une politique de gestion durable des équipements ?"
+    thematique: "Hébergement"
+    objectif: |-
+      Favoriser un hébergement ayant des engagements en faveur de l’environnement concernant sa gestion des équipements : impacts environnementaux de l’achat de ces équipements, politique d’achat (achat durable, réparable), politique d’usage (upgrade, réparation par exemple) et politique de fin d’usage (réemploi et gestion des DEEE, les déchets d’équipements électriques et électroniques).
+    miseEnOeuvre: |-
+      Sélectionner un hébergeur ou de demander des engagements à un hébergeur ayant une politique transparente et écologique de sa gestion des équipements : communication sur la durée de vie de ces derniers (serveurs, commutateurs réseau, firewalls, routeurs…) et sur la gestion du cycle de vie de son parc. Par exemple, il serait intéressant que l’hébergeur indique une durée de vie totale de ses équipements de plus de huit ans (ou un objectif en ce sens, si les installations de l’hébergeur ont moins de huit ans).
+    controle: |-
+      Vérifier la mise en place d’un plan de gestion durable des équipements informatiques par l’hébergeur. Le plan devra couvrir des informations sur la durée de vie des équipements, la politique d’achat durable et les actions mises en place pour minimiser l’empreinte environnementale du cycle de vie du matériel utilisé par l’hébergeur. Pour valider le critère, ce plan devra être référencé dans la déclaration d’écoconception du service numérique.
+    difficulte: "Moyen"
+    priorite: "Prioritaire"
+    application: N/A si le service n’utilise pas d’hébergement
+    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable des achats]
+  - id: "8.3"
+    critere: "Le service numérique utilise-t-il un hébergement dont le PUE (Power Usage Effectiveness) est minimisé ?"
+    thematique: "Hébergement"
+    objectif: |-
+      Il s’agit de connaître le PUE de son hébergement et favoriser de la réduction la consommation d’énergie nécessaire au bon fonctionnement et au refroidissement des serveurs nécessaires à l’hébergement.
+    miseEnOeuvre: |-
+      Il est recommandé de prendre en compte le PUE du centre de données dans le choix de la solution d’hébergement. Pour les hébergements en activité depuis plus de deux ans, le PUE devra être mesuré sur leur valeur dite « réelle » et non « by design » sur la base d’une méthodologie se référant à des normes et standards internationalement reconnus (par exemple normes ISO).
+
+      Sélectionner un hébergeur qui indique son PUE et la stratégie mise en œuvre pour le réduire. La communication de cet indicateur s’accompagne de la communication de la méthodologie utilisée pour le mesurer, basée sur des standards internationalement reconnus (par exemple ISO/IEC 30134) et notamment sur le type de PUE qui est mesuré (type 1,2 ou 3).
+
+      Le PUE est un indicateur d’efficacité énergétique qui consiste en un ratio entre l’énergie totale consommée par l’ensemble du centre d’exploitation (avec entre autres, le refroidissement, le traitement d’air, les onduleurs…) et la partie qui est effectivement consommée par les systèmes informatiques que ce centre exploite (serveurs, stockage, réseau). Un PUE proche de 1 indique une excellente performance énergétique du centre de données. Généralement, il est constaté un PUE à 1,1 pour les hyperscalers et de 2 pour les plus anciens centres de données. Cependant, améliorer cet indicateur peut dégrader d’autres indicateurs, sans que cela ne réduise ni l’impact global, ni la consommation d’énergie ; d’où l’intérêt de suivre plusieurs indicateurs (consommation d’énergie, consommation d’eau, politique de gestion du matériel, etc. Voir critère 8.1.).
+
+      À noter : Les centres de données les plus récents n’ont pas encore le taux de remplissage suffisant pour que le PUE réel soit l’indicateur approprié. Ainsi, en dessous de deux ans d’activité, le PUE by design est un meilleur indicateur auquel se référer, mais dans ce cas uniquement pour éviter les risques d’obsolescence.
+    controle: |-
+      Quel est le PUE de l’hébergeur du service numérique ?Vérifier la publication de cet indicateur de performance énergétique par  l’hébergeur du service numérique. Pour valider le critère, il faut choisir un hébergeur avec un PUE inférieur à 1,5 en réel (ou un PUE by design inférieur ou égal à 1,3 si les installations de l’hébergeur sont entrées en activité depuis moins de deux ans – en conséquence, le critère devra être réévalué passé ce délai de deux ans d’activité des installations –).
+
+      Si possible, fournir un lien ou justificatif incluant le PUE de l'hébergement dans la déclaration d’écoconception du service.
+    difficulte: "Moyen"
+    priorite: "Prioritaire"
+    application: N/A si le service n’utilise pas d’hébergement
+    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable des achats]
+  - id: "8.4"
+    critere: "Le service numérique utilise-t-il un hébergement dont son WUE (Water Usage Effectiveness) est minimisé ?"
+    thematique: "Hébergement"
+    objectif: |-
+      Connaître le WUE* de son hébergement, indicateur souvent peu pris en compte., et réduire ou limiter la consommation d’eau nécessaire au refroidissement des serveurs. Éviter le stress hydrique (c’est-à-dire de pénurie d’eau potable). Le stress hydrique local peut également être pris en compte: un WUE élevé dans une zone sans stress hydrique sera moins problématique.
+    miseEnOeuvre: |-
+      Sélectionner un hébergeur qui indique son WUE et la méthodologie utilisée pour le mesurer, basée sur des standards internationalement reconnus (par exemple ISO/IEC 30134). Cet indicateur est un ratio entre la quantité d’eau consommée et l’énergie totale utilisée par le centre de données. Il est mesuré en L/kWh. Pour les hébergements en activité depuis plus de deux ans, le WUE devra être mesuré – si possible – sur leur valeur dite « réelle » et non « by design » sur la base d’une méthodologie se référant à des normes et standards internationalement reconnus (par exemple normes ISO).
+
+      NB : Actuellement, il y a peu ou pas de données ouvertes sur le sujet du stress hydrique local. Comme pour le PUE, améliorer cet indicateur peut dégrader d’autres indicateurs, sans que cela ne réduise ni l’impact global, ni la consommation d’énergie, d’où l’intérêt de suivre plusieurs indicateurs (consommation d’énergie, consommation d’eau, politique de gestion du matériel, etc.).
+    controle: |-
+      Le critère est validé si l’hébergeur du service numérique démontre une démarche de minimisation de sa consommation d’eau en suivant les indicateurs pertinents, en particulier son WUE. L’objectif d’un WUE inférieur ou égal à 0,4 L/kWh peut être visé (calculer en réel si possible et sinon, considérer le WUE by design, en particulier pour les centres de données qui sont en activité depuis moins de deux ans – le critère est donc à réévaluer passé ce délai de deux ans d’activité des installations –).
+
+      La méthodologie de calcul et le type de WUE – réel ou by design – calculé sont précisés avec la valeur communiquée. Si possible, il faut fournir un lien ou justificatif incluant le WUE de l'hébergement dans la déclaration d’écoconception du service.
+
+      \* La consommation en eau est encore relativement peu documentée au moment de la rédaction du présent référentiel. Il conviendra donc de prendre en compte les spécificités techniques et les possibles évolutions réglementaires en cours dans l’appréciation de ce critère, en particulier concernant l’objectif chiffré du WUE.
+    difficulte: "Moyen"
+    priorite: "Recommandé"
+    application: N/A si le service n’utilise pas d’hébergement
+    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable des achats]
+  - id: "8.5"
+    critere: "Le service numérique utilise-t-il un hébergement dont la consommation d’électricité est majoritairement d’origine renouvelable ?"
+    thematique: "Hébergement"
+    objectif: |-
+      L’objectif de ce critère est de promouvoir la transparence sur l’origine de la consommation électrique des centres de données et d’œuvrer à la transition énergétique, en particulier au développement des énergies renouvelables.
+    miseEnOeuvre: |-
+      Demander à l’hébergeur sa politique en termes d’achat d’électricité. Les PPA (Power Purchage Agreement) des contrats d’énergie renouvelable de long terme sont considérés de meilleure qualité que les certificats d’origine de l’électricité.
+
+      Voir à ce sujet le rapport [Development of the EU Green Public Procurement (GPP) criteria for data centres, server rooms and cloud services](https://publications.jrc.ec.europa.eu/repository/handle/JRC118558). Ainsi la quantité annuelle d’énergie contractualisée devra être renseignée, incluant : via PPA sur le réseau français mais hors site, via autoconsommation donc sur site (potentiellement par PPA ou support complet des coûts de capital et autres) etvia des garanties d’origines. Pour les garanties d’origine renouvelable, l’additionnalité doit être prouvée.
+
+      Secondairement, un indicateur de performance normé peut être suivi : le REF, le Renewable Energy Factor.
+    controle: |-
+      S’assurer de la transparence de l’hébergeur en matière d’énergies renouvelables.
+
+      Demander des justificatifs sur la provenance de l’électricité consommée par l’hébergeur (PPA en priorité, sinon certificat d’origine de l’électricité).
+
+      Le critère est validé si l’hébergeur du service numérique est transparent sur son mix énergétique et documente une politique de recours majoritaire aux énergies renouvelables, ayant un impact effectif sur la réduction de la demande en énergie fossile. Au-delà de l’indicateur REF, l’hébergeur devra renseigner la quantité annuelle d’énergie contractualisée telle que décrite dans la section « Mise en œuvre » pour documenter sa politique de recours aux énergies renouvelables.
+
+      La provenance de l’électricité consommée par l'hébergement sera documentée dans la déclaration d’écoconception du service, par exemple en renvoyant vers la documentation détaillée pertinente du fournisseur.
+    difficulte: "Faible"
+    priorite: "Recommandé"
+    application: N/A si le service n’utilise pas d’hébergement
+    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable des achats]
+  - id: "8.6"
+    critere: "Le service numérique utilise-t-il un hébergement dont la localisation géographique est cohérente avec ses activités et qui minimise son empreinte environnementale ?"
+    thematique: "Hébergement"
+    objectif: |-
+      L’objectif est d’abord de privilégier un hébergement dans le pays où l’intensité carbone est peu élevée, et secondairement, dans une région où se situent la majorité des clients, afin de réduire la distance parcourue par les données et donc réduire l’infrastructure réseau mobilisée et son empreinte environnementale.
+    miseEnOeuvre: |-
+      Privilégier un hébergeur dont la localisation de ses serveurs est située dans un pays avec une électricité bas carbone (source : [Electricity Maps](https://app.electricitymaps.com/map)) et si possible, qui est proche des utilisateurs ou des activités identifiées (cela ne correspond pas à adopter les technologies Edge Computing mais à choisir un centre de données proche des utilisateurs).
+    controle: |-
+      Identifier la localisation des utilisateurs et la localisation des serveurs.
+
+      Par valider ce critère, il conviendra de vérifier que l’hébergeur du service numérique est situé dans un pays où l’intensité carbone de la consommation électrique est minimale. Pour cela, vérifier que cette intensité est en dessous du seuil annuel de 100 gCO₂eq/kWh , en lien avec la trajectoire de réduction des émissions de gaz à effet de serre telle que définie par l’initiative Science-Based Targets (SBTi) et conformément aux objectifs de l’Accord de Paris (à partir de 2030, le seuil à respecter est de 80 gCO₂eq/kWh puis 0 gCO₂eq/kWh à partir de 2050 – source : [Quick start guide for electric utilities (PDF – 2 Mo)](https://sciencebasedtargets.org/resources/legacy/2020/06/SBTi-Power-Sector-15C-guide-FINAL.pdf) De façon complémentaire (pas nécessaire pour la validation de ce critère), favoriser le choix d’un hébergement dans le pays où la majorité de ses utilisateurs sont localisés.
+
+      Documenter dans la déclaration d’écoconception, la localisation (pays, ville) de l’hébergement du service numérique.
+    difficulte: "Moyen"
+    priorite: "Recommandé"
+    application: N/A si le service n’utilise pas d’hébergement
+    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable Logistique]
+  - id: "8.7"
+    critere: "Le service numérique utilise-t-il un hébergement qui récupère la chaleur fatale produite par les serveurs ?"
+    thematique: "Hébergement"
+    objectif: |-
+      Encourager les initiatives permettant de diminuer ou de récupérer l’énergie produite, par exemple pour chauffer des bâtiments en hiver. Se reporter à la [Définition de la chaleur fatale selon l’ADEME](https://fondschaleur.ademe.fr/chaleur-fatale-2/).
+    miseEnOeuvre: |-
+      Sélectionner un hébergeur ou demander des engagements à un hébergeur de réutiliser la chaleur fatale générée (par exemple, pour chauffer directement les bureaux ou d’autres installations à proximité) ou à des mécanismes alternatifs permettant de gérer la température de serveurs et de minimiser l’empreinte environnementale de l’hébergement.
+    controle: |-
+      Le critère est validé si l’hébergeur a mis en place des initiatives assurant la récupération et la réutilisation de la chaleur fatale générée par son installation, et que celles-ci sont documentées dans la déclaration d’écoconception du service numérique. Il est nécessaire que le bilan environnemental global de la réutilisation de la chaleur produite soit positif, en tenant compte de l’investissement initial pour la construction ou de l’adaptation des installations pour la validation du critère.
+
+      De façon alternative, le critère peut être validé si le centre de données utilisé pour le service a un PUE inférieur à 1,3 en réel (ou un PUE by design inférieur ou égal à 1,2 si les installations de l’hébergeur sont entrées en activité depuis moins de deux ans – le critère est donc à réévaluer passé ce délai de deux ans d’activité des installations –). Un centre de données avec un PUE faible – bien qu’efficient énergétiquement – peut rendre impossible ou compliquée cette réutilisation de la chaleur fatale.
+    difficulte: "Faible"
+    priorite: "Recommandé"
+    application: N/A si le service n’utilise pas d’hébergement
+    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable]
+  - id: "8.8"
+    critere: "Le service numérique héberge-t-il de façon distincte les données « chaudes » et « froides » ?"
+    thematique: "Hébergement"
+    objectif: |-
+      Les données chaudes sont des données utilisées alors que les données froides sont des données archivées. Utiliser des hébergements différents permettrait de réduire les impacts environnementaux.
+    miseEnOeuvre: |-
+      Séparer les données chaudes des données froides en utilisant des solutions techniques adaptées au contexte d’utilisation. Il convient d’avoir une réflexion sur le mode de stockage des données froides : il existe plusieurs technologies sur le marché, toutes n’ont pas nécessairement le même impact.
+
+      Par exemple les archives et les sauvegardes à conserver dans la durée peuvent être mises dans un stockage « froid ».
+    controle: |-
+      Vérifier la séparation des données chaudes et froides dans l'architecture du service numérique, par exemple en examinant la configuration des systèmes, en s'assurant qu'ils sont distincts pour les deux types de données.
+
+      Pour valider ce critère, s'assurer que des stratégies de stockage appropriées sont mises en place pour les données froides, en prenant en compte leur empreinte environnementale.
+    difficulte: "Fort"
+    priorite: "Modéré"
+    application: N/A si le service numérique repose sur l’hébergement de moins de l’équivalent de 10 To de données
+    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Architecte de bases de données]
+  - id: "8.9"
+    critere: "Le service numérique duplique-t-il les données uniquement lorsque cela est nécessaire ?"
+    thematique: "Hébergement"
+    objectif: |-
+      Réduire les ressources informatiques et les ressources de stockage utilisées.
+      Il s’agit de se poser la question du bon niveau de service sélectionné par rapport au besoin. Plus le taux de disponibilité demandé est haut, plus cela mobilise une infrastructure coûteuse financièrement et environnementalement.
+    miseEnOeuvre: |-
+      Se questionner sur la pertinence de la redondance du service. Est-ce critique si le service numérique n’est pas disponible pendant un certain temps ?
+      - Le Backup & Restore est ce qu’il y a de moins cher, parfaitement adapté aux applications qui ont un RTO (Recovery Time Objective) ou RPO (Recovery Point Objective) de quelques heures.
+      - Le Pilot Light, à savoir par exemple une base de données « mirrorée » / dupliquée mais avec des VMs éteintes. Procédé un peu plus cher qu’un Backup & Restore, cela fonctionne pour la plupart des applications qui n’ont pas des exigences SLA (Service Level Agreement) extrêmes (inférieures à 1 heure).
+      - Le Warm Standby, lorsque les VMs tournent déjà mais dans une scalabilité limitée, quasiment en temps réel mais potentiellement en qualité légèrement dégradée s’il y a un incident.
+      - Le Hot Standby Multi-Site : résilience totale pour des SLAs temps réel. Aucune perte de service n’est tolérée, mais forcément cela a un coût.
+    controle: |-
+      Pour valider ce critère, vérifier la présence d’un SLA (Service Level Agreement) ajusté selon les besoins.
+    difficulte: "Moyen"
+    priorite: "Recommandé"
+    application: N/A si le service n’utilise pas d’hébergement
+    metiers: [Responsable de l'hébergement, Ingénieur en stockage de données, Responsable de la sécurité informatique, Architecte/Ingénieur Systèmes]
+  - id: "8.10"
+    critere: "Le service numérique tient-il compte des contraintes externes pour minimiser l’impact environnemental des calculs et transferts de données asynchrones ?"
+    thematique: "Hébergement"
+    objectif:  |-
+      Planifier les calculs et transferts de données asynchrones (sauvegardes, mises à jour, entraînement…) énergivores en dehors des pics quotidiens de consommation électrique, pour les algorithmes et traitement consommateurs pouvant être décalés dans le temps.
+
+      Ajuster la temporalité des calculs et transferts de données asynchrones pour éviter les moments où les serveurs ou les réseaux sont le plus sollicités, de façon à éviter l’achat de nouveaux équipements pour supporter les « pics ». Préférer les transferts de données d’un terminal mobile lorsque celui-ci est connecté au réseau filaire (qui est moins sensible aux usages que le réseau mobile en termes de ressources et de consommation énergétique).
+    miseEnOeuvre:  |-
+      Configurer les calculs et transferts de données asynchrones en prenant en compte ces paramètres :
+
+      - Énergie : Éviter de planifier les calculs ou transferts de données asynchrones au moment des pics quotidiens de consommation électrique (lorsque la production électrique est la plus carbonée) pour les opérations pouvant être décalées dans le temps (par exemple utiliser l’API Ecowatt développée par RTE et l’ADEME).
+      - Infrastructure : Décaler les calculs et mises à jour importantes lorsque la disponibilité des ressources de calcul est faible (afin d’éviter l’achat de nouveaux équipements).
+      - Réseau : Il s’agit de décaler les utilisations importantes, en limitant l’utilisation du réseau internet entre 19h00 et 23h00. Par exemple, si une mise à jour volumineuse est prête à être diffusée à 18h00, déclarer sa mise en production à 23h00. De façon complémentaire, Lorsque le service mobile est utilisé sur un terminal mobile ayant la possibilité de se connecter sur un réseau mobile et sur un réseau filaire, reporter les transferts de données non urgentes (par exemple : mises à jour non critiques, sauvegardes, remontées de statistiques) au moment où le terminal est connecté au réseau filaire (WiFi notamment).
+    controle:  |-
+      Le service numérique justifie dans la déclaration d’écoconception de la mise en œuvre de méthodes pour décaler les calculs et transferts de données asynchrones en fonction de la disponibilité de l’énergie électrique (éviter les pics quotidiens de consommation électrique qui impliquent une électricité plus carbonée), de la charge des infrastructures internet, et éventuellement en fonction de la disponibilité des ressources de calcul quand cela est pertinent.
+    difficulte: "Faible"
+    priorite: "Recommandé"
+    application: N/A si le service numérique n’inclut pas de calculs ou transferts de données asynchrones
+    metiers: [Responsable de la programmation, Ingénieur Logiciel, Responsable RSE/Numérique soutenable]
+  - id: "9.1"
+    critere: "Le service numérique a-t-il interrogé la nécessité d’une phase d’entraînement pour éviter un usage non justifié et déraisonné ?"
+    thematique: "Apprentissage"
+    objectif: |-
+      La phase d’apprentissage repose sur une infrastructure numérique qui, dans certains cas, peut nécessiter l’utilisation d’un important volume de données et de calculs. Largement répandue dans le domaine de l’intelligence artificielle, la phase d’entraînement peut engendrer une grande consommation d’énergie et de ressources. L’objectif est donc de réduire l’empreinte environnementale de la phase d’apprentissage en choisissant une méthode adaptée et proportionnée aux caractéristiques du service numérique.
+
+      Il s’agira donc de s’interroger sur la nécessité d’inclure une phase d’entraînement dans le service numérique. Ne pas inclure une phase d’entraînement si ce n’est pas nécessaire pour améliorer le service.
+    miseEnOeuvre: |-
+      Identifier les cibles utilisatrices et leurs besoins (voir mise en œuvre de la pratique [1.2](#1.2)) vis-à-vis du service numérique. Lister les fonctionnalités du service essentielles à ces besoins et se poser la question de la nécessité ou non de l’inclusion d’une phase d’entraînement.
+
+      Il conviendra de s’interroger régulièrement sur la valeur ajoutée espérée par la phase d’entraînement : l’ajout d’une phase d’entraînement améliore-t-il significativement le service numérique dans l’atteinte des besoins de ses cibles ? L’amélioration est-elle effectivement perceptible et utile pour l’utilisateur ?
+    controle: |-
+      Ne pas inclure une phase d’entraînement tant que le besoin n’est pas démontré et préférer les méthodes de recherches classiques, ou des solutions existantes déjà entraînées. Le cas échéant, il s’agira de cibler des publics, les besoins associés et de rendre accessible des documents de référence faisant état des études, entretiens, recherches, personas ayant permis de définir les cibles utilisatrices et leur besoin.
+
+      Justifier dans la déclaration d’écoconception le lien avec les fonctionnalités du service et les raisons expliquant la nécessité (si pertinent) de l’inclusion d’une phase d’entraînement dans le service numérique, en particulier en termes de valeur ajoutée pour l’utilisateur. Si les besoins sont clairement établis, il conviendra de définir un niveau de satisfaction suffisant et de choisir une fréquence d’entraînement proportionnée.
+
+      Le critère est validé si le service n’intègre pas d’apprentissage non justifié et suit donc, dans l’éventualité de la mise en place d’une phase d’apprentissage, les critères de documentation susmentionnés démontrant l’utilité de la phase d’entraînement et son caractère proportionnel au regard de ses cibles ainsi que des fonctionnalités concernées.
+    difficulte: "Faible"
+    priorite: "Prioritaire"
+    application: Applicable à tous les services
+    metiers: [Porteur de projet, Responsable R&D, Responsable RSE/Numérique soutenable, Data Scientist]
+  - id: "9.2"
+    critere: "Le service numérique utilise-t-il une phase d’apprentissage avec un niveau de complexité minimisé et proportionné à l’usage effectif du service ?"
+    thematique: "Apprentissage"
+    objectif: |-
+      Mettre en question le choix de la méthode d’apprentissage pour le service numérique et choisir la méthode d’entraînement la plus frugale, adéquate et proportionnée à l’usage du service.
+    miseEnOeuvre: |-
+      Faire le choix de la frugalité en privilégiant des méthodes simples comme une régression ou à défaut des réseaux de neurones simples à des technologies de deep-learning plus consommatrices de ressources de calcul.
+    controle: |-
+      Vérifier la consommation énergétique et en ressources matérielles de la méthode d’entraînement utilisée par le service numérique : la méthode d’entraînement doit être testée ou reconnue comme pauvre en consommation d’énergie et ressources.
+
+      Si le service ne repose pas sur des méthodes de régression ou autres méthodes peu coûteuses (low- complex, low-cost), justifier dans la déclaration d’écoconception du service le besoin de méthodes plus consommatrices par une référence à un état de l’art précisant la nécessité de méthodes plus complexes pour le cas d’usage cible.
+
+      Le critère est validé si le choix de la méthode d’apprentissage est l’alternative la plus sobre disponible selon l’état de l’art et les caractéristiques du service et que ces choix sont documentés dans la déclaration d’écoconception associée et auditables par un tiers.
+    difficulte: "Moyen"
+    prioritée: Prioritaire
+    application: N/A si le service numérique n'inclut pas de phase d’entraînement
+    metiers: [Porteur de projet, Data Scientist, Architecte Logiciel, Responsable RSE/Numérique soutenable]
+  - id: "9.3"
+    critere: "Le service numérique a-t-il mis en place des mécanismes visant à limiter la quantité d’entraînement nécessaire à son fonctionnement ?"
+    thematique: "Apprentissage"
+    objectif: |-
+      Limiter la phase d’entraînement utilisée par le service numérique en choisissant des modèles déjà existants et pré-entraînés. Éviter le surentraînement en maitrisant la consommation énergétique du mécanisme choisi.
+    miseEnOeuvre: |-
+      Utiliser un modèle déjà entraîné ou, à défaut, un fine-tuning d’un modèle pré-entraîné.
+
+      Mettre en œuvre les outils permettant la production de métriques de consommation de ressources (CPU / GPU / TPU / énergies, etc.) et les mettre en corrélation avec des métriques de qualité (précision, etc.) afin de limiter la consommation au juste nécessaire.
+
+      S’assurer de l’utilisation de CPU, de GPU ou de TPU efficaces, dont la localisation géographique est cohérente avec les activités concernées et qui minimise l’empreinte environnementale (en particulier, dans un pays à l’intensité carbone la plus faible possible).
+    controle: |-
+      Avant la conception du service, faire un état de l’art des modèles existants pouvant s’apparenter à la fonctionnalité visée. Utiliser un modèle pré-entraîné, si nécessaire en ajoutant des composants complémentaires (fine-tuning). Si le service n’utilise pas un modèle préexistant (déjà entraîné ou pré-entraîné), justifier dans la déclaration d’écoconception en quoi le cas d’usage est différent de ce qui existe dans l’état de l’art.
+
+      Par ailleurs, pour valider le critère, le service devrait avoir mis en place le suivi d’indicateurs de consommation de ressources et de qualité des fonctions de la phase d’apprentissage pour assurer l’optimisation de la quantité d’entraînement sous-jacente au fonctionnement du service.
+    difficulte: "Fort"
+    priorite: "Prioritaire"
+    application: N/A si le service numérique n'inclut pas de phase d’entraînement
+    metiers: [Porteur de projet, Data Scientist, Architecte Logiciel, Responsable RSE/Numérique soutenable]
+  - id: "9.4"
+    critere: "Le service numérique limite-il la quantité de données utilisées pour la phase d’apprentissage au strict nécessaire ?"
+    thematique: "Apprentissage"
+    objectif: |-
+      Il s’agit de s’interroger sur les données collectées et de minimiser les impacts environnementaux associés à leur collecte et à leur traitement pour la phase d’entraînement, en privilégiant des données existantes et en limitant la collecte de nouvelles données. Ce critère est pertinent pour la phase d’apprentissage, caractérisée le plus souvent par une forte obsolescence des bases de données utilisées.
+
+      Comme le souligne le rapport de la CNIL « Données, Empreinte et Libertés » (2023), certains impératifs de respect de la vie privée et objectifs d’écoconception se rejoignent.
+    miseEnOeuvre: |-
+      Veiller à réutiliser, si possible, des données existantes (notamment libres de droit) afin de limiter la collecte de nouvelles données et la puissance de calcul requise pour l’analyse incrémentielle de données. Questionner l’empreinte environnementale de l’acquisition de nouveau matériel de stockage contre celui du téléchargement systématique des données lorsque nécessaire.
+
+      Veiller à limiter la captation de nouvelles données pour la phase d’apprentissage.
+
+      Appliquer les critères 7.1 et 7.2 pour la mise en place de cache, de compression et de politique de gestion pour les données de la phase d’apprentissage.
+    controle: |-
+      Utiliser des bases de données existantes pour l’entraînement de son service numérique. Vérifier que la collecte de données est minimisée et mentionner les méthodes mises en œuvre dans la déclaration d’écoconception du service numérique.
+
+      Examiner également, la mise en place des critères 7.1 et 7.2 pour la mise en place de cache, de compression et de politique de gestion pour les données utilisées pour la phase d’apprentissage.
+
+      Le critère est validé si le service utilise, dès que cela est possible, des bases de données existantes et applique les critères 7.1. et 7.2 pour la phase d’apprentissage tout en documentant sa gestion de données, et l’inclusion des enjeux de sobriété, dans sa déclaration d’écoconception.
+    difficulte: "Faible"
+    priorite: "Prioritaire"
+    application: N/A si le service numérique n'inclut pas de phase d’entraînement
+    metiers: [Data Scientist, Architecte Logiciel, Responsable RSE/Numérique soutenable, Responsable de la protection des données, Développeur]
+  - id: "9.5"
+    critere: "Le service numérique optimise-t-il l’occurrence de mise à jour et de réentraînement des modèles en fonction de ses besoins et des cibles utilisatrices ?"
+    thematique: "Apprentissage"
+    objectif: |-
+      Il s’agit de questionner la fréquence des mises à jour et des réentraînements des modèles sous-jacents au service numérique en fonction des besoins réels du service (en termes de qualité et de vérifiabilité) et des besoins des cibles utilisatrices. Chaque mise à jour ou nouvel entraînement est consommateur en ressources et génère des émissions de gaz à effet de serre.
+    miseEnOeuvre: |-
+      Etablir dès la conception du service les paramètres de déclenchement d’un réentraînement du modèle. Ces paramètres devront tenir compte des besoins réels du service et des utilisateurs, notamment en termes de qualité, de fiabilité et de vérifiabilité. Analyser les données d'utilisation du service numérique pour ajuster en continu les besoins en termes de mise à jour des modèles. Prendre en compte les retours des utilisateurs, les évolutions technologiques et les changements dans l'environnement concurrentiel pour déterminer la fréquence optimale des mises à jour et de réentraînement. Minimiser autant que possible le réentraînement des modèles algorithmiques du service.
+    controle: |-
+      Fixer les conditions de déclenchement du réentraînement ou de la mise à jour des modèles algorithmiques du service en se basant sur les besoins réels des utilisateurs ou sur d’éventuelles contraintes légales. Minimiser la fréquence de ces opérations dans une démarche de sobriété. Documenter ces périmètres et les choix effectués dans la déclaration d’écoconception du service, en justifiant la prise en compte des principes d’écoconception.
+
+      Le critère est validé s’il est démontré que la fréquence de réentraînement est proportionnelle aux besoins du service et des cibles utilisatrices et est, autant que possible, minimisée grâce au suivi d’indicateurs (de performance, de satisfaction et de consommation en ressources).
+    difficulte: "Faible"
+    priorite: "Prioritaire"
+    application: N/A si le service numérique n'inclut pas de phase d’entraînement
+    metiers: [Porteur de projet, Data Scientist, Chef de produit marketing]
+  - id: "9.6"
+    critere: "Le service numérique utilise-t-il des techniques de compression pour les modèles utilisées lors de la phase d’entraînement ?"
+    thematique: "Apprentissage"
+    objectif: |-
+      Compresser les modèles d’intelligence artificielle (réduction de complexité des modèles) pour réduire l’impact environnemental.
+    miseEnOeuvre: |-
+      Compresser les modèles via les méthodes suivantes :
+      - sparsification
+      - pruning
+      - unification
+      - local scaling (pour limiter l’impact de la quantification)
+      - batch norm folding (réduire la redondance de certains paramètres)
+      - quantification
+      - distillation
+      - …
+    controle: |-
+      Le critère est validé si le service numérique justifie de la mise en œuvre de méthodes de compression de modèles, en indiquant les gains réalisés dans la déclaration d’écoconception du service numérique.
+    difficulte: "Moyen"
+    priorite: "Recommandé"
+    application: N/A si le service numérique n'inclut pas de phase d’entraînement
+    metiers: [Data Scientist, Architecte Logiciel, Responsable RSE/Numérique soutenable]
+  - id: "9.7"
+    critere: "Le service numérique utilise-t-il une stratégie d’inférence optimisée en termes de consommation de ressources et des cibles utilisatrices ?"
+    thematique: "Apprentissage"
+    objectif: |-
+      Réduire l’empreinte environnementale des modèles algorithmiques utilisés dans le domaine de l’intelligence artificielle en optimisant le besoin en ressources de leur phase d’inférence. Ce critère est particulièrement important pour l’intelligence artificielle (IA) générative. Si la phase d’entraînement a longtemps été perçue comme la plus consommatrice en énergie, le développement de l’IA générative tend à accroître la part de consommation d’énergie de la phase d’inférence, du fait du nombre de requêtes utilisateurs pour les services massivement consommés par le grand public. L’optimisation de la phase d’inférence est nécessaire pour aboutir à des modèles d’intelligence artificielle plus frugaux.
+    miseEnOeuvre: |-
+      Définir une stratégie d’inférence qui minimise le besoin en ressources et répond strictement au besoin des cibles utilisatrices. Mettre en place des indicateurs de suivi de consommation d’énergie, besoin en ressources de calcul, nécessaires à la phase d’inférence. Ces métriques sont à analyser par rapport à la satisfaction des utilisateurs. Fixer des objectifs de minimisation de la consommation en ressources, en tenant compte du ratio entre ressources consommées et satisfaction des utilisateurs. S’assurer que la phase d’inférence permet d’optimiser le nombre de requêtes utilisateurs.
+
+      Utiliser des CPU, GPU ou des TPU efficaces, dont la localisation géographique est cohérente avec leurs activités et minimise l’empreinte environnementale (en particulier, dans un pays à l’intensité carbone la plus faible possible).
+    controle: |-
+      La stratégie d’inférence du service est adaptée aux cibles utilisatrices en minimisant les ressources nécessaires à son fonctionnement et les requêtes inutiles. Des indicateurs de suivi de consommation en ressources et de satisfaction des utilisateurs sont mis en place pour ajuster la phase d’inférence, avec pour objectif la frugalité du modèle sous-jacent au service.
+
+      Le critère est validé si le service numérique démontre dans sa déclaration d’écoconception la mise en place de principes d’écoconception dans sa phase d’inférence, adaptée aux besoins des utilisateurs.
+    difficulte: "Faible"
+    priorite: "Prioritaire"
+    application: N/A si le service numérique n'inclut pas de phase d’inférence
+    metiers: [Porteur de projet, Data Scientist, Développeur]
