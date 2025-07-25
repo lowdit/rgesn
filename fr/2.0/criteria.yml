@@ -1169,7 +1169,7 @@ criteres:
     difficulte: "Moyen"
     priorite: "Modéré"
     application: N/A si le service ne gère pas de contenu
-    metiers: [Architecte logiciel, Data Scientist, Responsable de la sécurité informatique, Responsable Juridique]
+    metiers: [Développeur, Responsable IT]
   - id: "5.8"
     critere: "Le service numérique a-t-il une stratégie d’archivage et de suppression, automatiques ou manuelles, des contenus obsolètes ou périmés ?"
     thematique: "Contenus"

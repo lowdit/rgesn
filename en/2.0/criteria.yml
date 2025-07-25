@@ -1364,33 +1364,32 @@ metiers:
     priorite: "Prioritaire"
     application: N/A pour la diffusion de vidéos par multicast/broadcast
     metiers: [Développeur, Architecte Logiciel, Porteur de projet]
-  - id: "5.4"
-    critere: "Le service numérique propose-t-il des vidéos dont le niveau de compression est adapté au contenu et au contexte de visualisation ?"
-    thematique: "Contenus"
-    objectif: |-
-      La majeure partie du trafic sur internet est liée au visionnage de vidéos (la vidéo représente près de 66% du trafic internet en 2022 selon le rapport Sandvine The Global Internet Phenomena Report). Or le transport de données numériques s’appuie sur des infrastructures et l’usage d’équipements et de terminaux qui ont une empreinte environnementale à minimiser. L’emploi d’un codec vidéo efficace permet de réduire significativement la bande passante utilisée.
+  - id: 5.4
+    critere: Video Compression Efficiency
+    thematique: Video Traffic and Resource Optimization
+    objectif: |
+      Most internet traffic is tied to watching videos (video accounted for nearly 66% of internet traffic in 2023 according to Sandvine's The Global Internet Phenomena Report). Relaying data traffic relies on infrastructures as well as the use of equipment and devices whose environmental footprint needs to be minimised. The use of an efficient video codec (currently: AV1, VP9 and HEVC) can significantly reduce the bandwidth used.
 
-      Par ailleurs, le mode de décodage du codec vidéo par le terminal influe directement sur la consommation énergétique de l’appareil. Si le codec n’est pas accéléré matériellement par le processeur graphique (GPU), la lecture vidéo sera possible, mais via le microprocesseur (CPU) et dans ce cas-là, la consommation d’énergie du terminal sera plus importante, ce qui va diminuer l’autonomie d’un terminal sur batterie et possiblement sa durée de vie.
+      In addition, the way a device decodes the video codec has a direct impact on its power consumption. If the codec is not hardware-accelerated by the graphics processing unit (GPU), video playback will be possible, but only via the microprocessor (CPU). In which case the device will consume more energy, which will reduce the autonomy of a battery-based device and possibly its lifespan.
 
-      L’objectif est donc d’optimiser la taille des flux téléchargés par les utilisateurs et les ressources mobilisées grâce à l’utilisation d’un codec et d’un encodage efficace.
-    miseEnOeuvre: |-
-      Les vidéos sont proposées avec au moins un codec performant (à date : AV1, VP9 et HEVC) tenant compte de l’efficacité de compression du codec et son accélération matérielle dans les définitions 720p et au-delà. H.264 peut être proposé en complément du codec performant.
+      The goal is therefore to optimise the size of the streams downloaded by users and the resources mobilised through the use of a codec and efficient encoding.
 
-      Pour économiser de la bande passante sur les scènes simples à encoder, un encodage à débit variable doit être préféré. Ce mode d’encodage peut dans certains cas être associé à un plafond pour le débit maximal afin d’assurer que les contenus plus complexes restent lisibles avec une connexion internet à bas débit.
+    miseEnOeuvre: |
+      Videos are offered with at least one high-performance codec (currently: AV1, VP9 and HEVC) taking into account the codec's compression efficiency and its hardware acceleration in 720p and higher resolutions. H.264 can be offered as an add-on to the high-performance codec.
 
-      Par ailleurs, la qualité d’encodage de la vidéo devrait être adaptée au besoin de l’utilisateur. Par exemple, utiliser le niveau de qualité le plus faible sans dégrader la vidéo visuellement dans le contexte d’utilisation.
+      To save bandwidth on scenes that are easy to encode, variable bitrate encoding should be preferred. In some cases, this encryption method may be associated with a cap on the maximum bitrate to ensure that more complex content remains playable with a low-speed internet connection.
 
-      La qualité d’encodage des flux audio devrait être adaptée au besoin de l’utilisateur :
+      In addition, the video's encoding quality should be adapted to the user's needs. For example, using the lowest quality level without visually degrading the video in the context of use.
 
-      - Optimisation du bitrate (débit), du ratio (taux de compression) et de la fréquence d’échantillonnage au sein du format ;
-      - Choix adapté de nombre de canaux : stéréo pour de la musique ou mono pour des dialogues (voir critère 5.6. dédié à l’audio).
-    controle: |-
-      Le critère est validé si le service remplit les conditions suivantes :
+      The audio streams' encoding quality should be adapted to the user's needs: optimising speed (bitrate), (compression) ratio and sample rate within the format; adapted choice of channels numbers: stereo for music or mono for dialogue (see criterion 5.6. dedicated to audio).
 
-      - Les vidéos sont encodées avec un débit variable, quel que soit le codec vidéo utilisé. Ce mode d’encodage peut dans certains cas être associé à un plafond pour le débit maximal afin d’assurer que les contenus plus complexes restent lisibles avec une connexion internet à bas débit.
-      - Les vidéos disponibles sur le service numérique ont une définition inférieure à 720p ou sont proposées avec un codec vidéo efficace, à date AV1, VP9 ou HEVC (pour les vidéos encodées en 720p ou plus). Le codec H.264 peut être utilisé en secours, en cas d’incompatibilité, à condition qu’un codec plus performant soit proposé aux terminaux compatibles.
-      - Le ou les codecs utilisés sont accélérés matériellement par la majorité du parc des terminaux.
-      - Sont documentés dans la déclaration d’écoconception du service numérique le(s) codec(s) vidéo et audio utilisé(s) pour chaque définition vidéo, le type d’encodage vidéo : débit fixe, variable, variable avec débit maximum/présence de HDR, et le type d’encodage audio : débit, nombre de canaux.
+    controle: |
+      The criterion is validated if the service meets the following conditions:
+      • Videos are encoded with a variable bitrate, regardless of the video codec used. In some cases, this encryption method may be associated with a cap on the maximum bitrate to ensure that more complex content remains playable with a low-speed internet connection
+      • Videos available on the digital service have a resolution of less than 720p or are provided with an efficient video codec, AV1, VP9 or HEVC date (for videos encoded in 720p or higher). The H.264 codec can be used as a backup in case of incompatibility, as long as a higher performance codec is offered to compatible devices
+      • The codec(s) used are hardware-accelerated by the majority of the playback devices
+      • Document the video and audio codec(s) used for each video definition, the type of video encoding: fixed, variable, variable bitrate with maximum bitrate/presence of HDR and the type of audio encoding: bitrate, number of channels in the digital service's Ecodesign declaration of conformity
+
     source: |-
       | Codec et année d’introduction de l’accélération GPU* | H.264 (AVC) GPU 2006 à 2014 | VP9 GPU 2015 à 2017 | HEVC (H.265) GPU 2014 à 2017 | AV1 GPU 2020 à 2024                         |
       |------------------------------------------------------|-----------------------------|---------------------|------------------------------|---------------------------------------------|
@@ -1443,76 +1442,77 @@ metiers:
     priorite: "Prioritaire"
     application: N/A si le service numérique ne propose pas de vidéos
     metiers: [Développeur, Responsable IT]
-  - id: "5.5"
-    critere: "Le service numérique propose-t-il un mode « écoute seule » pour ses vidéos ?"
-    thematique: "Contenus"
-    objectif: |-
-      Une partie significative du trafic vidéo sur internet est constitué de vidéos qui sont écoutées (source : [étude de Chris Priest, de l’université de Bristol au Royaume-Uni sur l’usage d’un bouton « audio-seul » sur l’application YouTube](https://dl.acm.org/doi/fullHtml/10.1145/3290605.3300627) de mai 2019) :
+  - id: 5.5
+    critere: Audio-Only Mode for Videos
+    thematique: Video Traffic and Power Consumption Reduction
+    objectif: |
+      A significant part of video traffic on the internet is made up of videos that are listened to (source: study by Chris Priest, from the University of Bristol in the United Kingdom on the use of an audio-only button on the YouTube application from May 2019):
 
-      - Vidéos musicales utilisées en fond sonore ;
-      - Podcasts filmés écoutés et non visionnés ;
-      - Émissions écoutées pendant une autre activité.
+      • music videos playing in the background
+      • filmed podcasts that are listened to and not watched
+      • broadcasts listened to while doing something else (washing up, showering, etc.)
 
-      Le premier objectif est de réduire le trafic en permettant à l’utilisateur de couper son flux vidéo via une option « écoute seule », « audio only » , ou « zéro pixel » afin de réduire le trafic généré par la vidéo qui n’est pas regardée.
+      The first goal is to reduce traffic by allowing the user to mute their video stream via an audio-only option; "0p" or "zero pixels" to reduce traffic generated by the video that is not being watched.
+      The second goal is to reduce devices' power consumption by allowing them to enable a video's audio track when the screen is off.
 
-      Le second objectif est de réduire la consommation d’énergie des terminaux en leur permettant d’activer l’écoute de la piste audio d’une vidéo lorsque l’écran est éteint.
-    miseEnOeuvre: |-
-      Proposer une option permettant à l’utilisateur de basculer en mode « écoute seule » simplement sur le lecteur vidéo (et si possible de repasser en mode vidéo, s’il souhaite regarder de nouveau la vidéo). En mode « écoute seule », le flux vidéo n’est plus téléchargé par le lecteur vidéo, qui se limite au flux audio.
+    miseEnOeuvre: |
+      Provide an option for the user to simply switch to audio-only mode on the video player (and if possible, switch back to video mode, if they want to watch the video again). In audio-only mode, the video stream is no longer downloaded by the video player, which confines itself to the audio stream.
 
-      Basculer automatiquement les vidéos en « écoute seule » quand le service numérique détecte que le média n’est plus visualisé ou que l’utilisateur éteint son écran. Par exemple :
+      Automatically switch videos to audio-only when the digital service detects that the video is no longer being watch or when the user turns off their screen. For instance:
+      • Use of digital service on smartphone/tablet/connected device (native application or via web browser): pressing the sleep button must switch the video to audio-only mode, to allow the user to continue listening to the video while drastically reducing power consumption, with the screen turned off and only the audio data being transferred
+      • If the digital service is being accessed through’ a web browser, switching to a tab other than the video’s’ tab should trigger audio-only mode. When the user returns to the video’s tab, it can switch back to video mode
 
-      - Utilisation de service numérique sur smartphone / tablette / équipement connecté (application native ou via un navigateur web) : le fait d’appuyer sur le bouton de mise en veille doit basculer la vidéo en mode audio seul, de façon à permettre à l’utilisateur de continuer à écouter la vidéo en limitant fortement la consommation d’énergie, l’écran étant éteint et seules les données nécessaires à l’audio étant transférées.
-      - Si le service numérique est utilisé dans un navigateur web, le fait de passer dans un autre onglet que celui de la vidéo doit déclencher le mode « écoute seule ». Quand l’utilisateur affiche de nouveau l’onglet de la vidéo, celle-ci peut rebasculer en mode vidéo.
+      In the case of a digital service that uses a video platform that does not offer audio-only mode, an alternative is to provide a link to the audio version below the video, to allow the user to choose their playback mode
 
-      Dans le cas d’un service numérique qui utilise une plateforme de vidéo ne proposant pas de mode « écoute seule », une alternative est de proposer sous la vidéo un lien vers la version audio, afin de permettre à l’utilisateur de choisir son mode de diffusion.
-    controle: |-
-      Le critère est validé si :
+    controle: |
+      The criterion is validated if:
+      • The service offers audio-only mode on videos, which can be enabled at the user's request and is activated when it can be detected that the video is not displayed on the device (e.g. switching tabs in a browser or applications on a device, closing screens, etc.). In the event that the service's videos are already hosted by a third-party service that does not offer this audio-only mode, it is possible to validate the criterion by offering an audio-only recording under each video (without preloading the associated video)
+      • The location and operation of the "audio-only" mode are documented in the digital service's Ecodesign declaration of conformity
 
-        - Le service propose un mode « écoute seule » sur les vidéos, activable à la demande de l’utilisateur et qui s’enclenche lorsqu’il peut être détecté que la vidéo n’est pas affichée sur le terminal (par exemple : changement d’onglet dans un navigateur ou d’application sur un terminal, fermeture d’écran, etc.). Dans l’éventualité où les vidéos du service sont déjà hébergées par un service tiers qui ne propose pas ce mode « écoute seule », il est possible de valider le critère en proposant un enregistrement « écoute seule » sous chaque vidéo (sans préchargement de la vidéo associée).
-        - Sont documentés dans la déclaration d’écoconception du service numérique l’emplacement et le fonctionnement du mode « écoute seule ».
-    difficulte: "Fort"
-    priorite: "Prioritaire"
-    application: N/A si le service numérique ne propose pas de contenu vidéo avec piste audio
-    metiers: [Développeur, Responsable IT]
-  - id: "5.6"
-    critere: "Le service numérique propose-t-il des contenus audios dont le mode de compression est adapté au contenu et au contexte d’écoute ?"
-    thematique: "Contenus"
-    objectif:  |-
-      Réduire la taille des contenus audio téléchargés par les utilisateurs et donc les ressources informatiques nécessaires.
-    miseEnOeuvre: |-
-      Afin de réduire la taille des contenus audio, envisager les actions suivantes :
+    difficulte: Not specified
+    priorite: Not specified
+    application: Video content audio-only mode management
+    metiers:
+      - Developer
+      - IT Manager
+    target: N/A if the digital service does not use video content with an audio track
+  - id: 5.6
+    critere: Audio Content Compression Optimization
+    thematique: Audio File Size Reduction
+    objectif: |
+      Reduce the size of audio content uploaded by users and therefore the required IT resources.
 
-      - Utiliser des codecs audio efficaces (à date : Opus, AAC, HE-AAC, HE-AAC v2, HD-AAC, Dolby E-AC-3 ou Dolby AC-4), en évitant les formats les plus volumineux. L’ensemble des navigateurs web supportent un flux audio seul (sans vidéo accompagnant le flux audio) avec le codec Opus, dans un conteneur WebM et avec le codec AAC, dans un conteneur MP4.
-      - Optimiser le bitrate (débit), le ratio (taux de compression) et la fréquence d’échantillonnage au sein du format.
-      - Faire un choix adapté : stéréo pour de la musique ou mono pour des dialogues.
-      - Éviter le ratio poids en mégaoctet/durée en minute supérieur à 1.
-    controle: |-
-      Le critère est validé si le service remplit les conditions suivantes :
+    miseEnOeuvre: |
+      To reduce the size of audio content, consider the following: use efficient audio codecs (currently: Opus, AAC, HE-AAC, HE-AAC v2, HD-AAC, Dolby E-AC-3 or Dolby AC-4), avoiding the largest formats. All web browsers support an audio-only stream (without accompanying video) with the Opus codec, in a WebM container, and with the AAC codec, in an MP4 container. Optimisation of bitrate, compression ratio, and sample rate within the format. Suitable choice: stereo for music or mono for dialogue. Avoid a megabytes to duration in minutes ratio greater than 1.
 
-      - Les contenus audio disponibles sur le service numérique sont proposés avec un codec audio efficace, à date Opus, AAC ou Dolby AC-4 (un codec non efficace peut être proposé en fallback, à condition qu’un codec plus performant soit proposé aux terminaux compatibles).
-      - Le(s) codec(s) audio utilisé(s) et le type d’encodage audio (débit, nombre de canaux) sont documentés dans la déclaration d’écoconception du service numérique.
-    difficulte: "Faible"
-    priorite: "Modéré"
-    application: N/A si le service numérique ne propose pas de contenu audio
-    metiers: [Développeur, Responsable IT]
-  - id: "5.7"
-    critere:
-      Le service numérique utilise-t-il un format de fichier adapté au contenu et au contexte d’utilisation pour chaque document ?
-    thematique: "Contenus"
-    objectif: |-
-      Réduire le poids des fichiers téléchargés ou utilisés par les utilisateurs.
-    miseEnOeuvre: |-
-      Définir les paramètres de compression des documents afin de générer des fichiers de taille réduite.
+    controle: |
+      The criterion is validated if the service meets the following conditions: the audio content available on the digital service is offered with an efficient audio codec, currently Opus, AAC, HE-AAC, HE-AAC v2, HD-AAC, Dolby E-AC-3 or Dolby AC-4 (an inefficient codec may be offered as a fallback, provided that a more efficient one is available to compatible devices). Document the audio codec(s) used, the type of audio encoding: bitrate, number of channels in the digital service's Ecodesign declaration of conformity.
 
-      Prendre en compte les besoins spécifiques du contenu et du contexte d'utilisation pour déterminer le format de fichier le plus approprié. Par exemple utiliser une image vectorielle si c’est plus pertinent qu’une image matricielle (ou images bitmap), constituée de pixels.
+    difficulte: Not specified
+    priorite: Not specified
+    application: Audio content compression management
+    metiers:
+      - Developer
+      - IT Manager
 
-      Avoir notamment recourt à un format de fichier optimisé pour une visualisation en ligne, lorsque le document est destiné à être consulté en ligne.
-    controle: |-
-      Évaluer le poids du document en fonction de son contenu. Le critère est validé si les documents utilisés pour l’opération du service numérique sont compressés de façon à réduire leur poids et à s’adapter au contexte de visualisation, d’utilisation, et à leur contenu. La stratégie de compression des documents doit être documentée et auditable par un tiers, par exemple en étant détaillée dans la déclaration d’écoconception du service numérique.
-    difficulte: "Moyen"
-    priorite: "Modéré"
-    application: N/A si le service ne gère pas de contenu
-    metiers: [Architecte logiciel, Data Scientist, Responsable de la sécurité informatique, Responsable Juridique]
+  - id: 5.7
+    critere: Does the digital service use a file format adapted to each document’s content and context of use?
+    thematique: Document Compression and Format Selection
+    objectif: |
+      Reduce the size of files uploaded by users.
+
+    miseEnOeuvre: |
+      Adjust document compression settings to generate smaller file sizes. Consider the specific needs of the content and context of use to determine the most appropriate file format. Example: use a vector image if it is more appropriate than a raster image (or bitmap images), which is made up of pixels. In particular, use a file format that is optimised for online viewing, when the document is intended to be viewed online.
+
+    controle: |
+      Assess the document's size based on its content. The criterion is validated if the documents used for the digital service's operation are compressed to reduce their size and adapt to the viewing and use context and to the content. The document compression strategy must be documented and auditable by a third party, for instance by being detailed in the digital service's Ecodesign declaration of conformity.
+
+    difficulte: Not specified
+    priorite: Not specified
+    application: File format and compression management
+    metiers:
+      - Developer
+      - IT Manager
   - id: 5.8
     critere: Does the digital service have an automatic or manual archiving and deletion strategy for obsolete or outdated content?
     thematique: Content Management and Data Lifecycle
@@ -1530,48 +1530,45 @@ metiers:
       - Data Scientist
       - IT security manager
       - Chief legal officer
-  - id: "6.1"
-    critere: Le service numérique s’astreint-il à un poids maximum et une limite de requête par écran ?
-    thematique: "Frontend"
-    objectif: Réduire ou limiter les données téléchargées
-    miseEnOeuvre: |-
-      Par écran, il est entendu ici « écran virtuel » et non physique. Si le service numérique est un site web, l’écran désigne la page, pour une API, l’écran désigne la réponse du serveur.
+  - id: 6.1
+    critere: Digital Service Screen Data Limitation
+    thematique: Data Volume and Request Limitation
+    objectif: |
+      Reduce or limit the downloaded data.
 
-      Définir et suivre des indicateurs de :
+    miseEnOeuvre: |
+      The term "screen" or display is used here to refer to "virtual screen" and not to physical one. If the digital service is a website, the screen refers to the page, for an API, the screen refers to the server's response. Define and monitor indicators for: maximum data volume per screen, taking into account all downloaded assets (interface components, data, content, scripts, style sheets, etc.). For example, for a web page (with all resources loaded) that weighs 2 MB, the goal would be to go down to 1 MB. Depending on the context, this target can be much lower. Maximum client/server requests per screen, taking into account all downloaded resources (interface components, data, content, scripts, style sheets, etc.). For example, a good target for a website would be fewer than 30 requests per page instead of 100.
 
-      - Poids maximum par écran, en tenant compte de toutes les ressources téléchargées (composants d’interface, données, contenus, scripts, feuilles de style…). Par exemple pour une page web (avec toutes les ressources chargées) qui pèse 2 Mo, l’objectif serait de descendre à 1 Mo. Selon le contexte, cet objectif peut être beaucoup plus bas.
-      - Requêtes client/serveur maximum par écran, en tenant compte de toutes les ressources téléchargées (composants d’interface, données, contenus, scripts, feuilles de style…). Par exemple, pour un site web, il serait intéressant d’avoir moins de 30 requêtes par page au lieu de 100.
-    controle: |-
-      Afficher dans la déclaration d’écoconception :
+    controle: |
+      In the Ecodesign declaration of conformity display: the defined and proportionate maximum data volume per screen, and comply with this limit. The maximum number of queries per defined screen. Specify whether the limits on the number of requests relates only to web page's loading or to its operation as well (e.g. web page with an input form; does the number of requests include field control requests?).
 
-      - Le poids maximum par écran défini et proportionné, et respecter cette limite ;
-      - Le nombre de requêtes maximum par écran défini, en précisant si la limitation du nombre de requêtes porte sur le seul chargement de la page web ou également sur son fonctionnement (par exemple : pour une page web comportant un formulaire de saisie ; est-ce que le nombre de requêtes intègre les requêtes de contrôle de champs ?).
-    difficulte: "Moyen"
-    priorite: "Recommandé"
-    application: N/A si le service numérique ne repose pas sur l’utilisation d’un écran
-    metiers: [Développeur, Concepteur UX / UI, Responsable Produit]
-  - id: "6.2"
-    critere: Le service numérique utilise-t-il des mécanismes de mises en cache pour la totalité des contenus transférés dont il a le contrôle ?
-    thematique: "Frontend"
-    objectif: |-
-     L’objectif est de réduire le poids des données échangées. Une partie de l’empreinte énergétique des services numériques est liée à la volumétrie des données échangées sur les réseaux, en particulier lorsque les données sont transmises sur des réseaux radio (réseaux mobiles par exemple). La réduction de la volumétrie des données échangées sur les réseaux pour une application donnée est donc un axe important d’écoconception. Dans la plupart des cas, cette réduction pourra se faire sans dégradation de l’expérience utilisateur.
-    miseEnOeuvre: |-
-      La stratégie de cache doit être adaptée au contexte d’application, au type de contenus (images, fichiers CSS, JavaScript, etc.) qui sont transférés fréquemment depuis le serveur vers le client et au scénario d’usage. Mettre en place un mécanisme de cache côté utilisateur, en frontend (cache HTTP par exemple). La gestion du mode déconnecté (offline) est parfois très pertinente, parfois non.
+    difficulte: Not specified
+    priorite: Not specified
+    application: Virtual screen data management
+    metiers:
+      - Developer
+      - UX/UI designer
+      - Product manager
+  - id: 6.2
+    critere: Does the digital service use caching mechanisms for all of the transferred content that it controls?
+    thematique: Digital Service Caching Mechanisms
+    objectif: |
+      The aim is to reduce the amount of data traffic travelling over the network. Part of digital services' energy footprint of is tied to the volume of data exchanged over networks, especially when data is transmitted over radio networks (e.g. mobile networks). Reducing the volume of data exchanged on networks for a given application is therefore an important aspect of ecodesign. In most cases, this reduction can be done without degrading the user experience.
 
-      Lorsqu’une même information est susceptible d’être requêtée plusieurs fois, privilégier un stockage temporaire local pour éviter un trafic réseau inutile. Par exemple, il est possible de stocker des données souvent utilisées dans le navigateur web, afin de limiter les échanges avec le serveur.
+    miseEnOeuvre: |
+      The caching strategy should be adapted to the application context, the type of content (images, CSS files, JavaScript, etc.) that are frequently transferred from the server to the client, and the usage scenario. Set up a caching mechanism on the user side, on the frontend (e.g. HTTP cache). "Offline mode" management can sometimes be highly relevant, sometimes not. When the same piece of information is likely to be requested multiple times, use temporary local storage to avoid unnecessary network traffic. For example, it is possible to store often used data on the web browser, to limit exchanges with the server. Check that none of the data intended to be exchanged is superfluous and that the information transmitted is not redundant.
 
-      Vérifier qu’aucune des données destinées à être échangées n’est superflue et que les informations transmises ne sont pas redondantes.
+    controle: |
+      To validate this criterion, a user-side caching mechanism is set up, when the solution is appropriate. In terms of testing methods, access repeatedly and check that the content is retrieved from the cache rather than the server. Explain the frontend cache strategy in the service's Ecodesign declaration of conformity, including its optimisation with regard to the type of content, the application context and the usage scenarios.
 
-      Le critère 6.2 traite du cache côté client. Le cache côté serveur est, quant à lui, traité dans le critère 7.1.
-    controle: |-
-      Pour valider ce critère, un mécanisme de cache côté utilisateur est mis en place, quand la solution est pertinente. En termes de moyens de test, accéder à plusieurs reprises au service et vérifier si les contenus sont récupérés à partir du cache plutôt que du serveur.
+    difficulte: Not specified
+    priorite: Not specified
+    application: Client-side cache (Criterion 6.2 deals with client-side cache. The server-side cache is addressed in criterion 7.1)
+    metiers: 
+      - Systems administrator
+      - Developer
+      - Software architect
 
-      Expliciter dans la déclaration d’écoconception du service la stratégie de cache frontend, y compris son optimisation au regard du type de contenu, du contexte d’application et des scénarios d’usage.
-
-    difficulte: "Moyen"
-    priorite: "Recommandé"
-    application: N/A si le service numérique ne repose pas sur l’utilisation d’un serveur
-    metiers: [Administrateur Système, Développeur, Architecte Logiciel]
   - id: 6.3
     critere: Has the digital service implemented compression techniques for the transferred resources that it controls?
     thematique: Network Traffic Optimization
