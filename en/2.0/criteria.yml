@@ -1572,247 +1572,303 @@ metiers:
     priorite: "Recommandé"
     application: N/A si le service numérique ne repose pas sur l’utilisation d’un serveur
     metiers: [Administrateur Système, Développeur, Architecte Logiciel]
-  - id: "6.3"
-    critere: Le service numérique a-t-il mis en place des techniques de compression sur la totalité des ressources transférées dont il a le contrôle ?
-    thematique: "Frontend"
-    objectif: |-
-      Réduire la quantité de ressources transférées sur le réseau via la compression des données.
-    miseEnOeuvre: |-
-      Mettre en place la compression, minification des fichiers de scripts. Attention toutefois à ne pas générer de la consommation de ressources s’il y a besoin de puissance de calcul pour « décompresser » les fichiers : la compression systématique de type « .tgz » par exemple pour des petits fichiers peut être contre-productive. Ce critère s’applique uniquement aux fichiers texte (HTML, CSS, JavaScript par exemple).
+  - id: 6.3
+    critere: Has the digital service implemented compression techniques for the transferred resources that it controls?
+    thematique: Network Traffic Optimization
+    objectif: |
+      Reduce the amount of resources transferred over the network thanks to data compression.
 
-      Mettre en place une compression de bout en bout (Exemple: [Documentation Mozilla sur la compression dans HTTP](https://developer.mozilla.org/fr/docs/Web/HTTP/Compression)). Faire appel à des mécanismes de compression de flux pour minimiser le volume du trafic échangé. Favoriser, lorsque cela est possible, le mécanisme de compression le plus efficace.
+    miseEnOeuvre: |
+      Set up the compression, minification of script files. Be mindful, however, of not generating resource consumption if computing power is needed to "decompress" the files: systematic compression such as ".tgz" for small files can be counterproductive. This criterion only applies to text files (e.g. HTML, CSS, JavaScript).
 
-      Par exemple, pour HTTP plusieurs protocoles de compression existent, tels en particulier Brotli et GZIP.
+      Implement end-to-end compression. Use flow compression mechanisms to minimise the volume of traffic exchanged. Promote, where possible, the most efficient compression mechanism.
 
-      Ne pas confondre avec le critère [5.2](#5.2) sur la compression des images (qui n’aborde pas la compression lors du transfert).
-    controle: |-
-      Le critère est validé si les requêtes du service numérique utilisent un mécanisme de compression des données au niveau du frontend. Pour le protocole HTTP et la compression HTML, les mécanismes de compression Brotli ou GZIP sont conseillés.
-    source: |-
-      **Comment activer Brotli ?**
+      For example, several compression protocols exist for HTTP, such as Brotli and GZIP.
 
-      Ce module est intégré par défaut à la plupart des navigateurs.
+      This is not to be confused with criterion 5.2 on image compression (which does not address compression during transfer).
 
-      Plus généralement, les 3 serveurs web majeurs à ce jour : Apache, Nginx et Microsoft IIS proposent d’activer Brotli :
-      - Apache : le module « [mod_brotli](https://httpd.apache.org/docs/2.4/fr/mod/mod_brotli.html) » permet d’ajouter le support de Brotli ;
-      - Nginx : le module « [ngx_brotli](https://github.com/google/ngx_brotli) » ;
-      - Microsoft IIS : extension « [IIS Brotli](https://github.com/saucecontrol/Brotli-IIS) ».
+    controle: |
+      The criterion is validated if the numeric service queries use a data compression mechanism at the frontend.
 
-      Certains fournisseurs de CDN proposent d’activer Brotli.
-    difficulte: "Faible"
-    priorite: "Modéré"
-    application: N/A si le service numérique ne repose pas sur l’utilisation d’un serveur
-    metiers: [Administrateur Système, Développeur, Architecte Logiciel]
-  - id: "6.4"
-    critere: "Le service numérique affiche-t-il majoritairement des éléments graphiques et des médias dont les dimensions d’origine correspondent aux dimensions du contexte d’affichage ?"
-    thematique: "Frontend"
-    objectif: |-
-      Réduire ou limiter les données téléchargées en proposant un redimensionnement côté serveur pour les images dans une définition trop importante. Il s’agit également de minimiser la consommation d’énergie du terminal.
-    miseEnOeuvre: |-
-      Les images matricielles (ou images bitmap) proposées par un service numérique sont soit affichées dans leur taille d’origine, soit proposées dans de multiples définitions, afin de ne pas charger une image avec une définition significativement supérieure à celle du contexte d’affichage utilisé par le client.
+    difficulte: Unspecified
+    priorite: Unspecified
+    application: N/A if the digital service does not use an internet connection
+    metiers:
+      - Developer
+      - Systems administrator
+      - Software architect
 
-      Lors de l’ajout des images matricielles au service numérique, les dimensions d’affichage sont requises ou un redimensionnement est réalisé côté serveur, lors de l’ajout du fichier par un contributeur.
-    controle: |-
-      Pour être valider ce critère, les images du service numérique doivent entrer dans une des trois catégories suivantes :
+    references:
+      - How to enable Brotli
+      - Apache: "mod brotli"
+      - Nginx: "ngx_brotli"
+      - Microsoft IIS: "IIS Brotli" extension
+  - id: 6.4
+    critere: Image Dimension Optimization
+    thematique: Image Resource Efficiency
+    objectif: |
+      Reduce or limit the amount of data downloaded by offering server-side resizing for images whose definition is too high. The aim is also to minimise the device's power consumption.
 
-      - Images vectorielles ;
-      - Images matricielles, affichées dans leur taille d’origine (pas de redimensionnement) ;
-      - Dans le cas d'images fluides (l'image occupe un pourcentage de la largeur du parent), plusieurs variantes d'images existent avec des définitions différentes, et la meilleure est proposée à l'écran, en fonction du contexte d’affichage.
+    miseEnOeuvre: |
+      Raster images (or bitmap images) on a digital service are either displayed in their original size or offered in multiple resolutions, to avoid loading an image with a significantly higher resolution than the display context used by the customer.
 
-      Si le service numérique permet à un contributeur d’ajouter des images, un redimensionnement doit être réalisé côté serveur pour les images qui dépasseraient une certaine taille (exprimée en pixels ou en octets) ou définition d’image.
-    difficulte: "Moyen"
-    priorite: "Recommandé"
-    application: N/A si le service numérique n’inclut pas de graphiques et/ou médias
-    metiers: [Développeur, Concepteur UX / UI]
-  - id: "6.5"
-    critere: "Le service numérique évite-t-il de déclencher le chargement de ressources et de contenus inutilisés pour chaque fonctionnalité ?"
-    thematique: "Frontend"
-    objectif: |-
-      Réduire ou limiter les données téléchargées et optimiser la consommation énergétique des terminaux. Il est souvent plus simple pour l’équipe de développement de charger tous les composants, packagés dans un fichier compressé quelle que soit la fonctionnalité. Il en résulte que l’utilisateur charge des composants qui ne seront pas forcément utilisés. N’utiliser que ce qui est effectivement nécessaire au fonctionnement du service permet d’économiser de la ressource informatique.
-    miseEnOeuvre: |-
-      Ressources et composants ne doivent être chargés que lorsqu’ils sont effectivement utilisés. Prévoir des mécanismes de chargement progressif pour les éléments graphiques et les médias qui nécessitent un téléchargement. Par exemple : streaming pour la vidéo, chargement uniquement des images ou ressources affichées à l’écran (« lazy loading ») lorsque l'utilisateur les atteint en faisant défiler la page (Illustration : [Documentation MDN sur le chargement progressif](https://developer.mozilla.org/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading)).
-    controle: |-
-      Vérifier le contenu des ressources chargées et leur utilisation effective en s'assurant qu'elles correspondent aux fonctionnalités effectivement utilisées : pour valider ce critère, il ne doit pas y avoir de ressources chargées inutilement..
-    difficulte: "Fort"
-    priorite: "Recommandé"
-    application: N/A si le service numérique n’utilise pas d’interface graphique
-    metiers: [Développeur, Concepteur UX / UI]
-  - id: "6.6"
-    critere: "Le service numérique restreint-il l’usage des capteurs des terminaux utilisateurs au besoin du service ?"
-    thematique: "Frontend"
-    objectif: |-
-      Réduire ou limiter les données échangées, dont des données personnelles (comme la webcam, le micro ou la géolocalisation, par exemple), avec le service numérique.
-    miseEnOeuvre: |-
-      Prévoir des mécanismes d’alerte, d’information et de consentement et une validation avant tout déclenchement de capteur du terminal par l’utilisateur. Il s’agit de limiter l'activation des capteurs aux moments où ils sont réellement nécessaires au bon fonctionnement du service, ou par l’activation d’une fonctionnalité expressément demandée par l’utilisateur. La définition du « moment où ils sont réellement nécessaires » doit être objectivée pour chaque usage : l’usage des capteurs doit être minimal par défaut, mais peut également être proposé à l’utilisateur un « mode dégradé » permettant de répondre à l’usage essentiel souhaité, optimisant les ressources matérielles et en particulier la batterie, sans aller jusqu’au fonctionnement nominal ou idéal.
-    controle: |-
-      Vérifier l’affichage de mécanismes d’alerte et de consentement avant tout déclenchement de capteur du terminal accepté par l’utilisateur. Examiner périodiquement que la durée d’utilisation des capteurs des terminaux utilisateurs est minimisée.
+      When raster images are added to the digital service, display dimensions are required or resizing is done on the server side, when the file is added by a contributor.
 
-      Le critère est validé si un mécanisme d’alerte et de consentement s’enclenche pour tout déclenchement de capteur du terminal.
-    difficulte: "Moyen"
-    priorite: "Modéré"
-    application: N/A si le service numérique fonctionne sans l’usage de capteurs des terminaux des utilisateurs
-    metiers: [Administrateur Système, Développeur, Architecte Logiciel]
-  - id: "6.7"
-    critere: "Le service numérique héberge-t-il les ressources statiques transférées dont il est l’émetteur sur un même domaine ?"
-    thematique: "Frontend"
-    objectif: |-
-      Permettre de diminuer la taille des échanges et de requêtes en utilisant HTTP/2 ou HTTP/3 à la place de HTTP/1.1 et en limitant le nombre de domaines différents pour les ressources utilisées. Il s’agit ainsi d’optimiser la sollicitation des serveurs.
-    miseEnOeuvre: |-
-      Activer HTTP/2 ou HTTP/3 et limiter le nombre de domaines différents pour les ressources utilisées afin notamment de profiter du multiplexage proposé par HTTP/2 ou HTTP/3.
-    controle: |-
-      Le critère est validé si (conditions cumulatives) :
+    controle: |
+      To be compliant, images on the digital service must fall into one of the following three categories:
+      - be vector images;
+      - be raster images, displayed in their original size (no resizing);
+      - in the case of fluid images (the image occupies a percentage of the width of the parent), several image variants exist with different resolutions, and the best one is on the screen, according to the display context.
 
-      - L’ensemble de ses ressources prennent en charge HTTP/2 ou HTTP/3 ;
-      - Les ressources statiques, hors services tiers, sont transférées via un seul nom de domaine à un instant « t ».
-    difficulte: "Faible"
-    priorite: "Modéré"
-    application: N/A si le service numérique n’utilise pas le protocole HTTP
-    metiers: [Administrateur Système, Développeur, Architecte Logiciel]
-  - id: "7.1"
-    critere: "Le service numérique a-t-il recours à un système de cache serveur pour les données les plus utilisées ?"
-    thematique: "Backend"
-    objectif: Limiter la consommation de ressources informatiques.
-    miseEnOeuvre: |-
-      Identifier les données, entrées API, ressources les plus utilisées à mettre en cache afin d’éviter de les régénérer. Configurer une durée d’expiration pour les rafraîchir par exemple en invalidant automatiquement le cache après une durée déterminée ou en utilisant des mécanismes de purge du cache lorsqu'une mise à jour des données est effectuée.
+      If the digital service allows a contributor to add images, server-side resizing must be done for images that exceed a certain size (expressed in pixels or bytes) or image definition.
 
-      Le critère 7.1 concerne le cache côté serveur, à ne pas confondre avec le critère 6.2 qui traite du cache côté client.
-    controle: |-
-      Pour valider ce critère :
+    difficulte: Unspecified
+    priorite: Unspecified
+    application: N/A if the digital service does not include graphics and/or media
+    metiers:
+      - Developer
+      - UX/UI designer
 
-      - Vérifier la configuration des systèmes de cache serveurs utilisés et s’assurer que les ressources les plus utilisées sont mises en cache ;
-      - Examiner la présence et les règles d’expiration qui doivent être correctement paramétrées en fonction des caractéristiques de chaque fonctionnalité (ressources statiques, contenu dynamique, données en temps réel, informations personnalisées…) ;
-      - S’assurer de la présence d’un mécanisme de rafraîchissement du cache.
-      - Expliquer la stratégie de gestion de cache côté serveur dans la déclaration d’écoconception du service.
-    difficulte: "Moyen"
-    priorite: "Recommandé"
-    application: N/A si le service repose sur des requêtes ne pouvant être mises en cache ou s’il ne s’appuie pas sur la réponse d’un serveur
-    metiers: [Administrateur Système, Développeur, Architecte Logiciel]
-  - id: "7.2"
-    critere: "Le service numérique met-il en place des durées de conservation sur les données et documents en vue de leur suppression ou archivage passé ce délai ?"
-    thematique: "Backend"
-    objectif: |-
-      Le stockage des données n'est ni illimité, ni gratuit, il a un impact environnemental et doit être optimisé. Certains services traitent de grandes quantités de données qui ne sont jamais consultées, car l'utilisateur a cessé d'utiliser le produit (mais n'a, par exemple, pas supprimé le compte) ou parce que les données sont obsolètes depuis longtemps. La limitation des durées de conservation des données personnelles figure d’ailleurs dans les obligations du RGPD.
+  - id: 6.5
+    critere: Does the digital service avoid triggering uploads of unused resources and content for each feature?
+    thematique: Resource Loading Optimization
+    objectif: |
+      Reduce or limit data downloads and optimise devices' power consumption. It is often easier for the development team to load all the components, packaged in a compressed file regardless of the feature. As a result, the user loads components that may not necessarily be used. Using only what is actually necessary for the service's operation saves IT resources.
 
-      L’objectif est d’alléger les bases de données et les serveurs physiques de données non utiles.
-    miseEnOeuvre: |-
-      Définir des dates d’expiration sur les données (fichiers, entrées en base de données…) permettant par la suite d’archiver et/ou de supprimer ces données. Implémenter des fonctionnalités qui aident les utilisateurs à identifier des données obsolètes grâce à des indicateurs et ou des suggestions de localisation où les données peuvent être supprimées.
+    miseEnOeuvre: |
+      Only load resources and components when they are actually used. Provide progressive loading mechanisms for graphics and media that require downloading – e.g.: streaming for video, loading only the images or assets displayed on the screen ("lazy loading") when the user reaches them by scrolling down the page.
 
-      Mettre en place un processus (de préférence automatique) d’archivage ou de suppression des données (fichiers, entrées en base de données…) dont la durée de conservation est dépassée.
+    controle: |
+      Verify the content of the loaded resources and their actual use, ensuring that they correspond to the features currently employed by the user: to validate this criterion, the user must not have unnecessarily loaded resources.
 
-      Dans la mesure du possible, archiver les informations rarement consultées et intégrer une interface de « récupération à partir de l'archive » dans les interactions de l'utilisateur. Supprimer les archives inutilisées après une durée communiquée à l’utilisateur.
+    difficulte: Unspecified
+    priorite: Unspecified
+    application: N/A if the digital service does not use a graphical user interface (GUI)
+    metiers:
+      - Developer
+      - UX/UI designer
+  - id: 6.6
+    critere: Does the digital service solicit sensors on user devices only when needed, rather than permanently?
+    thematique: Device Sensor Usage Optimization
+    objectif: |
+      Reduce or limit the data exchanged, including personal data (such as webcam, microphone or geolocation, for instance), with the digital service.
 
-      Déplacer le cas échéant les archives (données froides) sur un autre support que celui utilisé pour les données actives (données chaudes), voir critère 8.8.
-    controle: |-
-      Pour valider ce critère, définir des dates d’expiration pour les informations obsolètes et mettre en place un mécanisme d’archivage ou de suppression des données dépassant la durée de conservation définie.  Un suivi de l’évolution du poids des fichiers stockés et des bases de données.
-    difficulte: "Moyen"
-    priorite: "Recommandé"
-    application: N/A si le service numérique ne repose pas sur l’utilisation d’un serveur
-    metiers: [Administrateur Système, Développeur, Responsable Produit, Architecte Logiciel]
-  - id: "7.3"
-    critere: "Le service numérique informe-t-il l’utilisateur d’un traitement en cours en arrière-plan ?"
-    thematique: "Backend"
-    objectif: |-
-      Éviter les requêtes simultanées provoquées par l’utilisateur s’il ne sait pas que son action est en cours de prise en compte.
-    miseEnOeuvre: |-
-      Rendre indisponible l’action qui génère le traitement (par exemple un bouton de soumission de formulaire) lorsqu’elle est initiée par l’utilisateur lorsque la requête est en cours de traitement. Il conviendra également d’informer l’utilisateur que le traitement est en cours, éventuellement une durée approximative de traitement.
-    controle: |-
-      Réaliser des tests fonctionnels permettant de vérifier que lorsqu'une action est en cours de traitement, le bouton ou l'élément déclencheur est désactivé et qu'un indicateur visuel ou un message d'attente est présent pour informer l'utilisateur.
-    difficulte: "Faible"
-    priorite: "Modéré"
-    application: N/A si le service numérique ne fait pas de traitement en arrière-plan
-    metiers: [Développeur, Responsable Produit]
-  - id: "7.4"
-    critere: Le service numérique s’appuie-t-il sur un mécanisme de consensus qui minimise sa consommation de ressources ?
-    thematique: "Backend"
-    objectif: |-
-      L’empreinte énergétique des services numériques reposant sur une technologie blockchain publique dépendra essentiellement du mécanisme de consensus choisi. Contrairement aux blockchains privées et de consortium, les blockchains publiques sont ouvertes à tout participant et doivent donc s’appuyer sur un mécanisme de consensus particulièrement sécurisé. La preuve de travail est le mécanisme de consensus utilisé qui consomme le plus d’énergie, car s’appuyant sur le minage. L’objectif est donc de réduire l’impact environnemental de la blockchain en évitant tout algorithme de consensus reposant sur le minage et en choisissant un mécanisme de consensus moins énergivore, et plus généralement, moins consommateur en ressources.
-    miseEnOeuvre: |-
-      Prendre en compte le critère de la consommation d’énergie dans le choix de la blockchain.
+    miseEnOeuvre: |
+      Validation of alert, information and consent mechanisms before any device sensor is triggered by the user. Limit the activation of sensors to times when they are truly necessary for the proper functioning of the service or by activating a feature expressly requested by the user. The definition of "when they are truly needed" must be objectified for each use: the use of sensors must be minimal by default, but the user can also be offered a "degraded mode", to satisfy the desired essential purpose, optimising hardware resources and the battery in particular, without going as far as nominal or ideal operation.
 
-      Choisir un mécanisme de consensus alternatif à la preuve de travail ne reposant pas sur le minage et s’assurer que l’algorithme de consensus a une consommation énergétique réduite. Par exemple :
-      - Preuve d’enjeu
-      - Preuve d’enjeu déléguée
-      - Preuve d’autorité
+    controle: |
+      Verify the display of alert and consent mechanisms before triggering any user-accepted device sensors. Periodically review that user device sensors' duration of use is minimised.
 
-      Si possible, définir les paramètres de la blockchain de manière à minimiser sa consommation énergétique et en ressources matérielles (exemples : la fréquence des validations ou la gestion de la taille des blocs).
-    controle: |-
-      Vérifier la consommation d’ énergie et en ressources matérielles du mécanisme de consensus utilisé par le service numérique : l’algorithme doit être testé ou reconnu comme pauvre en consommation d’énergie et ressources. Selon les fonctionnalités du service, choisir l’algorithme de consensus de la blockchain permettant de minimiser la consommation énergétique requise. Vérifier que les paramètres de la blockchain minimisent son impact environnemental.
+      The criterion is validated if an alert and consent mechanism is engaged by any triggering of the device's sensors.
 
-      Si le service repose sur une blockchain ayant recours à la preuve de travail ou un algorithme de consensus reposant sur le minage et, de façon générale, associée à une consommation énergétique et en ressources élevée, le critère n’est pas validé.
-    source: |-
-      Sources :
-      - [Consommation énergétique des technologies blockchain – EcoInfo (cnrs.fr)](https://ecoinfo.cnrs.fr/2021/11/05/consommation-energetique-des-technologies-blockchain/)
-      - [Enjeux technologiques des blockchains (chaînes de blocs) (Dossier législatif en version repliée) - Assemblée nationale (assemblee-nationale.fr)](https://www.assemblee-nationale.fr/dyn/15/dossiers/enjeux_technologiques_blockchains_rap-info)
-      - [Les différents algorithmes de consensus sur la blockchain (coinacademy.fr)](https://coinacademy.fr/academie/differents-algorithmes-consensus-blockchain/)
-      - [Promesses et (dés)illusions (openedition.org)](https://journals.openedition.org/terminal/9059#tocto1n2)
-    difficulte: "Fort"
-    priorite: "Prioritaire"
-    application: N/A si le service ne repose pas sur un mécanisme de consensus
-    metiers: [Développeur, Administrateur Système, Architecte Logiciel]
-  - id: "8.1"
-    critere: "Le service numérique utilise-t-il un hébergement ayant une démarche de réduction de son empreinte environnementale ?"
-    thematique: "Hébergement"
-    objectif: |-
-      Les centres de données représentent environ 15 % de l’empreinte carbone du numérique en France et leur empreinte environnementale ne se limite pas aux émissions de GES (étude ADEME-Arcep). Il est donc important de prendre en compte dans le choix de la solution d’hébergement les pratiques du centre de données en matière environnementale. Il convient de favoriser un hébergement qui suit son empreinte environnementale et a engagé une démarche proactive pour la réduire.
-    miseEnOeuvre: |-
-      Sélectionner un hébergeur transparent sur son empreinte environnementale et ayant des engagements environnementaux pour la réduire. Une ACV est recommandée, ou a minima, la publication des indicateurs suivants : émissions de GES (market-based et location-based), consommation énergétique, en eau, en ressources abiotiques (minérales/métalliques). Plus précisément, l’hébergeur devra avoir pris des engagements pour minimiser son empreinte environnementale, visant a minima les indicateurs suivants : émissions de GES (market-based et location-based), consommation énergétique, en eau, en ressources abiotiques (minérales/métalliques). Afin de vérifier les engagements environnementaux pris par l’hébergeur, ceux-ci devront se baser sur des cadres ou normes existantes, spécifiquement :
+    difficulte: Unspecified
+    priorite: Unspecified
+    application: N/A if the digital service operates without the use of sensors on user devices
+    metiers:
+      - Developer
+      - UX/UI designer
 
-      - Code de conduite européen sur les centres de données, établi par la Commission européenne ;
-      - Norme environnementale : [ISO 14001](https://www.iso.org/fr/standard/60857.html)… ;
-      - Certification environnementale : [ISO 14001](https://www.iso.org/fr/standard/60857.html), [LEED](https://www.usgbc.org/leed), [BREAM](https://bregroup.com/products/breeam/), [HQE](https://competences.afnor.org/formations/hqe-et-qeb-integrer-ces-demarches-dans-vos-projets-de-construction)... ;
-      - mesure et communication des impacts via des référentiels reconnus (ex : Product Category Rule (PCR), Bilan Carbone/[GHG Protocol](https://ghgprotocol.org/), [ISO 14063](https://www.iso.org/fr/standard/72888.html), normes ITU, [Carbon Disclosure Project]() (CDP), [Science Based Targets](https://sciencebasedtargets.org/) (SBTi)...) mutualisation des ressources machines ;
-      - Type de refroidissement minimisant la consommation de l’environnement technique en fluides frigorigènes, en eau et en énergie ;
-      - Mécanisme de récupération de la chaleur fatale ;
-      - Mise en place d’effort d’amélioration de la performance énergétique de l’hébergement via une certification [ISO 50001](https://www.iso.org/fr/standard/69426.html) ;
-      - Analyse d’impact environnemental du « move to cloud » pour les acteurs ayant leur cloud on premise voire calculettes proposées par les fournisseurs en amont de la migration ;
-      - Politique de construction du centre de données et minimisation de l’artificialisation des sols ;
-      - Charte, politique RSE certifiée etc.
+  - id: 6.7
+    critere: Static Resources Domain Hosting
+    thematique: Network Request Optimization
+    objectif: |
+      Reduce the size of exchanges and requests by using HTTP/2 or HTTP/3 instead of HTTP/1.1 and by limiting the number of different domains for the resources used. The aim is to optimise the use of servers.
 
-      Il convient de rester vigilant au greenwashing lorsqu’il s’agit de communications sur la neutralité carbone, d’une charte, d’une politique ou d’une feuille de route interne, sans possibilité de vérifier la mise en œuvre ou sans un tiers indépendant qui certifie la mise en œuvre.
-    controle: |-
-      Fournir un justificatif, si possible dans la déclaration d’écoconception du service, qui rend compte de la mise en place des engagements environnementaux en question des hébergeurs. Ces engagements doivent être communiqués dans un document public, auditable par un tiers et aborder des voies de minimisation des impacts environnementaux suivants : émissions de GES, consommation énergétique et consommation d’eau.
-    source: |-
-      Des références à consulter en ligne :
+    miseEnOeuvre: |
+      Enable HTTP/2 or HTTP/3 and limit the number of different domains for the resources used to take advantage of the multiplexing offered by HTTP/2 or HTTP/3.
 
-      - [Qu’est-ce que le Code de conduite européen sur les datacentres ?](https://ecoinfo.cnrs.fr/2020/05/19/guide-des-bonnes-pratiques-du-code-de-conduite-europeen-sur-les-datacentres/)
-      - [Liste des centres de données déclarés signataires du Code de conduite européen sur les datacentres (JRC)](https://e3p.jrc.ec.europa.eu/node/575)
-    difficulte: "Moyen"
-    priorite: "Prioritaire"
-    application: N/A si le service ne repose pas sur l’activité d’un centre de données
-    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable des achats, Administrateur Système]
-  - id: "8.2"
-    critere: "Le service numérique utilise-t-il un hébergement qui fournit une politique de gestion durable des équipements ?"
-    thematique: "Hébergement"
-    objectif: |-
-      Favoriser un hébergement ayant des engagements en faveur de l’environnement concernant sa gestion des équipements : impacts environnementaux de l’achat de ces équipements, politique d’achat (achat durable, réparable), politique d’usage (upgrade, réparation par exemple) et politique de fin d’usage (réemploi et gestion des DEEE, les déchets d’équipements électriques et électroniques).
-    miseEnOeuvre: |-
-      Sélectionner un hébergeur ou de demander des engagements à un hébergeur ayant une politique transparente et écologique de sa gestion des équipements : communication sur la durée de vie de ces derniers (serveurs, commutateurs réseau, firewalls, routeurs…) et sur la gestion du cycle de vie de son parc. Par exemple, il serait intéressant que l’hébergeur indique une durée de vie totale de ses équipements de plus de huit ans (ou un objectif en ce sens, si les installations de l’hébergeur ont moins de huit ans).
-    controle: |-
-      Vérifier la mise en place d’un plan de gestion durable des équipements informatiques par l’hébergeur. Le plan devra couvrir des informations sur la durée de vie des équipements, la politique d’achat durable et les actions mises en place pour minimiser l’empreinte environnementale du cycle de vie du matériel utilisé par l’hébergeur. Pour valider le critère, ce plan devra être référencé dans la déclaration d’écoconception du service numérique.
-    difficulte: "Moyen"
-    priorite: "Prioritaire"
-    application: N/A si le service n’utilise pas d’hébergement
-    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable des achats]
-  - id: "8.3"
-    critere: "Le service numérique utilise-t-il un hébergement dont le PUE (Power Usage Effectiveness) est minimisé ?"
-    thematique: "Hébergement"
-    objectif: |-
-      Il s’agit de connaître le PUE de son hébergement et favoriser de la réduction la consommation d’énergie nécessaire au bon fonctionnement et au refroidissement des serveurs nécessaires à l’hébergement.
-    miseEnOeuvre: |-
-      Il est recommandé de prendre en compte le PUE du centre de données dans le choix de la solution d’hébergement. Pour les hébergements en activité depuis plus de deux ans, le PUE devra être mesuré sur leur valeur dite « réelle » et non « by design » sur la base d’une méthodologie se référant à des normes et standards internationalement reconnus (par exemple normes ISO).
+    controle: |
+      The criterion is validated if (cumulative conditions):
+      • all of its resources support HTTP/2 or HTTP/3;
+      • all static resources, excluding third-party services, are transferred via a single domain name at a given point in time.
 
-      Sélectionner un hébergeur qui indique son PUE et la stratégie mise en œuvre pour le réduire. La communication de cet indicateur s’accompagne de la communication de la méthodologie utilisée pour le mesurer, basée sur des standards internationalement reconnus (par exemple ISO/IEC 30134) et notamment sur le type de PUE qui est mesuré (type 1,2 ou 3).
+    difficulte: Unspecified
+    priorite: Unspecified
+    application: N/A if the digital service does not use HTTP
+    metiers:
+      - Systems administrator
+      - Developer
+      - Software architect
 
-      Le PUE est un indicateur d’efficacité énergétique qui consiste en un ratio entre l’énergie totale consommée par l’ensemble du centre d’exploitation (avec entre autres, le refroidissement, le traitement d’air, les onduleurs…) et la partie qui est effectivement consommée par les systèmes informatiques que ce centre exploite (serveurs, stockage, réseau). Un PUE proche de 1 indique une excellente performance énergétique du centre de données. Généralement, il est constaté un PUE à 1,1 pour les hyperscalers et de 2 pour les plus anciens centres de données. Cependant, améliorer cet indicateur peut dégrader d’autres indicateurs, sans que cela ne réduise ni l’impact global, ni la consommation d’énergie ; d’où l’intérêt de suivre plusieurs indicateurs (consommation d’énergie, consommation d’eau, politique de gestion du matériel, etc. Voir critère 8.1.).
+  - id: 7.1
+    critere: Cache Server System for Popular Data
+    thematique: IT Resource Consumption Optimization
+    objectif: |
+      Limit the consumption of IT resources.
 
-      À noter : Les centres de données les plus récents n’ont pas encore le taux de remplissage suffisant pour que le PUE réel soit l’indicateur approprié. Ainsi, en dessous de deux ans d’activité, le PUE by design est un meilleur indicateur auquel se référer, mais dans ce cas uniquement pour éviter les risques d’obsolescence.
-    controle: |-
-      Quel est le PUE de l’hébergeur du service numérique ?Vérifier la publication de cet indicateur de performance énergétique par  l’hébergeur du service numérique. Pour valider le critère, il faut choisir un hébergeur avec un PUE inférieur à 1,5 en réel (ou un PUE by design inférieur ou égal à 1,3 si les installations de l’hébergeur sont entrées en activité depuis moins de deux ans – en conséquence, le critère devra être réévalué passé ce délai de deux ans d’activité des installations –).
+    miseEnOeuvre: |
+      Identify the most popular data, API entries, resources to cache to avoid regenerating them. Configure an expiration time to refresh them, for instance, by automatically invalidating the cache after a set amount of time, or by using cache purge mechanisms when a data refresh is performed.
 
-      Si possible, fournir un lien ou justificatif incluant le PUE de l'hébergement dans la déclaration d’écoconception du service.
-    difficulte: "Moyen"
-    priorite: "Prioritaire"
-    application: N/A si le service n’utilise pas d’hébergement
-    metiers: [Responsable de l'hébergement, Responsable RSE/Numérique soutenable, Responsable des achats]
+      Criterion 7.1 relates to the server-side cache. Not to be confused with criterion 6.2 which deals with client-side cache.
+
+    controle: |
+      To validate this criterion:
+      • Verify the configuration of the server caching systems used and ensure that the most used resources are cached.
+      • Examine the presence and expiration rules that must be correctly set up according to the characteristics of each feature (static resources, dynamic content, real-time data, personalised information, etc.).
+      • Make sure there is a cache refresh mechanism.
+
+    difficulte: Unspecified
+    priorite: Unspecified
+    application: N/A if the service is based on requests that cannot be cached, or does not rely on server response
+    metiers:
+      - Systems administrator
+      - Developer
+      - Software architect
+  - id: 7.2
+    critere: Data and Document Retention Periods
+    thematique: Data Storage Optimization
+    objectif: |
+      Data storage is neither unlimited nor free, it has an environmental impact and must be optimised. Some services process large amounts of data that are never accessed because the user has stopped using the product (but has not deleted their account, for instance) or because the data has been out of date for some time. Setting retention periods for personal data is also one of the GDPR obligations. The goal is to relieve databases and physical servers of the burden of useless data.
+
+    miseEnOeuvre: |
+      Set expiration dates on data (files, database entries, etc.) to archive and/or delete them. Implement features that help users identify outdated data through flags and/or location suggestions where data can be deleted. Set up a process (preferably automatic) for archiving or deleting data (files, database entries, etc.) whose retention period has expired.
+
+      Whenever possible, archive infrequently accessed information and incorporate a "retrieval from archive" interface into user interactions. Delete unused archives after a period of time communicated to the user.
+
+      If necessary, move the archives (cold data) to a location other than the one used for active data (hot data), see criterion 8.8.
+
+    controle: |
+      To validate this criterion, set expiration dates for obsolete information and set up a mechanism for archiving or deleting data whose set retention period has expired, and track changes in the size of stored files and databases.
+
+    difficulte: Unspecified
+    priorite: Unspecified
+    application: N/A if the digital service does not use a server
+    metiers:
+      - Systems administrator
+      - Developer
+      - Product manager
+      - Software architect
+
+  - id: 7.3
+    critere: Background Processing User Notification
+    thematique: User Interface and Processing Transparency
+    objectif: |
+      Avoid concurrent requests caused by the user if they do not know that their action is being taken into account.
+
+    miseEnOeuvre: |
+      Make the action that generates the processing (for instance, a form submission button) unavailable when it is initiated by the user while the request is being processed. The user should also be informed that the processing is ongoing, and possibly given an approximate timeframe for its completion.
+
+    controle: |
+      Perform functional tests to verify that when an action is being processed, the button or trigger is disabled and a visual indicator or wait message is present to inform the user.
+
+    difficulte: Unspecified
+    priorite: Unspecified
+    application: N/A if the digital service does not perform background processing
+    metiers:
+      - Developer
+      - Product manager
+
+  - id: 7.4
+    critere: Does the digital service rely on a consensus mechanism that minimises its resource consumption?
+    thematique: Blockchain Consensus Mechanism Resource Efficiency
+    objectif: |
+      The energy footprint of digital services based on public blockchain technology will depend mainly on the chosen consensus mechanism. Unlike private and consortium blockchains, public blockchains are open to any participant and must therefore rely on a particularly secure consensus mechanism. Proof-of-work is the consensus mechanism that consumes the most energy, as it relies on data mining. The goal is therefore to reduce the blockchain's environmental impact by avoiding any consensus algorithm based on data mining, and by choosing one that consumes less energy, and fewer resources in general.
+
+    miseEnOeuvre: |
+      Take the energy consumption criterion into account when choosing a blockchain. Choose an alternative consensus mechanism to proof-of-work that does not rely on mining, and ensure that the consensus algorithm is low power consumption. For instance:
+      • Proof of Stake
+      • Delegated Proof of Stake
+      • Proof of Authority
+
+      If possible, define the blockchain's parameters in such a way as to minimise its energy and hardware resource consumption (e.g., the frequency of validations or management of block sizes).
+
+    controle: |
+      Verify the energy and hardware resource consumption of the digital service's consensus mechanism: the algorithm must be tested or recognised as low in energy and resource consumption. Depending on the service's features, choose a blockchain consensus algorithm that will minimise the required energy consumption. Verify that the blockchain's parameters minimise its environmental impact.
+
+      If the service is based on a proof-of-work blockchain or a mining-based consensus algorithm that is generally associated with high energy and resource consumption, the criterion is not validated.
+
+      Document the choice of blockchain and the relevance of the chosen consensus algorithm with regard to environmental issues in the Ecodesign declaration of conformity.
+
+    difficulte: Unspecified
+    priorite: Unspecified
+    application: N/A if the service does not rely on a consensus mechanism
+    metiers:
+      - Developer
+      - Systems administrator
+      - Software architect
+
+  - id: 8.1
+    critere: Hosting Provider Environmental Footprint Reduction Strategy
+    thematique: Data Centre Environmental Impact Management
+    objectif: |
+      Data centres account for around 15% of ICT's carbon footprint in France, and their environmental footprint is not limited to GHG emissions (ADEME-Arcep study). When choosing a hosting solution, it is therefore important to take into account how the data centre is working to curtail its environmental footprint. This means opting for a hosting provider that monitors its environmental footprint and is taking proactive steps to reduce it.
+
+    miseEnOeuvre: |
+      Select a hosting provider that is transparent about its environmental footprint and has made commitments to reduce it. An LCA is recommended or, at very least, the publication of the following indicators: GHG emissions (market-based and location-based), energy consumption, water consumption, abiotic resource use (minerals/metals).
+
+      The hosting provider must also have made commitments to minimise its environmental footprint, targeting at least the following indicators: GHG emissions (market-based and location-based), energy consumption, water consumption, abiotic resource use (minerals/metals). Existing frameworks or standards must be used to verify the hosting providers' environmental commitments, and specifically:
+      • European Code of Conduct for Energy Efficiency in Data Centres, established by the European Commission
+      • ISO International Environmental management standards: ISO 14001…
+      • environmental auditor certification:ISO 14001LEED , BREAM, HQE…
+      • environmental impact assessment and communication via recognised standards (e.g.: Product Category Rule (PCR), Carbon audit/GHG Protocol, ISO14063, ITU standards, Carbon Disclosure Project (CDP), Science Based Targets (SBTi)…), resource pooling
+      • type of cooling that minimises the consumption of refrigerants, water and energy in the technical environment
+      • waste heat recovery mechanism
+      • implementation of efforts to improve hosting's energy performance via ISO 50001 certification
+      • environmental impact analysis of the move to the cloud for players with on-premise servers or calculators supplied by providers prior to migration
+      • data centre construction policy and minimising soil artificialisation
+      • charter, certified CSR policy, etc.
+
+    controle: |
+      Choose a hosting provider that is transparent about its environmental footprint and its commitments to the environment. To verify the veracity of the information provided by data centres, it is advisable to request environmental performance certificates from the hosting companies, as well as the methodologies used based on recognised norms and standards (ISO, etc.).
+
+      Verify or request commitments from the hosting provider to reduce its environmental footprint – at least concerning the following indicators: GHG emissions (market-based and location-based), energy consumption, water consumption, abiotic resource use (minerals/metals). Ensure the ratification of the Data Centre Code of Conduct by the hosting provider (refer, if possible, to the European Commission's methodology set out in the Taxonomy Climate Delegated Act which assesses data centre compliance with this Code of Conduct) and associated actions.
+
+      Document the hosting provider's environmental footprint and the implementation of its commitments in the service's Ecodesign declaration of conformity.
+
+    difficulte: Unspecified
+    priorite: Unspecified
+    application: N/A if the service does not use hosting
+    metiers:
+      - Web hosting manager
+      - CSR/digital sustainability manager
+      - Purchasing manager
+      - Systems administrator
+
+    sources:
+      - What is the European Code of Conduct on Data Centres?
+      - List of data centres that have signed the European Code of Conduct for Data Centre Energy Efficiency (JRC)
+
+  - id: 8.2
+    critere: Does the digital service use a hosting provider that provides a sustainable management policy for its equipment?
+    thematique: Hosting Provider Equipment Sustainability
+    objectif: |
+      Prefer a hosting provider that has made sustainable equipment management commitments: environmental impacts of procuring this equipment, purchasing policy (sustainable purchasing, repairable), use policy (upgrade, repair for instance) and end-of-life policy (reuse and management of WEEE, Waste Electrical and Electronic Equipment).
+
+    miseEnOeuvre: |
+      Select a hosting provider or ask for commitments from a hosting provider with a transparent and sustainable policy for its equipment management. Communication on the lifespan of equipment (servers, network switches, firewalls, routers, etc.) and on the management of the life cycle of its fleet. It would be useful, for instance, for the hosting provider to indicate a total lifespan of its equipment that is more than eight years old (or future targets if the host's installations are less than eight years old).
+
+    controle: |
+      Check the hosting provider's implementation of a sustainable IT equipment management plan. The plan should cover information on the lifespan of the equipment, the sustainable purchasing policy and the actions put in place to minimise the environmental footprint of the life cycle of the equipment used by the hosting provider. To validate the criterion, this plan must be referenced in the digital service's Ecodesign declaration of conformity.
+
+    difficulte: Moderate
+    priorite: High
+    application: N/A if the service does not use hosting
+    metiers:
+      - Web hosting manager
+      - CSR/digital sustainability manager
+      - Purchasing manager
+ 
+  - id: 8.3
+    critere: Does the digital service use a hosting provider with a low PUE (Power
+Usage Effectiveness)?
+    thematique: Digital Service Hosting Provider Energy Efficiency
+    objectif: |
+      Know the PUE of one's hosting provider. Reduce the energy consumption required for the proper operation and cooling of the servers required for hosting. Data centres are encouraged to reduce and limit the energy required to keep servers running and cool.
+
+    miseEnOeuvre: |
+      It is recommended that the data centre's PUE be a factor when choosing the hosting solution. For hosting providers that have been in operation for more than two years, PUE must be measured based on their "real-world" value and not "by design," and using a methodology based on internationally recognised norms and standards (e.g. ISO standards). Select a hosting provider that indicates its PUE and the strategy implemented to reduce it. The information provided on this indicator is accompanied by information on the methodology used to measure it, based on internationally recognised standards (by ex. ISO/IEC 30134) and in particular on the type of PUE that is measured (type 1, 2 or 3).
+
+    controle: |
+      What is the digital service host's PUE? Check that the digital service's hosting provider has published this performance indicator. To validate the criterion, choose a hosting provider with a "real-world" PUE of less than 1.5 (or a PUE by design less than or equal to 1.3 if the host's facilities have been in operation for less than two years – in which case the criterion will have to be reassessed after the two-year period).
+
+    difficulte: Moderate
+    priorite: High
+    application: N/A if the service does not use hosting
+    metiers:
+      - Web hosting manager
+      - CSR/digital sustainability manager
+      - Purchasing manager
+
   - id: "8.4"
     critere: "Le service numérique utilise-t-il un hébergement dont son WUE (Water Usage Effectiveness) est minimisé ?"
     thematique: "Hébergement"
